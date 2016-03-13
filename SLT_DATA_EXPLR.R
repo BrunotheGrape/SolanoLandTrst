@@ -1,7 +1,7 @@
 # SLT data exploration
 # reading in data sets
-library(xlsx); library(dplyr); library(ggplot2)
-#RDM2011 <- read.csv("2011_RDM.csv", header = TRUE)
+library(xlsx); library(dplyr); library(ggplot2); library(xtable)
+
 #SFB <- read.csv("SFBFMWQ.csv", header = TRUE)
 #RDM2009 <- read.xlsx2("2009_RDM.xls", 1)
 RDM09 <- read.csv("2009_RDMDA.csv", header = TRUE, stringsAsFactors = FALSE)
@@ -36,29 +36,30 @@ RDMLGTD$wt.minus.bag <- as.numeric(RDMLGTD$wt.minus.bag)
 RDMLGTD$X.lab..Phytomass.pounds.ac..gx96. <- as.numeric(RDMLGTD$X.lab..Phytomass.pounds.ac..gx96.)
 RDMLGTD$X7..month.for.one.mo. <- as.numeric(RDMLGTD$X7..month.for.one.mo.)
 
+nn <- c("Waypoint", "Height in Inches", "Green Foliage", "Litter", "Bare Soil, Gravel and Rocks", "rDM Condition", "Bag Weight, Oven Dry", "Weigh Minus Bag", "X Lab Phytomass: Lbs", "7% per Month", "YR")
+colnames(RDMLGTD) <- nn
 #first level summary metrics
 
 # column sums
-c09 <- subset(RDMLGTD, YR == "X09")
-c09 <- colSums(c09[, 2:10], na.rm = TRUE)
-c10 <- subset(RDMLGTD, YR == "X10")
-c10 <- colSums(c10[, 2:10], na.rm = TRUE)
-c11 <- subset(RDMLGTD, YR == "X11")
-c11 <- colSums(c11[, 2:10], na.rm = TRUE)
+SumYR09 <- subset(RDMLGTD, YR == "X09")
+SumYR09 <- colSums(SumYR09[, 2:10], na.rm = TRUE)
+SumYR10 <- subset(RDMLGTD, YR == "X10")
+SumYR10 <- colSums(SumYR10[, 2:10], na.rm = TRUE)
+SumYR11 <- subset(RDMLGTD, YR == "X11")
+SumYR11 <- colSums(SumYR11[, 2:10], na.rm = TRUE)
 
-cS <- rbind(c11, c10)
-cS <- rbind(cS, c09)
-cS
-
+cS <- rbind(SumYR11, SumYR10)
+cS <- rbind(cS, SumYR09)
+cS 
 
 #column means
-mn09 <- subset(RDMLGTD, YR == "X09")
-mn09 <- colMeans(mn09[, 2:10], na.rm = TRUE)
-mn10 <- subset(RDMLGTD, YR == "X10")
-mn10 <- colMeans(mn10[, 2:10], na.rm = TRUE)
-mn11 <- subset(RDMLGTD, YR == "X11")
-mn11 <- colMeans(mn11[, 2:10], na.rm = TRUE)
+MeanYR09 <- subset(RDMLGTD, YR == "X09")
+MeanYR09 <- colMeans(MeanYR09[, 2:10], na.rm = TRUE)
+MeanYR10 <- subset(RDMLGTD, YR == "X10")
+MeanYR10 <- colMeans(MeanYR10[, 2:10], na.rm = TRUE)
+MeanYR11 <- subset(RDMLGTD, YR == "X11")
+MeanYR11 <- colMeans(MeanYR11[, 2:10], na.rm = TRUE)
 
-cM <- rbind(mn11, mn10)
-cM <- rbind(cM, mn09)
+cM <- rbind(MeanYR11, MeanYR10)
+cM <- rbind(cM, MeanYR09)
 cM
