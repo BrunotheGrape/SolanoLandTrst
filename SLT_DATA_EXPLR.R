@@ -1,5 +1,5 @@
 # SLT data exploration
-# reading in data sets
+# reading in RDM data sets
 library(xlsx); library(dplyr); library(ggplot2); library(xtable)
 
 #SFB <- read.csv("SFBFMWQ.csv", header = TRUE)
@@ -63,3 +63,17 @@ MeanYR11 <- colMeans(MeanYR11[, 2:10], na.rm = TRUE)
 cM <- rbind(MeanYR11, MeanYR10)
 cM <- rbind(cM, MeanYR09)
 cM
+
+
+#reading Wilcox Data
+WCX_1 <- read.csv("WILCOX-1_Barbour_VegData_2002_DA.csv", header = FALSE, stringsAsFactors = FALSE)
+
+# transpose columns to rows
+WCX_1 <- as.data.frame(t(WCX_1))
+# remove empty column V47
+WCX_1 <- select(WCX_1, -c(V47))
+#rename column headers
+write.table(WCX_1, file = "WCX_1.csv", sep = ",")
+WCX_1DA <- read.csv("WCX_1.csv", header = TRUE, skip = 1)
+
+
