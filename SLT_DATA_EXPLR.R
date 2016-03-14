@@ -66,7 +66,9 @@ cM
 
 
 #reading Wilcox Data
+library(ggplot2); library(dplyr)
 WCX_1 <- read.csv("WILCOX-1_Barbour_VegData_2002_DA.csv", header = FALSE, stringsAsFactors = FALSE)
+
 
 # transpose columns to rows
 WCX_1 <- as.data.frame(t(WCX_1))
@@ -75,5 +77,6 @@ WCX_1 <- select(WCX_1, -c(V47))
 #rename column headers
 write.table(WCX_1, file = "WCX_1.csv", sep = ",")
 WCX_1DA <- read.csv("WCX_1.csv", header = TRUE, skip = 1)
+WCX_1DA <- WCX_1DA[1:26,2:148]
 
-
+ggplot(data = WCX_1DA, "Pool_lengt", "Number.of.species") + geom_point() 
