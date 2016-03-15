@@ -74,9 +74,32 @@ WCX_1 <- read.csv("WILCOX-1_Barbour_VegData_2002_DA.csv", header = FALSE, string
 WCX_1 <- as.data.frame(t(WCX_1))
 # remove empty column V47
 WCX_1 <- select(WCX_1, -c(V47))
-#rename column headers
+#rename column headers and eliminate unwanted rows and columns
 write.table(WCX_1, file = "WCX_1.csv", sep = ",")
 WCX_1DA <- read.csv("WCX_1.csv", header = TRUE, skip = 1)
 WCX_1DA <- WCX_1DA[1:26,2:148]
 
-ggplot(data = WCX_1DA, "Pool_lengt", "Number.of.species") + geom_point() 
+#add variable for approximate pool volume
+WCX_1DA <- mutate(WCX_1DA, Pool_Vmn = Pool_lengt * Pool_width * Max_depth)
+
+#plot number of species against pool volume
+pv <- ggplot(data = WCX_1DA, aes(Pool_Vmn, Number.of.species)) + geom_point()
+pv <- pv + xlab("Pool Volume") +ylab("Number or Species") 
+pv <- pv + geom_smooth(method = lm, formula = y ~ x)
+pv
+
+#plot number of species against elevation
+pe <- ggplot(data = WCX_1DA, aes(Rela_elev, Number.of.species)) + geom_point()
+pe <- pe + xlab("Relative Elevation") +ylab("Number or Species")
+pe
+
+# plot number of species against Cov_soil
+ps <- ggplot(data = WCX_1DA, aes(Cov_soil, Number.of.species)) + geom_point()
+ps <- ps + xlab("Soil") +ylab("Number or Species")
+ps
+
+
+# fit a linear model to Pool Volume and Number of Species
+mod.fit <- lm(Number.of.species ~ Pool_Vmn, data = WCX_1DA)
+summary(mod.fit)
+#results are not significant
