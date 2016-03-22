@@ -103,3 +103,46 @@ ps
 mod.fit <- lm(Number.of.species ~ Pool_Vmn, data = WCX_1DA)
 summary(mod.fit)
 #results are not significant
+
+
+# read in SFBFMWQ and trim data
+library(dplyr); library(ggplot2); library(caret)
+WQ.Data <- read.csv("SFBFMWQ.csv", header = TRUE, skip = 2)
+WQ.Data <- WQ.Data[1:84101, ]
+
+# predict disolved oxygen (DO_pct). Predictors are temperature, salinity, depth, ph, and turbulance (Temp, Sal, Depth, pH, Turb )
+
+fit.DO <- lm(DO_pct ~ Temp +Sal + Depth + pH + Turb, data = WQ.Data)
+summary(fit.DO)
+confint(fit.DO)
+
+#plot variables against Disolved Oxygen
+pT <- ggplot(WQ.Data, aes(Temp, DO_pct)) 
+pT <- pT + geom_point(colour = "dark blue", alpha = .3) 
+pT <- pT + geom_smooth(method = lm, formula = y ~ x)
+pT <- pT + xlab("Temperature") + ylab("Disolved Oxygen pct")
+ggsave(file = "Temp_DO.png")
+
+pS <- ggplot(WQ.Data, aes(Sal, DO_pct))
+pS <- pS + geom_point(colour = "dark blue", alpha = .3) 
+pS <- pS + geom_smooth(method = lm, formula = y ~ x)
+pS <- pS + xlab("Salinity") + ylab("Disolved Oxygen pct")
+ggsave(file = "Sal_DO.png")
+
+pD <- ggplot(WQ.Data, aes(Depth, DO_pct))
+pD <- pD + geom_point(colour = "dark blue", alpha = .3) 
+pD <- pD + geom_smooth(method = lm, formula = y ~ x)
+pD <- pD + xlab("Depth") + ylab("Disolved Oxygen pct")
+ggsave(file = "Depth_DO.png")
+
+ppH <- ggplot(WQ.Data, aes(pH, DO_pct))
+ppH <- ppH + geom_point(colour = "dark blue", alpha = .3) 
+ppH <- ppH + geom_smooth(method = lm, formula = y ~ x)
+ppH <- ppH + xlab("pH") + ylab("Disolved Oxygen pct")
+ggsave(file = "pH_DO.png")
+
+pTrb <- ggplot(WQ.Data, aes(Turb, DO_pct))
+pTrb <- pTrb + geom_point(colour = "dark blue", alpha = .3) 
+pTrb <- pTrb + geom_smooth(method = lm, formula = y ~ x)
+pTrb <- pT + xlab("Turbulance") + ylab("Disolved Oxygen pct")
+ggsave(file = "Turb_DO.png")
