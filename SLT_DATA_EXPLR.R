@@ -106,7 +106,7 @@ summary(mod.fit)
 
 
 # read in SFBFMWQ and trim data
-library(dplyr); library(ggplot2); library(caret)
+library(dplyr); library(ggplot2); library(caret); library(gridExtra)
 WQ.Data <- read.csv("SFBFMWQ.csv", header = TRUE, skip = 2)
 WQ.Data <- WQ.Data[1:84101, ]
 
@@ -144,5 +144,57 @@ ggsave(file = "pH_DO.png")
 pTrb <- ggplot(WQ.Data, aes(Turb, DO_pct))
 pTrb <- pTrb + geom_point(colour = "dark blue", alpha = .3) 
 pTrb <- pTrb + geom_smooth(method = lm, formula = y ~ x)
-pTrb <- pT + xlab("Turbulance") + ylab("Disolved Oxygen pct")
+pTrb <- pTrb + xlab("Turbulance") + ylab("Disolved Oxygen pct")
 ggsave(file = "Turb_DO.png")
+
+# modeling individual variables and ploting the residuals
+fit.DOT <- lm(DO_pct ~ Temp, data = WQ.Data)
+summary(fit.DOT)
+
+fit.SAL<- lm(DO_pct ~ Sal, data = WQ.Data)
+summary(fit.SAL)
+
+fit.DPT<- lm(DO_pct ~ Depth, data = WQ.Data)
+summary(fit.SAL)
+
+fit.pH<- lm(DO_pct ~ pH, data = WQ.Data)
+summary(fit.SAL)
+
+fit.TRB<- lm(DO_pct ~ Turb, data = WQ.Data)
+summary(fit.SAL)
+
+rDOT <- ggplot(fit.DOT, aes(.fitted, .resid))
+rDOT <- rDOT + geom_point(colour = "forest green", alpha = .3)
+rDOT <- rDOT + geom_hline(yintercept = 0, lwd = 1.5, colour = "slateblue") 
+rDOT <- rDOT + xlab("Fitted Values") + ylab("Residuals") 
+rDOT <- rDOT + ggtitle("Temperature")
+rDOT
+
+rSAL <- ggplot(fit.SAL, aes(.fitted, .resid))
+rSAL <- rSAL + geom_point(colour = "forest green", alpha = .3)
+rSAL <- rSAL + geom_hline(yintercept = 0, lwd = 1.5, colour = "slateblue") 
+rSAL <- rSAL + xlab("Fitted Values") + ylab("Residuals")
+rSAL <- rSAL + ggtitle("Salinity")
+rSAL
+
+rDPT <- ggplot(fit.DPT, aes(.fitted, .resid))
+rDPT <- rDPT + geom_point(colour = "forest green", alpha = .3)
+rDPT <- rDPT + geom_hline(yintercept = 0, lwd = 1.5, colour = "slateblue") 
+rDPT <- rDPT + xlab("Fitted Values") + ylab("Residuals")
+rDPT <- rDPT + ggtitle("Depth")
+rDPT
+
+rpH <- ggplot(fit.pH, aes(.fitted, .resid))
+rpH <- rpH + geom_point(colour = "forest green", alpha = .3)
+rpH <- rpH + geom_hline(yintercept = 0, lwd = 1.5, colour = "slateblue") 
+rpH <- rpH + xlab("Fitted Values") + ylab("Residuals")
+rpH <- rpH + ggtitle("pH")
+rpH
+
+rTRB <- ggplot(fit.TRB, aes(.fitted, .resid))
+rTRB <- rTRB + geom_point(colour = "forest green", alpha = .3)
+rTRB <- rTRB + geom_hline(yintercept = 0, lwd = 1.5, colour = "slateblue") 
+rTRB <- rTRB + xlab("Fitted Values") + ylab("Residuals")
+rTRB <- rTRB + ggtitle("Depth")
+rTRB
+
