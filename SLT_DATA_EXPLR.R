@@ -155,13 +155,13 @@ fit.SAL<- lm(DO_pct ~ Sal, data = WQ.Data)
 summary(fit.SAL)
 
 fit.DPT<- lm(DO_pct ~ Depth, data = WQ.Data)
-summary(fit.SAL)
+summary(fit.DPT)
 
 fit.pH<- lm(DO_pct ~ pH, data = WQ.Data)
-summary(fit.SAL)
+summary(fit.pH)
 
 fit.TRB<- lm(DO_pct ~ Turb, data = WQ.Data)
-summary(fit.SAL)
+summary(fit.TRB)
 
 rDOT <- ggplot(fit.DOT, aes(.fitted, .resid))
 rDOT <- rDOT + geom_point(colour = "forest green", alpha = .3)
