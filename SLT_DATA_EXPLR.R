@@ -236,3 +236,32 @@ cm <- cor(cc, use = "complete")
 cm
 
 # there is a moderately strong correlation between turbulance and salinity
+# create interaction variable and compare correlations
+WQ.Int <- mutate(WQ.Data, sltrb = Sal * Turb)
+fit.sST <- lm(DO_pct ~ sltrb + Sal + Turb, data = WQ.Int)
+summary(fit.sST)
+
+fit.sT <- lm(DO_pct ~ sltrb, data = WQ.Int)
+
+#plot of new salinity/turbulance variable as predictors of disolved oxygen
+pSlt <- ggplot(WQ.Int, aes(sltrb, DO_pct))
+pSlt <- pSlt + geom_point(colour = "dark blue", alpha = .3) 
+pSlt <- pSlt + geom_point(colour = "red", alpha = .0098) 
+pSlt <- pSlt + geom_point(colour = "white", alpha = .005) 
+pSlt <- pSlt + geom_smooth(method = lm, formula = y ~ x)
+pSlt <- pSlt + xlab("Salinity and Turbulance") + ylab("Disolved Oxygen pct")
+ggsave(file = "psT_DO.png")
+pSlt
+
+# residual plot of new salinity/turbulance variable
+
+rSlt <- ggplot(fit.sT, aes(.fitted, .resid))
+rSlt <- rSlt + geom_point(colour = "forest green", alpha = .3)
+rSlt <- rSlt + geom_point(colour = "dark blue", alpha = .0098)
+rSlt <- rSlt + geom_point(colour = "blue", alpha = .0095) 
+rSlt <- rSlt + geom_point(colour = "white", alpha = .005) 
+rSlt <- rSlt + geom_hline(yintercept = 0, lwd = 1.5, colour = "slateblue") 
+rSlt <- rSlt + xlab("Fitted Values") + ylab("Residuals")
+rSlt <- rSlt + ggtitle("Salinity and Turbulance")
+ggsave("psT_DOr.png")
+rSlt
