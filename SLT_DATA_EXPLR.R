@@ -106,7 +106,7 @@ summary(mod.fit)
 
 
 # read in SFBFMWQ and trim data
-library(dplyr); library(ggplot2); library(caret); library(gridExtra)
+library(dplyr); library(ggplot2); library(caret); library(gridExtra); library(corrplot)
 WQ.Data <- read.csv("SFBFMWQ.csv", header = TRUE, skip = 2)
 WQ.Data <- WQ.Data[1:84101, ]
 
@@ -115,6 +115,8 @@ WQ.Data <- WQ.Data[1:84101, ]
 fit.DO <- lm(DO_pct ~ Temp +Sal + Depth + pH + Turb, data = WQ.Data)
 summary(fit.DO)
 confint(fit.DO)
+
+
 
 #plot variables against Disolved Oxygen
 pT <- ggplot(WQ.Data, aes(Temp, DO_pct)) 
@@ -181,6 +183,7 @@ rDOT <- rDOT + geom_point(colour = "white", alpha = .005)
 rDOT <- rDOT + geom_hline(yintercept = 0, lwd = 1.5, colour = "slateblue") 
 rDOT <- rDOT + xlab("Fitted Values") + ylab("Residuals") 
 rDOT <- rDOT + ggtitle("Temperature")
+ggsave(file = "Temp_DOr.png")
 rDOT
 
 rSAL <- ggplot(fit.SAL, aes(.fitted, .resid))
@@ -191,6 +194,7 @@ rSAL <- rSAL + geom_point(colour = "white", alpha = .005)
 rSAL <- rSAL + geom_hline(yintercept = 0, lwd = 1.5, colour = "slateblue") 
 rSAL <- rSAL + xlab("Fitted Values") + ylab("Residuals")
 rSAL <- rSAL + ggtitle("Salinity")
+ggsave("Sal_DOr.png")
 rSAL
 
 rDPT <- ggplot(fit.DPT, aes(.fitted, .resid))
@@ -201,6 +205,7 @@ rDPT <- rDPT + geom_point(colour = "white", alpha = .005)
 rDPT <- rDPT + geom_hline(yintercept = 0, lwd = 1.5, colour = "slateblue") 
 rDPT <- rDPT + xlab("Fitted Values") + ylab("Residuals")
 rDPT <- rDPT + ggtitle("Depth")
+ggsave("Depth_DOr.png")
 rDPT
 
 rpH <- ggplot(fit.pH, aes(.fitted, .resid))
@@ -211,6 +216,7 @@ rpH <- rpH + geom_point(colour = "white", alpha = .005)
 rpH <- rpH + geom_hline(yintercept = 0, lwd = 1.5, colour = "slateblue") 
 rpH <- rpH + xlab("Fitted Values") + ylab("Residuals")
 rpH <- rpH + ggtitle("pH")
+ggsave("pH_DOr.png")
 rpH
 
 rTRB <- ggplot(fit.TRB, aes(.fitted, .resid))
@@ -220,6 +226,13 @@ rTRB <- rTRB + geom_point(colour = "blue", alpha = .0095)
 rTRB <- rTRB + geom_point(colour = "white", alpha = .005) 
 rTRB <- rTRB + geom_hline(yintercept = 0, lwd = 1.5, colour = "slateblue") 
 rTRB <- rTRB + xlab("Fitted Values") + ylab("Residuals")
-rTRB <- rTRB + ggtitle("Depth")
+rTRB <- rTRB + ggtitle("Turbulance")
+ggsave("Turb_DOr.png")
 rTRB
 
+# checking the correlations between predictor variables 
+cc <- WQ.Data[,c("Temp","Sal", "Depth", "pH", "Turb")]
+cm <- cor(cc, use = "complete")
+cm
+
+# there is a moderately strong correlation between turbulance and salinity
