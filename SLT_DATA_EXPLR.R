@@ -110,7 +110,7 @@ library(dplyr); library(ggplot2); library(caret); library(gridExtra); library(co
 WQ.Data <- read.csv("SFBFMWQ.csv", header = TRUE, skip = 2)
 WQ.Data <- WQ.Data[1:84101, ]
 
-# predict disolved oxygen (DO_pct). Predictors are temperature, salinity, depth, ph, and turbulance (Temp, Sal, Depth, pH, Turb )
+# predict disolved oxygen (DO_pct). Predictors are temperature, salinity, depth, ph, and turbidity (Temp, Sal, Depth, pH, Turb )
 
 fit.DO <- lm(DO_pct ~ Temp +Sal + Depth + pH + Turb, data = WQ.Data)
 summary(fit.DO)
@@ -156,7 +156,7 @@ pTrb <- pTrb + geom_point(colour = "dark blue", alpha = .3)
 pTrb <- pTrb + geom_point(colour = "red", alpha = .0098) 
 pTrb <- pTrb + geom_point(colour = "white", alpha = .005) 
 pTrb <- pTrb + geom_smooth(method = lm, formula = y ~ x)
-pTrb <- pTrb + xlab("Turbulance") + ylab("Disolved Oxygen pct")
+pTrb <- pTrb + xlab("Turbidity") + ylab("Disolved Oxygen pct")
 ggsave(file = "Turb_DO.png")
 
 # modeling individual variables and ploting the residuals
@@ -226,7 +226,7 @@ rTRB <- rTRB + geom_point(colour = "blue", alpha = .0095)
 rTRB <- rTRB + geom_point(colour = "white", alpha = .005) 
 rTRB <- rTRB + geom_hline(yintercept = 0, lwd = 1.5, colour = "slateblue") 
 rTRB <- rTRB + xlab("Fitted Values") + ylab("Residuals")
-rTRB <- rTRB + ggtitle("Turbulance")
+rTRB <- rTRB + ggtitle("Turbidity")
 ggsave("Turb_DOr.png")
 rTRB
 
@@ -235,25 +235,26 @@ cc <- WQ.Data[,c("Temp","Sal", "Depth", "pH", "Turb")]
 cm <- cor(cc, use = "complete")
 cm
 
-# there is a moderately strong correlation between turbulance and salinity
+# there is a moderately strong correlation between turbidity and salinity
 # create interaction variable and compare correlations
 WQ.Int <- mutate(WQ.Data, sltrb = Sal * Turb)
 fit.sST <- lm(DO_pct ~ sltrb + Sal + Turb, data = WQ.Int)
 summary(fit.sST)
 
 fit.sT <- lm(DO_pct ~ sltrb, data = WQ.Int)
+summary(fit.sT)
 
-#plot of new salinity/turbulance variable as predictors of disolved oxygen
+#plot of new salinity/turbidity variable as predictors of disolved oxygen
 pSlt <- ggplot(WQ.Int, aes(sltrb, DO_pct))
 pSlt <- pSlt + geom_point(colour = "dark blue", alpha = .3) 
 pSlt <- pSlt + geom_point(colour = "red", alpha = .0098) 
 pSlt <- pSlt + geom_point(colour = "white", alpha = .005) 
 pSlt <- pSlt + geom_smooth(method = lm, formula = y ~ x)
-pSlt <- pSlt + xlab("Salinity and Turbulance") + ylab("Disolved Oxygen pct")
+pSlt <- pSlt + xlab("Salinity and Turbidity") + ylab("Disolved Oxygen pct")
 ggsave(file = "psT_DO.png")
 pSlt
 
-# residual plot of new salinity/turbulance variable
+# residual plot of new salinity/turbidity variable
 
 rSlt <- ggplot(fit.sT, aes(.fitted, .resid))
 rSlt <- rSlt + geom_point(colour = "forest green", alpha = .3)
@@ -262,6 +263,30 @@ rSlt <- rSlt + geom_point(colour = "blue", alpha = .0095)
 rSlt <- rSlt + geom_point(colour = "white", alpha = .005) 
 rSlt <- rSlt + geom_hline(yintercept = 0, lwd = 1.5, colour = "slateblue") 
 rSlt <- rSlt + xlab("Fitted Values") + ylab("Residuals")
-rSlt <- rSlt + ggtitle("Salinity and Turbulance")
+rSlt <- rSlt + ggtitle("Salinity and Turbidity")
 ggsave("psT_DOr.png")
 rSlt
+
+
+#data transformations
+fit.DOpH2 <- lm(DO_pct ~ pH + I(pH^2), WQ.Data)
+summary(fit.DOpH2)
+par(mfrow = c(2, 2))
+par(mar = rep(2, 4))
+plot(fit.DOpH2)
+
+rDOpH2 <- ggplot(fit.DOpH2, aes(.fitted, .resid))
+rDOpH2 <- rDOpH2 + geom_point(colour = "forest green", alpha = .3)
+rDOpH2 <- rDOpH2 + geom_point(colour = "dark blue", alpha = .0098)
+rDOpH2 <- rDOpH2 + geom_point(colour = "blue", alpha = .0095) 
+rDOpH2 <- rDOpH2 + geom_point(colour = "white", alpha = .005) 
+rDOpH2 <- rDOpH2 + geom_hline(yintercept = 0, lwd = 1.5, colour = "slateblue") 
+rDOpH2 <- rDOpH2 + xlab("Fitted Values") + ylab("Residuals")
+rDOpH2 <- rDOpH2 + ggtitle("pH squared")
+rDOpH2
+
+fit.DOpH3 <- lm(DO_pct ~ poly(pH, 3), WQ.Data, use = "complete")
+summary(fit.DOpH3)
+par(mfrow = c(2, 2))
+par(mar = rep(2, 4))
+plot(fit.DOpH3)
