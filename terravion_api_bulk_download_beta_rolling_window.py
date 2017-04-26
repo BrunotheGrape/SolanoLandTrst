@@ -36,7 +36,7 @@ import urllib
 import requests,csv, re 
 import os, sys,base64,argparse
 from os.path import basename
-from urllib2 import Request, urlopen, URLError, HTTPError
+#from urllib2 import Request, urlopen, URLError, HTTPError
 import datetime
 import time
 from datetime import datetime
@@ -107,29 +107,29 @@ def main(argv):
 	rollback_start_days=int(args.rollback_start_days)
 	sub_folder_by_block_product=args.sub_folder_by_block_product
 	if not (username and access_token):
-		print 'Pleaese include -username -access_token -working_dir'
-		print 'email William Maio at wmaio@terravion.com if you need one'
-		print parser.print_help()
+		print ('Pleaese include -username -access_token -working_dir')
+		print ('email William Maio at wmaio@terravion.com if you need one')
+		print (parser.print_help())
 		return 0
 	if task_list and access_token:
 		request_info={}
 		request_info['server_address']=beta_server
 		request_info['access_token']=access_token
 		request_url='%(server_address)s/v1/layers/task_list/?access_token=%(access_token)s'%request_info
-		print request_url
+		print (request_url)
 		request = Request(request_url)
 		response_body = urlopen(request).read()
-		#print response_body
+		#print (response_body)
 		task_list=json.loads(response_body)
 		for task in task_list:
-			print task
+			print (task)
 		return True
 	elif rolling_window and rollback_start_days is not None and working_dir:
 		if not os.path.exists(working_dir):
 			os.makedirs(working_dir)
 		download_imagery_rw_deamon(working_dir,username,access_token,rollback_start_days,color_map,sub_folder_by_block_product=sub_folder_by_block_product)
 	elif not year_week:
-		print '--------------------------------------------------------------------------------------------------------------------------------'
+		print ('--------------------------------------------------------------------------------------------------------------------------------')
 		block_dic_struct=get_block_list_with_id(username,access_token)
 		if not product_name:
 			product_name='NDVI'
@@ -152,25 +152,25 @@ def main(argv):
 				ranch_name=week_year_dic[week_year_index][block_id]['block_name'].split('/')[0]
 				if not ranch_name in ranch_list:
 					ranch_list.append(ranch_name)
-			print week_year_index, datetime.strptime(week_year_index + '-0', "%Y_%W-%w").strftime('%Y-%m-%d'),sorted(ranch_list)
-		print '--------------------------------------------------------------------------------------------------------------------------------'
-		print parser.print_help()
-		print '--------------------------------------------------------------------------------------------------------------------------------'
+			print (week_year_index, datetime.strptime(week_year_index + '-0', "%Y_%W-%w").strftime('%Y-%m-%d'),sorted(ranch_list))
+		print ('--------------------------------------------------------------------------------------------------------------------------------')
+		print (parser.print_help())
+		print ('--------------------------------------------------------------------------------------------------------------------------------')
 	elif not working_dir:
-		print 'pleaese include -working_dir'
-		print '--------------------------------------------------------------------------------------------------------------------------------'
-		print parser.print_help()
-		print '--------------------------------------------------------------------------------------------------------------------------------'
+		print ('pleaese include -working_dir')
+		print ('--------------------------------------------------------------------------------------------------------------------------------')
+		print (parser.print_help())
+		print ('--------------------------------------------------------------------------------------------------------------------------------')
 	elif not product_name or product_name not in ['NC','CIR','NDVI','ZONE','TIRS','MULTIBAND','FULL']:
-		print 'pleaese include valid -product_name [NC,CIR,NDVI,ZONE,TIRS,MULTIBAND,FULL]' 
-		print '--------------------------------------------------------------------------------------------------------------------------------'
-		print parser.print_help()
-		print '--------------------------------------------------------------------------------------------------------------------------------'
+		print ('pleaese include valid -product_name [NC,CIR,NDVI,ZONE,TIRS,MULTIBAND,FULL]') 
+		print ('--------------------------------------------------------------------------------------------------------------------------------')
+		print (parser.print_help())
+		print ('--------------------------------------------------------------------------------------------------------------------------------')
 	elif product_name:
 		if generate_csv and not output_csv:
 			output_csv=os.path.join(working_dir,datetime.now().strftime('%Y-%m-%d_%H:%M:%S')+'_'+year_week+'_'+product_name+'.csv')
 		downloading_report=DownloadingReport(csv_filename=output_csv)
-		print 'download imagery',year_week 
+		print ('download imagery',year_week )
 		if not os.path.exists(working_dir):
 			os.makedirs(working_dir)
 
@@ -188,17 +188,17 @@ def main(argv):
 			downloading_report.print_download_record_list()
 
 	else: 
-		print '--------------------------------------------------------------------------------------------------------------------------------'
-		print parser.print_help()
-		print '--------------------------------------------------------------------------------------------------------------------------------'
+		print ('--------------------------------------------------------------------------------------------------------------------------------')
+		print (parser.print_help())
+		print ('--------------------------------------------------------------------------------------------------------------------------------')
 def download_imagery_rw_deamon(working_dir,username,access_token,rollback_start_days,color_map,sub_folder_by_block_product=None):
-	print '--------------------------------------------------------------------------------------------------------------------------------'
+	print ('--------------------------------------------------------------------------------------------------------------------------------')
 	addEpochStart=int(datetime.now().strftime("%s"))-rollback_start_days*24*60*60
 	addEpochEnd=int(datetime.now().strftime("%s"))
 	#addEpochStart=int(datetime.now().strftime("%s"))
 	# subtract one hour 
 	#addEpochEnd=int(datetime.now().strftime("%s"))-60*60
-	print addEpochStart,addEpochEnd
+	print (addEpochStart,addEpochEnd)
 	while True:
 		block_dic_struct=get_block_list_with_id(username,access_token)
 		product_name_list=['NC','CIR','NDVI','ZONE','TIRS']
@@ -217,12 +217,12 @@ def download_imagery_rw_deamon(working_dir,username,access_token,rollback_start_
 					request_info=get_geotiff(layer_info,layer_info['product_name'],color_map,username,access_token,working_sub_dir,include_block_id_flag=True,RGB_color_map=None)
 				else: 
 					request_info=get_geotiff(layer_info,layer_info['product_name'],color_map,username,access_token,working_dir,include_block_id_flag=True,RGB_color_map=None)
-				print 'response_info',request_info
+				print ('response_info',request_info)
 				request_info_list.append(request_info)
 			while True:
 				pending_request_info_list=[]
 				for request_info in request_info_list:
-					print request_info
+					print (request_info)
 					try:
 						if 'status' not in request_info:
 							if 'output_filename' in request_info:
@@ -236,7 +236,7 @@ def download_imagery_rw_deamon(working_dir,username,access_token,rollback_start_
 						elif request_info['status'] in ('INPROGRESS','INITIAL'):
 							pending_request_info_list.append(request_info)
 						elif 'cached' in request_info:
-							print 'file already exisits in system', request_info['output_filename']
+							print ('file already exisits in system', request_info['output_filename'])
 							'''
 							if not error_only_logging:
 								request_info['timestamp']=datetime.now().strftime('%m/%d/%Y %H:%M:%S')
@@ -259,7 +259,7 @@ def download_imagery_rw_deamon(working_dir,username,access_token,rollback_start_
 								report_error(request_info)
 								#downloading_report.insert_download_result(request_info)
 						else:
-							print 'error', request_info
+							print ('error', request_info)
 							request_info['status']='ERROR'
 							request_info['message']=json.dumps(request_info)
 							request_info['timestamp']=datetime.now().strftime('%m/%d/%Y %H:%M:%S')
@@ -275,7 +275,7 @@ def download_imagery_rw_deamon(working_dir,username,access_token,rollback_start_
 						#downloading_report.insert_download_result(request_info)
 				time.sleep(5)
 				request_info_list=[]
-				print 'pending requests',pending_request_info_list
+				print ('pending requests',pending_request_info_list)
 				for pending_request in pending_request_info_list:
 					try:
 						request_info=check_request_update(pending_request,username,access_token)
@@ -287,15 +287,15 @@ def download_imagery_rw_deamon(working_dir,username,access_token,rollback_start_
 						report_error(request_info)
 						#downloading_report.insert_download_result(request_info)					
 				if not request_info_list:
-					print 'finished all request'
+					print ('finished all request')
 					break
 
-		print 'waiting 1 hour to request again'
+		print ('waiting 1 hour to request again')
 		time.sleep(60*60)
 		# rolling window one hour 
 		addEpochStart=int(datetime.now().strftime("%s"))-2*60*60
 		addEpochEnd=int(datetime.now().strftime("%s"))
-		print 'new request and_start_date 2 hours eariler, add_end_date now, '
+		print ('new request and_start_date 2 hours eariler, add_end_date now, ')
 def run_download_workflow(downloading_report,working_dir,year_week,product_name,block_dic_struct,username,access_token,color_map,RGB_color_map,error_only_logging):
 	layer_list=get_all_layers_list(block_dic_struct,product_name,username,access_token)
 	# organize layers by week: 
@@ -314,9 +314,9 @@ def run_download_workflow(downloading_report,working_dir,year_week,product_name,
 		include_block_id_flag=check_duplicate_block_name(week_year_dic[week_year_index])
 		request_info_list=[]
 		for block_id in week_year_dic[week_year_index]:
-			print 'requesting',week_year_dic[week_year_index][block_id]['block_name'], datetime.strptime(week_year_dic[week_year_index][block_id]['layerdate'], "%Y-%m-%dT%H:%M:%S.%fZ").strftime('%Y-%m-%d')
+			print ('requesting',week_year_dic[week_year_index][block_id]['block_name'], datetime.strptime(week_year_dic[week_year_index][block_id]['layerdate'], "%Y-%m-%dT%H:%M:%S.%fZ").strftime('%Y-%m-%d'))
 			request_info=get_geotiff(week_year_dic[week_year_index][block_id],product_name,color_map,username,access_token,working_dir,include_block_id_flag,RGB_color_map=RGB_color_map)
-			print 'response_info',request_info
+			print ('response_info',request_info)
 			request_info_list.append(request_info)
 		while True:
 			pending_request_info_list=[]
@@ -334,7 +334,7 @@ def run_download_workflow(downloading_report,working_dir,year_week,product_name,
 					elif request_info['status'] in ('INPROGRESS','INITIAL'):
 						pending_request_info_list.append(request_info)
 					elif 'cached' in request_info:
-						print 'file already exisits in system', request_info['output_filename']
+						print ('file already exisits in system', request_info['output_filename'])
 						if not error_only_logging:
 							request_info['timestamp']=datetime.now().strftime('%m/%d/%Y %H:%M:%S')
 							downloading_report.insert_download_result(request_info)
@@ -353,7 +353,7 @@ def run_download_workflow(downloading_report,working_dir,year_week,product_name,
 							report_error(request_info)
 							downloading_report.insert_download_result(request_info)
 					else:
-						print 'error', request_info
+						print ('error', request_info)
 						request_info['status']='ERROR'
 						request_info['message']=json.dumps(request_info)
 						request_info['timestamp']=datetime.now().strftime('%m/%d/%Y %H:%M:%S')
@@ -369,7 +369,7 @@ def run_download_workflow(downloading_report,working_dir,year_week,product_name,
 					downloading_report.insert_download_result(request_info)
 			time.sleep(5)
 			request_info_list=[]
-			print 'pending requests',pending_request_info_list
+			print ('pending requests',pending_request_info_list)
 			for pending_request in pending_request_info_list:
 				try:
 					request_info=check_request_update(pending_request,username,access_token)
@@ -381,10 +381,10 @@ def run_download_workflow(downloading_report,working_dir,year_week,product_name,
 					report_error(request_info)
 					downloading_report.insert_download_result(request_info)					
 			if not request_info_list:
-				print 'finished all request'
+				print ('finished all request')
 				break
 	else:
-		print 'invalid week_year',week_year_index
+		print ('invalid week_year',week_year_index)
 
 def check_duplicate_block_name(block_dic):
 	block_name_list=[]
@@ -400,7 +400,7 @@ def get_all_layers_list(block_dic_struct,product_name,username,access_token):
 	if product_name=='MULTIBAND':
 		product_name='NDVI'
 	request_url='https://api.terravion.com/v1/users/'+username+'/layers?product='+product_name+'&access_token='+access_token
-	print request_url
+	print (request_url)
 	request = Request(request_url)
 	response_body = urlopen(request).read()
 	layer_list_json=json.loads(response_body)
@@ -426,7 +426,7 @@ def get_layer_by_add_date(block_dic_struct,product_name,username,access_token,ad
 	request_info['addEpochStart']=addEpochStart
 	request_info['addEpochEnd']=addEpochEnd
 	request_url='https://api.terravion.com/v1/users/%(username)s/layers?addEpochStart=%(addEpochStart)s&addEpochEnd=%(addEpochEnd)s&product=%(product_name)s&access_token=%(access_token)s'%request_info
-	print request_url
+	print (request_url)
 	request = Request(request_url)
 	response_body = urlopen(request).read()
 	layer_list_json=json.loads(response_body)
@@ -447,14 +447,14 @@ def get_layer_list(block_dic_struct):
 	# Get the layer list of the users between the time period of start_date and end_date and organize the layers by the block_name 
 
 	request_url='https://api.terravion.com/v1/users/'+username+'/layers?epochStart='+str(start_date_epoc)+'&epochEnd='+str(end_date_epoc)+'&product='+product_name+'&access_token='+access_token
-	print request_url
+	print (request_url)
 	request = Request(request_url)
 	response_body = urlopen(request).read()
 	layer_list_json=json.loads(response_body)
 	# Organize the layer_id with block_name 
 	layer_list=[]
 	for layer_info in layer_list_json:
-		print layer_info
+		print (layer_info)
 		layer_struct={}
 		layer_struct['id']=layer_info['id']
 		layer_struct['layerdate']=layer_info['layerDate']
@@ -472,15 +472,15 @@ def get_user_colormap(username,access_token):
 def get_geotiff(layer_info,product_name,color_map,username,access_token,working_dir,include_block_id_flag,RGB_color_map=None):
 	# Download the product specified by the product and colormap to the working directory 
 	#http://docs.terravionv1.apiary.io/#reference/layers/usersuseridoremaillayerstileszxypngcolormapepochstartepochendproduct
-	#print layer_info
+	#print (layer_info)
 	layer_id=layer_info['id']
 	date_object=datetime.strptime(layer_info['layerdate'], "%Y-%m-%dT%H:%M:%S.%fZ")
-	print layer_id 
+	print (layer_id) 
 	if include_block_id_flag:
 		output_filename=os.path.join(working_dir,layer_info['block_name'].replace('/','_')+'_'+product_name+'_'+date_object.strftime('%Y-%m-%d')+'_'+layer_info['block_id']+'.tif')
 	else:
 		output_filename=os.path.join(working_dir,layer_info['block_name'].replace('/','_')+'_'+product_name+'_'+date_object.strftime('%Y-%m-%d')+'.tif')
-	print output_filename,os.path.isfile(output_filename)
+	print (output_filename,os.path.isfile(output_filename))
 	if not os.path.isfile(output_filename):
 		request_info={}
 		request_info['access_token']=access_token
@@ -502,14 +502,14 @@ def get_geotiff(layer_info,product_name,color_map,username,access_token,working_
 				request_url='%(server_address)s/v1/layers/%(layer_id)s/geotiffs/image.tiff?colorMap=%(colorMap)s&access_token=%(access_token)s&isColormapRgb=true'%request_info
 			else: 
 				request_url='%(server_address)s/v1/layers/%(layer_id)s/geotiffs/image.tiff?colorMap=%(colorMap)s&access_token=%(access_token)s'%request_info
-		#print request_url
+		#print (request_url)
 		#response_file = urlopen(request)
 
 		try:
-			print 'output_filename:',output_filename
-			print 'request_url:',request_url
+			print ('output_filename:',output_filename)
+			print ('request_url:',request_url)
 			r = requests.get(request_url)
-			print r 
+			print (r )
 			response_info=json.loads(r.content)
 			response_info['output_filename']=output_filename
 			response_info['request_url']=request_url
@@ -524,7 +524,7 @@ def get_geotiff(layer_info,product_name,color_map,username,access_token,working_
 			error_message['output_filename']=output_filename
 			error_message['status']='ERROR'
 			error_message['message']=str(traceback.format_exc())
-			print traceback.format_exc()
+			print (traceback.format_exc())
 			return error_message
 	else: 
 		request_info={}
@@ -543,7 +543,7 @@ def check_request_update(request_info,username,access_token):
 	request_info['server_address']=beta_server
 	request_url='%(server_address)s/v1/layers/task/?access_token=%(access_token)s&task_id=%(task_id)s'%request_info
 	r = requests.get(request_url)
-	print r.content
+	print (r.content)
 	request_info=json.loads(r.content)
 	request_info['output_filename']=output_filename
 	request_info['request_url']=request_url
@@ -553,10 +553,10 @@ def get_block_list_with_id(username,access_token):
 
 	# http://docs.terravionv1.apiary.io/#reference/users/user-blocks-collection/retrieve-blocks-user-has-access-to
 	request_url='https://api.terravion.com/v1/users/'+username+'/blocks'+'?access_token='+access_token
-	print request_url
+	print (request_url)
 	request = Request(request_url)
 	response_body = urlopen(request).read()
-	#print response_body
+	#print (response_body)
 	block_list_json=json.loads(response_body)
 	block_dic_struct={}
 	for block_info in block_list_json:
@@ -570,11 +570,11 @@ def check_download_progress(status_dic,p1):
 	while True:
 		time_elapsed=time.time()-status_dic['running_time']
 		if status_dic['download_complete']:
-			print 'check download thread complete'
+			print ('check download thread complete')
 			return True
-		print time_elapsed,status_dic['download_complete']
+		print (time_elapsed,status_dic['download_complete'])
 		if time_elapsed>120: # if waiting for more than 2 mins then kill it and retry 
-			print 'download stuck'
+			print ('download stuck')
 			# kill both thread
 			status_dic['kill_download_thread']=True
 			p1.terminate()
@@ -602,13 +602,13 @@ def download_file(url,outfilename):
 
 	for attempt in range(download_try_limit):
 		try:
-			print 'download_url:', url
-			print 'download_filename:',outfilename
+			print ('download_url:', url)
+			print ('download_filename:',outfilename)
 			run_download_file(url,outfilename)
 		except:
 			#thread_a.stop()
 			#thread_b.stop()
-			print "download stuck?"
+			print ("download stuck?")
 			error_log_list.append(str(traceback.format_exc()))
 			if os.path.isfile(outfilename):
 				os.remove(outfilename)
@@ -617,9 +617,9 @@ def download_file(url,outfilename):
 			return outfilename
 	raise Exception('download failed', json.dumps(error_log_list))
 def report_error(error_message):
-	print error_message
+	print (error_message)
 	r = requests.put('%(beta_server)s/report_error/'%{'beta_server':beta_server}, json={"message":error_message})
-	print r, 'error message sent' 
+	print (r, 'error message sent') 
 class DownloadingReport(object):
 	def __init__(self,csv_filename=None):
 		self.csv_filename=csv_filename
@@ -656,8 +656,8 @@ class DownloadingReport(object):
 					csv_writer.writerow([output_filename,status,request_url,download_url,timestamp,message.replace('\n', ' ').replace('\r', '')])
 	def print_download_record_list(self):
 		if self.download_record_list:
-			print '---------------------------------------------------------------------------------------'
-			print ' '.join(self.csv_header_list)
+			print ('---------------------------------------------------------------------------------------')
+			print (' '.join(self.csv_header_list))
 			for download_record in self.download_record_list:
 				output_filename=None
 				status=None
@@ -678,7 +678,7 @@ class DownloadingReport(object):
 				if 'request_url' in download_record:
 					request_url= download_record['request_url']
 
-				print output_filename,status,download_url,timestamp,message
+				print (output_filename,status,download_url,timestamp,message)
 def clean_filename(filename):
 	return re.sub("[!|*'();:@&=+$,/?# [\]]",'-',filename)
 
