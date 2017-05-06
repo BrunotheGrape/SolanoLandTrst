@@ -13,18 +13,18 @@ cellStats(imgrm, range)
 imgrm@crs
 imgrm@extent
 
-new.extent <- extent(-10, -10, 10, 10)
+new.extent <- extent(0, 70, 0, 60)
 
 
 
 
 
-imgrm1 <- crop(imgrm, extent(imgrm, -10, -100, 10, 100))
+imgrm1 <- crop(imgrm, extent(imgrm, 0, 70, 0, 60))
+imgrm2 <- crop(imgrm, extent(imgrm, 70, 140, 0, 60))
+imgrmx <- crop(imgrm, extent(imgrm, 3500, 3600, 3000, 3100))
 
 
-
-
-hist(imgrm1, main="Distribution of elevation values", 
+hist(imgrmx, main="Distribution of elevation values", 
      col= "purple", 
      maxpixels=22000000)
 
@@ -57,14 +57,14 @@ indices <- expand.grid(i, j)
 
 ##  Crop to these grid locations, storing individual cropped
 ##    areas in a list object:
-imgrm_out <- lapply(1:nrow(indices), function(x){ 
-  crop(imgrm, 
-       extent(imgrm,
-              indices[x,2], indices[x,2]+nrow(imgrm)/2 - 1,
-              indices[x,1], indices[x,1]+ncol(imgrm)/3 - 1
-       )
-  )
-})
+#imgrm_out <- lapply(1:nrow(indices), function(x){ 
+  #crop(imgrm, 
+       #extent(imgrm,
+             # indices[x,2], indices[x,2]+nrow(imgrm)/2 - 1,
+              #indices[x,1], indices[x,1]+ncol(imgrm)/3 - 1
+      # )
+ # )
+#})
 
 
 ##  Plot all individual rasters:
