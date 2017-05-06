@@ -17,11 +17,29 @@ new.extent <- extent(0, 70, 0, 60)
 
 
 
-
-
-imgrm1 <- crop(imgrm, extent(imgrm, 0, 70, 0, 60))
-imgrm2 <- crop(imgrm, extent(imgrm, 70, 140, 0, 60))
 imgrmx <- crop(imgrm, extent(imgrm, 3500, 3600, 3000, 3100))
+
+imgrm1.1 <- crop(imgrm, extent(imgrm, 0, 777, 0, 638))
+imgrm1.2 <- crop(imgrm, extent(imgrm, 778, 1554, 0, 638))
+imgrm1.3 <- crop(imgrm, extent(imgrm, 1555, 2331, 0, 638))
+imgrm1.4 <- crop(imgrm, extent(imgrm, 2332, 3108, 0, 638))
+imgrm1.5 <- crop(imgrm, extent(imgrm, 3109, 3885, 0, 638))
+imgrm1.6 <- crop(imgrm, extent(imgrm, 3886, 4662, 0, 638))
+imgrm1.7 <- crop(imgrm, extent(imgrm, 4663, 5439, 0, 638))
+imgrm1.8 <- crop(imgrm, extent(imgrm, 5440, 6216, 0, 638))
+imgrm1.9 <- crop(imgrm, extent(imgrm, 6217, 6993, 0, 638))
+imgrm1.10 <- crop(imgrm, extent(imgrm, 6994, 7771, 0, 638))
+
+imgrm2.1 <- crop(imgrm, extent(imgrm, 0, 777, 0, 1276))
+imgrm2.2 <- crop(imgrm, extent(imgrm, 778, 1554, 0, 1276))
+imgrm2.3 <- crop(imgrm, extent(imgrm, 1555, 2331, 0, 1276))
+imgrm2.4 <- crop(imgrm, extent(imgrm, 2332, 3108, 0, 1276))
+imgrm2.5 <- crop(imgrm, extent(imgrm, 3109, 3885, 0, 1276))
+imgrm2.6 <- crop(imgrm, extent(imgrm, 3886, 4662, 0, 1276))
+imgrm2.7 <- crop(imgrm, extent(imgrm, 4663, 5439, 0, 1276))
+imgrm2.8 <- crop(imgrm, extent(imgrm, 5440, 6216, 0, 1276))
+imgrm2.9 <- crop(imgrm, extent(imgrm, 6217, 6993, 0, 1276))
+imgrm2.10 <- crop(imgrm, extent(imgrm, 6994, 7771, 0, 1276))
 
 
 hist(imgrmx, main="Distribution of elevation values", 
@@ -51,8 +69,8 @@ plot(imgrm, col=col, breaks=brk, main="imgrm with more breaks")
 #j <- seq(1, nrow(r), nrow(r)/2)
 #indices <- expand.grid(i, j)
 
-i <- seq(1, 7000, 1000)
-j <- seq(1, 6000, 1000)
+#i <- seq(1, 7000, 1000)
+#j <- seq(1, 6000, 1000)
 indices <- expand.grid(i, j)
 
 ##  Crop to these grid locations, storing individual cropped
