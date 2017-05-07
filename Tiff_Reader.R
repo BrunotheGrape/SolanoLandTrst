@@ -63,6 +63,19 @@ imgrm4.8 <- crop(imgrm, extent(imgrm, 5440, 6216, 1915, 2552))
 imgrm4.9 <- crop(imgrm, extent(imgrm, 6217, 6993, 1915, 2552))
 imgrm4.10 <- crop(imgrm, extent(imgrm, 6994, 7771, 1915, 2552))
 
+imgrm5.1 <- crop(imgrm, extent(imgrm, 0, 777, 2553, 3190))
+imgrm5.2 <- crop(imgrm, extent(imgrm, 778, 1554, 2553, 3190))
+imgrm5.3 <- crop(imgrm, extent(imgrm, 1555, 2331, 2553, 3190))
+imgrm5.4 <- crop(imgrm, extent(imgrm, 2332, 3108, 2553, 3190))
+imgrm5.5 <- crop(imgrm, extent(imgrm, 3109, 3885, 2553, 3190))
+imgrm5.6 <- crop(imgrm, extent(imgrm, 3886, 4662, 2553, 3190))
+imgrm5.7 <- crop(imgrm, extent(imgrm, 4663, 5439, 2553, 3190))
+imgrm5.8 <- crop(imgrm, extent(imgrm, 5440, 6216, 2553, 3190))
+imgrm5.9 <- crop(imgrm, extent(imgrm, 6217, 6993, 2553, 3190))
+imgrm5.10 <- crop(imgrm, extent(imgrm, 6994, 7771, 2553, 3190))
+
+
+
 hist(imgrmx, main="Distribution of elevation values", 
      col= "purple", 
      maxpixels=22000000)
