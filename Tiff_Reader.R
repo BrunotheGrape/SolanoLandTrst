@@ -74,6 +74,43 @@ imgrm5.8 <- crop(imgrm, extent(imgrm, 5440, 6216, 2553, 3190))
 imgrm5.9 <- crop(imgrm, extent(imgrm, 6217, 6993, 2553, 3190))
 imgrm5.10 <- crop(imgrm, extent(imgrm, 6994, 7771, 2553, 3190))
 
+imgrm6.1 <- crop(imgrm, extent(imgrm, 0, 777, 3191, 3828))
+imgrm6.2 <- crop(imgrm, extent(imgrm, 778, 1554, 3191, 3828))
+imgrm6.3 <- crop(imgrm, extent(imgrm, 1555, 2331, 3191, 3828))
+imgrm6.4 <- crop(imgrm, extent(imgrm, 2332, 3108, 3191, 3828))
+imgrm6.5 <- crop(imgrm, extent(imgrm, 3109, 3885, 3191, 3828))
+imgrm6.6 <- crop(imgrm, extent(imgrm, 3886, 4662, 3191, 3828))
+imgrm6.7 <- crop(imgrm, extent(imgrm, 4663, 5439, 3191, 3828))
+imgrm6.8 <- crop(imgrm, extent(imgrm, 5440, 6216, 3191, 3828))
+imgrm6.9 <- crop(imgrm, extent(imgrm, 6217, 6993, 3191, 3828))
+imgrm6.10 <- crop(imgrm, extent(imgrm, 6994, 7771, 3191, 3828))
+
+imgrm7.1 <- crop(imgrm, extent(imgrm, 0, 777, 3829, 4466))
+imgrm7.2 <- crop(imgrm, extent(imgrm, 778, 1554, 3829, 4466))
+imgrm7.3 <- crop(imgrm, extent(imgrm, 1555, 2331, 3829, 4466))
+imgrm7.4 <- crop(imgrm, extent(imgrm, 2332, 3108, 3829, 4466))
+imgrm7.5 <- crop(imgrm, extent(imgrm, 3109, 3885, 3829, 4466))
+imgrm7.6 <- crop(imgrm, extent(imgrm, 3886, 4662, 3829, 4466))
+imgrm7.7 <- crop(imgrm, extent(imgrm, 4663, 5439, 3829, 4466))
+imgrm7.8 <- crop(imgrm, extent(imgrm, 5440, 6216, 3829, 4466))
+imgrm7.9 <- crop(imgrm, extent(imgrm, 6217, 6993, 3829, 4466))
+imgrm7.10 <- crop(imgrm, extent(imgrm, 6994, 7771, 3829, 4466))
+
+imgrm8.1 <- crop(imgrm, extent(imgrm, 0, 777, 4467, 5104))
+imgrm8.2 <- crop(imgrm, extent(imgrm, 778, 1554, 4467, 5104))
+imgrm8.3 <- crop(imgrm, extent(imgrm, 1555, 2331, 4467, 5104))
+imgrm8.4 <- crop(imgrm, extent(imgrm, 2332, 3108, 4467, 5104))
+imgrm8.5 <- crop(imgrm, extent(imgrm, 3109, 3885, 4467, 5104))
+imgrm8.6 <- crop(imgrm, extent(imgrm, 3886, 4662, 4467, 5104))
+imgrm8.7 <- crop(imgrm, extent(imgrm, 4663, 5439, 4467, 5104))
+imgrm8.8 <- crop(imgrm, extent(imgrm, 5440, 6216, 4467, 5104))
+imgrm8.9 <- crop(imgrm, extent(imgrm, 6217, 6993, 4467, 5104))
+imgrm8.10 <- crop(imgrm, extent(imgrm, 6994, 7771, 4467, 5104))
+
+
+
+
+
 
 
 hist(imgrmx, main="Distribution of elevation values", 
