@@ -107,9 +107,27 @@ imgrm8.8 <- crop(imgrm, extent(imgrm, 5440, 6216, 4467, 5104))
 imgrm8.9 <- crop(imgrm, extent(imgrm, 6217, 6993, 4467, 5104))
 imgrm8.10 <- crop(imgrm, extent(imgrm, 6994, 7771, 4467, 5104))
 
+imgrm9.1 <- crop(imgrm, extent(imgrm, 0, 777, 5105, 5742))
+imgrm9.2 <- crop(imgrm, extent(imgrm, 778, 1554, 5105, 5742))
+imgrm9.3 <- crop(imgrm, extent(imgrm, 1555, 2331, 5105, 5742))
+imgrm9.4 <- crop(imgrm, extent(imgrm, 2332, 3108, 5105, 5742))
+imgrm9.5 <- crop(imgrm, extent(imgrm, 3109, 3885, 5105, 5742))
+imgrm9.6 <- crop(imgrm, extent(imgrm, 3886, 4662, 5105, 5742))
+imgrm9.7 <- crop(imgrm, extent(imgrm, 4663, 5439, 5105, 5742))
+imgrm9.8 <- crop(imgrm, extent(imgrm, 5440, 6216, 5105, 5742))
+imgrm9.9 <- crop(imgrm, extent(imgrm, 6217, 6993, 5105, 5742))
+imgrm9.10 <- crop(imgrm, extent(imgrm, 6994, 7771, 5105, 5742))
 
-
-
+imgrm10.1 <- crop(imgrm, extent(imgrm, 0, 777, 5743, 6376))
+imgrm10.2 <- crop(imgrm, extent(imgrm, 778, 1554, 5743, 6376))
+imgrm10.3 <- crop(imgrm, extent(imgrm, 1555, 2331, 5743, 6376))
+imgrm10.4 <- crop(imgrm, extent(imgrm, 2332, 3108, 5743, 6376))
+imgrm10.5 <- crop(imgrm, extent(imgrm, 3109, 3885, 5743, 6376))
+imgrm10.6 <- crop(imgrm, extent(imgrm, 3886, 4662, 5743, 6376))
+imgrm10.7 <- crop(imgrm, extent(imgrm, 4663, 5439, 5743, 6376))
+imgrm10.8 <- crop(imgrm, extent(imgrm, 5440, 6216, 5743, 6376))
+imgrm10.9 <- crop(imgrm, extent(imgrm, 6217, 6993, 5743, 6376))
+imgrm10.10 <- crop(imgrm, extent(imgrm, 6994, 7771, 5743, 6376))
 
 
 
