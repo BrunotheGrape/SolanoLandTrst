@@ -1,4 +1,4 @@
-library(tiff); library(raster); library(rgdal); library(sp)
+library(tiff); library(raster); library(rgdal); library(sp); library(ggplot2)
 
 dft <- readTIFF("https://s3.amazonaws.com/share-terravion-com/solanolandtrust/2016-02-25_2310-34_7c98a49f-e6f0-499c-8016-afdac6c58641_Solano-Rush-Ranch-_TIRS_T_4326.tiff", all = TRUE, convert = TRUE)
 
@@ -175,5 +175,15 @@ indices <- expand.grid(i, j)
 
 
 ##  Plot all individual rasters:
-par(mfrow=c(2,3))
-lapply(r_out, plot)
+#par(mfrow=c(2,3))
+#lapply(r_out, plot)
+
+NDVI.5.5 <- stack(imgrm5.5)
+NDVI.5.5 <- NDVI.5.5/10000
+meanNDVI.5.5 <- cellStats(NDVI.5.5, mean)
+meanNDVI.5.5 <- as.data.frame(meanNDVI.5.5)
+meanNDVI.5.5
+NDVI.5.5
+dfNDVI.5.5 <- as.data.frame(NDVI.5.5)
+colnames(dfNDVI.5.5) <- "NDVI"
+dfNDVI.5.5$observation <- 1:nrow(dfNDVI.5.5)
