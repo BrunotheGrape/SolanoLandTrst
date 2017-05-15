@@ -1,4 +1,4 @@
-library(tiff); library(raster); library(rgdal); library(sp); library(ggplot2)
+library(tiff); library(raster); library(rgdal); library(sp); library(ggplot2); library(rasterVis)
 
 dft <- readTIFF("https://s3.amazonaws.com/share-terravion-com/solanolandtrust/2016-02-25_2310-34_7c98a49f-e6f0-499c-8016-afdac6c58641_Solano-Rush-Ranch-_TIRS_T_4326.tiff", all = TRUE, convert = TRUE)
 
@@ -229,3 +229,182 @@ NDVI.2.9 <- stack(imgrm2.9)
 NDVI.2.9 <- NDVI.2.9/10000
 NDVI.2.10 <- stack(imgrm2.10)
 NDVI.2.10 <- NDVI.2.10/10000
+
+NDVI.3.1 <- stack(imgrm3.1)
+NDVI.3.1 <- NDVI.3.1/10000
+NDVI.3.2 <- stack(imgrm3.2)
+NDVI.3.2 <- NDVI.3.2/10000
+NDVI.3.3 <- stack(imgrm3.3)
+NDVI.3.3 <- NDVI.3.3/10000
+NDVI.3.4 <- stack(imgrm3.4)
+NDVI.3.4 <- NDVI.3.4/10000
+NDVI.3.5 <- stack(imgrm3.5)
+NDVI.3.5 <- NDVI.3.5/10000
+NDVI.3.6 <- stack(imgrm3.6)
+NDVI.3.6 <- NDVI.3.6/10000
+NDVI.3.7 <- stack(imgrm3.7)
+NDVI.3.7 <- NDVI.3.7/10000
+NDVI.3.8 <- stack(imgrm3.8)
+NDVI.3.8 <- NDVI.3.8/10000
+NDVI.3.9 <- stack(imgrm3.9)
+NDVI.3.9 <- NDVI.3.9/10000
+NDVI.3.10 <- stack(imgrm3.10)
+NDVI.3.10 <- NDVI.3.10/10000
+
+NDVI.4.1 <- stack(imgrm4.1)
+NDVI.4.1 <- NDVI.4.1/10000
+NDVI.4.2 <- stack(imgrm4.2)
+NDVI.4.2 <- NDVI.4.2/10000
+NDVI.4.3 <- stack(imgrm4.3)
+NDVI.4.3 <- NDVI.4.3/10000
+NDVI.4.4 <- stack(imgrm4.4)
+NDVI.4.4 <- NDVI.4.4/10000
+NDVI.4.5 <- stack(imgrm4.5)
+NDVI.4.5 <- NDVI.4.5/10000
+NDVI.4.6 <- stack(imgrm4.6)
+NDVI.4.6 <- NDVI.4.6/10000
+NDVI.4.7 <- stack(imgrm4.7)
+NDVI.4.7 <- NDVI.4.7/10000
+NDVI.4.8 <- stack(imgrm4.8)
+NDVI.4.8 <- NDVI.4.8/10000
+NDVI.4.9 <- stack(imgrm4.9)
+NDVI.4.9 <- NDVI.4.9/10000
+NDVI.4.10 <- stack(imgrm4.10)
+NDVI.4.10 <- NDVI.4.10/10000
+
+NDVI.5.1 <- stack(imgrm5.1)
+NDVI.5.1 <- NDVI.5.1/10000
+NDVI.5.2 <- stack(imgrm5.2)
+NDVI.5.2 <- NDVI.5.2/10000
+NDVI.5.3 <- stack(imgrm5.3)
+NDVI.5.3 <- NDVI.5.3/10000
+NDVI.5.4 <- stack(imgrm5.4)
+NDVI.5.4 <- NDVI.5.4/10000
+NDVI.5.5 <- stack(imgrm5.5)
+NDVI.5.5 <- NDVI.5.5/10000
+NDVI.5.6 <- stack(imgrm5.6)
+NDVI.5.6 <- NDVI.5.6/10000
+NDVI.5.7 <- stack(imgrm5.7)
+NDVI.5.7 <- NDVI.5.7/10000
+NDVI.5.8 <- stack(imgrm5.8)
+NDVI.5.8 <- NDVI.5.8/10000
+NDVI.5.9 <- stack(imgrm5.9)
+NDVI.5.9 <- NDVI.5.9/10000
+NDVI.5.10 <- stack(imgrm5.10)
+NDVI.5.10 <- NDVI.5.10/10000
+
+NDVI.6.1 <- stack(imgrm6.1)
+NDVI.6.1 <- NDVI.6.1/10000
+NDVI.6.2 <- stack(imgrm6.2)
+NDVI.6.2 <- NDVI.6.2/10000
+NDVI.6.3 <- stack(imgrm6.3)
+NDVI.6.3 <- NDVI.6.3/10000
+NDVI.6.4 <- stack(imgrm6.4)
+NDVI.6.4 <- NDVI.6.4/10000
+NDVI.6.5 <- stack(imgrm6.5)
+NDVI.6.5 <- NDVI.6.5/10000
+NDVI.6.6 <- stack(imgrm6.6)
+NDVI.6.6 <- NDVI.6.6/10000
+NDVI.6.7 <- stack(imgrm6.7)
+NDVI.6.7 <- NDVI.6.7/10000
+NDVI.6.8 <- stack(imgrm6.8)
+NDVI.6.8 <- NDVI.6.8/10000
+NDVI.6.9 <- stack(imgrm6.9)
+NDVI.6.9 <- NDVI.6.9/10000
+NDVI.6.10 <- stack(imgrm6.10)
+NDVI.6.10 <- NDVI.6.10/10000
+
+NDVI.7.1 <- stack(imgrm7.1)
+NDVI.7.1 <- NDVI.7.1/10000
+NDVI.7.2 <- stack(imgrm7.2)
+NDVI.7.2 <- NDVI.7.2/10000
+NDVI.7.3 <- stack(imgrm7.3)
+NDVI.7.3 <- NDVI.7.3/10000
+NDVI.7.4 <- stack(imgrm7.4)
+NDVI.7.4 <- NDVI.7.4/10000
+NDVI.7.5 <- stack(imgrm7.5)
+NDVI.7.5 <- NDVI.7.5/10000
+NDVI.7.6 <- stack(imgrm7.6)
+NDVI.7.6 <- NDVI.7.6/10000
+NDVI.7.7 <- stack(imgrm7.7)
+NDVI.7.7 <- NDVI.7.7/10000
+NDVI.7.8 <- stack(imgrm7.8)
+NDVI.7.8 <- NDVI.7.8/10000
+NDVI.7.9 <- stack(imgrm7.9)
+NDVI.7.9 <- NDVI.7.9/10000
+NDVI.7.10 <- stack(imgrm7.10)
+NDVI.7.10 <- NDVI.7.10/10000
+
+NDVI.8.1 <- stack(imgrm8.1)
+NDVI.8.1 <- NDVI.8.1/10000
+NDVI.8.2 <- stack(imgrm8.2)
+NDVI.8.2 <- NDVI.8.2/10000
+NDVI.8.3 <- stack(imgrm8.3)
+NDVI.8.3 <- NDVI.8.3/10000
+NDVI.8.4 <- stack(imgrm8.4)
+NDVI.8.4 <- NDVI.8.4/10000
+NDVI.8.5 <- stack(imgrm8.5)
+NDVI.8.5 <- NDVI.8.5/10000
+NDVI.8.6 <- stack(imgrm8.6)
+NDVI.8.6 <- NDVI.8.6/10000
+NDVI.8.7 <- stack(imgrm8.7)
+NDVI.8.7 <- NDVI.8.7/10000
+NDVI.8.8 <- stack(imgrm8.8)
+NDVI.8.8 <- NDVI.8.8/10000
+NDVI.8.9 <- stack(imgrm8.9)
+NDVI.8.9 <- NDVI.8.9/10000
+NDVI.8.10 <- stack(imgrm8.10)
+NDVI.8.10 <- NDVI.8.10/10000
+
+NDVI.9.1 <- stack(imgrm9.1)
+NDVI.9.1 <- NDVI.9.1/10000
+NDVI.9.2 <- stack(imgrm9.2)
+NDVI.9.2 <- NDVI.9.2/10000
+NDVI.9.3 <- stack(imgrm9.3)
+NDVI.9.3 <- NDVI.9.3/10000
+NDVI.9.4 <- stack(imgrm9.4)
+NDVI.9.4 <- NDVI.9.4/10000
+NDVI.9.5 <- stack(imgrm9.5)
+NDVI.9.5 <- NDVI.9.5/10000
+NDVI.9.6 <- stack(imgrm9.6)
+NDVI.9.6 <- NDVI.9.6/10000
+NDVI.9.7 <- stack(imgrm9.7)
+NDVI.9.7 <- NDVI.9.7/10000
+NDVI.9.8 <- stack(imgrm9.8)
+NDVI.9.8 <- NDVI.9.8/10000
+NDVI.9.9 <- stack(imgrm9.9)
+NDVI.9.9 <- NDVI.9.9/10000
+NDVI.9.10 <- stack(imgrm9.10)
+NDVI.9.10 <- NDVI.9.10/10000
+
+NDVI.10.1 <- stack(imgrm10.1)
+NDVI.10.1 <- NDVI.10.1/10000
+NDVI.10.2 <- stack(imgrm10.2)
+NDVI.10.2 <- NDVI.10.2/10000
+NDVI.10.3 <- stack(imgrm10.3)
+NDVI.10.3 <- NDVI.10.3/10000
+NDVI.10.4 <- stack(imgrm10.4)
+NDVI.10.4 <- NDVI.10.4/10000
+NDVI.10.5 <- stack(imgrm10.5)
+NDVI.10.5 <- NDVI.10.5/10000
+NDVI.10.6 <- stack(imgrm10.6)
+NDVI.10.6 <- NDVI.10.6/10000
+NDVI.10.7 <- stack(imgrm10.7)
+NDVI.10.7 <- NDVI.10.7/10000
+NDVI.10.8 <- stack(imgrm10.8)
+NDVI.10.8 <- NDVI.10.8/10000
+NDVI.10.9 <- stack(imgrm10.9)
+NDVI.10.9 <- NDVI.10.9/10000
+NDVI.10.10 <- stack(imgrm10.10)
+NDVI.10.10 <- NDVI.10.10/10000
+
+par(mfrow=c(1,3))
+plot(NDVI.4.4)
+plot(NDVI.4.5)
+plot(NDVI.4.6)
+#plot(NDVI.5.4)
+#plot(NDVI.5.5)
+#plot(NDVI.5.6)
+#plot(NDVI.6.4)
+#plot(NDVI.6.5)
+#plot(NDVI.6.6)
