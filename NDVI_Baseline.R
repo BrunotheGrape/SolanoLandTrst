@@ -39,3 +39,53 @@ image(wlc1m, main="Digital Elevation Model (wlc1m)", col=col)
 brk <- c(250, 300, 350, 400,450,500)
 
 plot(wlc1m, col=col, breaks=brk, main="wlc1m with more breaks")
+
+NDVI.1 <- stack(wlc1)
+NDVI.1 <- NDVI.1/10000
+meanNDVI.1 <- cellStats(NDVI.1, mean)
+meanNDVI.1 <- as.data.frame(meanNDVI.1)
+meanNDVI.1
+medianNDVI.1 <- cellStats(NDVI.1, median)
+medianNDVI.1 <- as.data.frame(medianNDVI.1)
+medianNDVI.1
+NDVI.1
+dfNDVI.1 <- as.data.frame(NDVI.1)
+colnames(dfNDVI.1) <- "NDVI"
+dfNDVI.1$observation <- 1:nrow(dfNDVI.1)
+
+plot(NDVI.1)
+
+NDVI.2 <- stack(wlc2)
+NDVI.2 <- NDVI.2/10000
+meanNDVI.2 <- cellStats(NDVI.2, mean)
+meanNDVI.2 <- as.data.frame(meanNDVI.2)
+meanNDVI.2
+medianNDVI.2 <- cellStats(NDVI.2, median)
+medianNDVI.2 <- as.data.frame(medianNDVI.2)
+medianNDVI.2
+NDVI.2
+dfNDVI.2 <- as.data.frame(NDVI.2)
+colnames(dfNDVI.2) <- "NDVI"
+dfNDVI.2$observation <- 1:nrow(dfNDVI.2)
+
+plot(NDVI.2)
+
+NDVI.3 <- stack(wlc3)
+NDVI.1 <- NDVI.1/10000
+meanNDVI.3 <- cellStats(NDVI.3, mean)
+meanNDVI.3 <- as.data.frame(meanNDVI.3)
+meanNDVI.3
+medianNDVI.3 <- cellStats(NDVI.3, median)
+medianNDVI.3 <- as.data.frame(medianNDVI.3)
+medianNDVI.3
+NDVI.3
+dfNDVI.3 <- as.data.frame(NDVI.3)
+colnames(dfNDVI.3) <- "NDVI"
+dfNDVI.3$observation <- 1:nrow(dfNDVI.3)
+
+plot(NDVI.3)
+
+par(mfrow=c(1,3))
+plot(NDVI.1)
+plot(NDVI.2)
+plot(NDVI.3)
