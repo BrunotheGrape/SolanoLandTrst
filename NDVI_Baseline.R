@@ -71,7 +71,7 @@ dfNDVI.2$observation <- 1:nrow(dfNDVI.2)
 plot(NDVI.2)
 
 NDVI.3 <- stack(wlc3)
-NDVI.1 <- NDVI.1/10000
+NDVI.3 <- NDVI.3/10000
 meanNDVI.3 <- cellStats(NDVI.3, mean)
 meanNDVI.3 <- as.data.frame(meanNDVI.3)
 meanNDVI.3
@@ -85,7 +85,148 @@ dfNDVI.3$observation <- 1:nrow(dfNDVI.3)
 
 plot(NDVI.3)
 
-par(mfrow=c(1,3))
+NDVI.4 <- stack(wlc4)
+NDVI.4 <- NDVI.4/10000
+meanNDVI.4 <- cellStats(NDVI.4, mean)
+meanNDVI.4 <- as.data.frame(meanNDVI.4)
+meanNDVI.4
+medianNDVI.4 <- cellStats(NDVI.4, median)
+medianNDVI.4 <- as.data.frame(medianNDVI.4)
+medianNDVI.4
+NDVI.4
+dfNDVI.4 <- as.data.frame(NDVI.4)
+colnames(dfNDVI.4) <- "NDVI"
+dfNDVI.4$observation <- 1:nrow(dfNDVI.4)
+
+plot(NDVI.4)
+
+NDVI.5 <- stack(wlc5)
+NDVI.5 <- NDVI.5/10000
+meanNDVI.5 <- cellStats(NDVI.5, mean)
+meanNDVI.5 <- as.data.frame(meanNDVI.5)
+meanNDVI.5
+medianNDVI.5 <- cellStats(NDVI.5, median)
+medianNDVI.5 <- as.data.frame(medianNDVI.5)
+medianNDVI.5
+NDVI.5
+dfNDVI.5 <- as.data.frame(NDVI.5)
+colnames(dfNDVI.5) <- "NDVI"
+dfNDVI.5$observation <- 1:nrow(dfNDVI.5)
+
+plot(NDVI.5)
+
+NDVI.6 <- stack(wlc6)
+NDVI.6 <- NDVI.6/10000
+meanNDVI.6 <- cellStats(NDVI.6, mean)
+meanNDVI.6 <- as.data.frame(meanNDVI.6)
+meanNDVI.6
+medianNDVI.6 <- cellStats(NDVI.6, median)
+medianNDVI.6 <- as.data.frame(medianNDVI.6)
+medianNDVI.6
+NDVI.6
+dfNDVI.6 <- as.data.frame(NDVI.6)
+colnames(dfNDVI.6) <- "NDVI"
+dfNDVI.6$observation <- 1:nrow(dfNDVI.6)
+
+plot(NDVI.6)
+
+NDVI.7 <- stack(wlc7)
+NDVI.7 <- NDVI.7/10000
+meanNDVI.7 <- cellStats(NDVI.7, mean)
+meanNDVI.7 <- as.data.frame(meanNDVI.7)
+meanNDVI.7
+medianNDVI.7 <- cellStats(NDVI.7, median)
+medianNDVI.7 <- as.data.frame(medianNDVI.7)
+medianNDVI.7
+NDVI.7
+dfNDVI.7 <- as.data.frame(NDVI.7)
+colnames(dfNDVI.7) <- "NDVI"
+dfNDVI.7$observation <- 1:nrow(dfNDVI.7)
+
+plot(NDVI.7)
+
+NDVI.8 <- stack(wlc8)
+NDVI.8 <- NDVI.8/10000
+meanNDVI.8 <- cellStats(NDVI.8, mean)
+meanNDVI.8 <- as.data.frame(meanNDVI.8)
+meanNDVI.8
+medianNDVI.8 <- cellStats(NDVI.8, median)
+medianNDVI.8 <- as.data.frame(medianNDVI.8)
+medianNDVI.8
+NDVI.8
+dfNDVI.8 <- as.data.frame(NDVI.8)
+colnames(dfNDVI.8) <- "NDVI"
+dfNDVI.8$observation <- 1:nrow(dfNDVI.8)
+
+plot(NDVI.8)
+
+NDVI.9 <- stack(wlc9)
+NDVI.9 <- NDVI.9/10000
+meanNDVI.9 <- cellStats(NDVI.9, mean)
+meanNDVI.9 <- as.data.frame(meanNDVI.9)
+meanNDVI.9
+medianNDVI.9 <- cellStats(NDVI.9, median)
+medianNDVI.9 <- as.data.frame(medianNDVI.9)
+medianNDVI.9
+NDVI.9
+dfNDVI.9 <- as.data.frame(NDVI.9)
+colnames(dfNDVI.9) <- "NDVI"
+dfNDVI.9$observation <- 1:nrow(dfNDVI.9)
+
+plot(NDVI.9)
+
+NDVI.10 <- stack(wlc10)
+NDVI.10 <- NDVI.10/10000
+meanNDVI.10 <- cellStats(NDVI.10, mean)
+meanNDVI.10 <- as.data.frame(meanNDVI.10)
+meanNDVI.10
+medianNDVI.10 <- cellStats(NDVI.10, median)
+medianNDVI.10 <- as.data.frame(medianNDVI.10)
+medianNDVI.10
+NDVI.10
+dfNDVI.10 <- as.data.frame(NDVI.10)
+colnames(dfNDVI.10) <- "NDVI"
+dfNDVI.10$observation <- 1:nrow(dfNDVI.10)
+
+plot(NDVI.10)
+
+par(mfrow = c(1,2))
 plot(NDVI.1)
+plot(NDVI.6)
+
+par(mfrow=c(1,2))
 plot(NDVI.2)
+plot(NDVI.7)
+
+par(mfrow=c(1,2))
 plot(NDVI.3)
+plot(NDVI.8)
+
+par(mfrow=c(1,2))
+plot(NDVI.4)
+plot(NDVI.9)
+
+par(mfrow=c(1,2))
+plot(NDVI.5)
+plot(NDVI.10)
+
+NDVI.1
+NDVI.6
+
+
+wlnc1 <- raster("https://s3.amazonaws.com/share-terravion-com/solanolandtrust/2016-07-05_1746-30_a651f248-3fdc-4c24-9f53-ef3323596250_Wallace_Brazelton-0121150110_NC_4326.tiff")
+
+NDNC.1 <- stack(wlc1)
+NDNC.1 <- NDNC.1/10000
+meanNDNC.1 <- cellStats(NDNC.1, mean)
+meanNDNC.1 <- as.data.frame(meanNDNC.1)
+meanNDNC.1
+medianNDNC.1 <- cellStats(NDNC.1, median)
+medianNDNC.1 <- as.data.frame(medianNDNC.1)
+medianNDNC.1
+NDNC.1
+dfNDNC.1 <- as.data.frame(NDNC.1)
+colnames(dfNDNC.1) <- "NDVI"
+dfNDNC.1$observation <- 1:nrow(dfNDNC.1)
+
+plot(NDNC.1)
