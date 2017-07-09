@@ -123,8 +123,16 @@ rrbldf <- cbind(rrbldf, ndvimn)
 write.csv(rrbldf, "RushRanchBlk1_2016.csv")
 
 options(device = "RStudioGD")
-ndvi050316us <- unstack(ndvi050316df)
-ndvi050316p <- ggplot(ndvi050316us, aes(ndvi050316us$res, color = "darkblue")) + geom_histogram(binwidth = 2)
+ndvi050316us <- unstack(ndvi050316df); colnames(ndvi050316us) <- "MAY0316"
+ndvi052616us <- unstack(ndvi052616df); colnames(ndvi052616us) <- "MAY2616"
+ndvi062316us <- unstack(ndvi062316df); colnames(ndvi062316us) <- "JUN2316"
+ndvi062916us <- unstack(ndvi062916df); colnames(ndvi062916us) <- "JUN2916"
+ndvi072716us <- unstack(ndvi072716df); colnames(ndvi072716us) <- "JUL2716"
+ndvi081716us <- unstack(ndvi081716df); colnames(ndvi081716us) <- "AUG1716"
+ndvi082416us <- unstack(ndvi082416df); colnames(ndvi082416us) <- "AUG2416"
+
+
+ndvi050316p <- ggplot(ndvi050316us, aes(ndvi050316us$JUN0316)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
 ndvi050316p <- ndvi050316p + labs(title = "May 3, 2016 NDVI Values Histogram", x = "")
 ndvi050316p <- ndvi050316p + theme_bw()
 ndvi050316p
