@@ -25,27 +25,20 @@ ndvi072716st <- stack(ndvi072716)
 ndvi081716st <- stack(ndvi081716)
 ndvi082416st <- stack(ndvi082416)
 
-ndvi050316df <- as.data.frame(ndvi050316st)
-colnames(ndvi050316df) <- "NDVI"
-ndvi050316df$observation <- 1:nrow(ndvi050316df)
-ndvi052616df <- as.data.frame(ndvi052616st)
-colnames(ndvi052616df) <- "NDVI"
-ndvi052616df$observation <- 1:nrow(ndvi052616df)
-ndvi062316df <- as.data.frame(ndvi062316st)
-colnames(ndvi062316df) <- "NDVI"
-ndvi062316df$observation <- 1:nrow(ndvi062316df)
-ndvi062916df <- as.data.frame(ndvi062916st)
-colnames(ndvi062916df) <- "NDVI"
-ndvi062916df$observation <- 1:nrow(ndvi062916df)
-ndvi072716df <- as.data.frame(ndvi072716st)
-colnames(ndvi072716df) <- "NDVI"
-ndvi072716df$observation <- 1:nrow(ndvi072716df)
-ndvi081716df <- as.data.frame(ndvi081716st)
-colnames(ndvi081716df) <- "NDVI"
-ndvi081716df$observation <- 1:nrow(ndvi081716df)
-ndvi082416df <- as.data.frame(ndvi082416st)
-colnames(ndvi082416df) <- "NDVI"
-ndvi082416df$observation <- 1:nrow(ndvi082416df)
+ndvi050316df <- as.data.frame(ndvi050316st);colnames(ndvi050316df) <- "NDVI"; ndvi050316df$observation <- 1:nrow(ndvi050316df)
+
+ndvi052616df <- as.data.frame(ndvi052616st);colnames(ndvi052616df) <- "NDVI"; ndvi052616df$observation <- 1:nrow(ndvi052616df)
+
+ndvi062316df <- as.data.frame(ndvi062316st); colnames(ndvi062316df) <- "NDVI"; ndvi062316df$observation <- 1:nrow(ndvi062316df)
+
+ndvi062916df <- as.data.frame(ndvi062916st); colnames(ndvi062916df) <- "NDVI"; ndvi062916df$observation <- 1:nrow(ndvi062916df)
+
+ndvi072716df <- as.data.frame(ndvi072716st); colnames(ndvi072716df) <- "NDVI"; ndvi072716df$observation <- 1:nrow(ndvi072716df)
+
+ndvi081716df <- as.data.frame(ndvi081716st); colnames(ndvi081716df) <- "NDVI"; ndvi081716df$observation <- 1:nrow(ndvi081716df)
+
+ndvi082416df <- as.data.frame(ndvi082416st);colnames(ndvi082416df) <- "NDVI"; ndvi082416df$observation <- 1:nrow(ndvi082416df)
+
 
 ndvi050316 <- setMinMax(ndvi050316)
 ndvi052616 <- setMinMax(ndvi052616)
@@ -136,6 +129,10 @@ ndvi050316p <- ggplot(ndvi050316us, aes(ndvi050316us$JUN0316)) + geom_histogram(
 ndvi050316p <- ndvi050316p + labs(title = "May 3, 2016 NDVI Values Histogram", x = "")
 ndvi050316p <- ndvi050316p + theme_bw()
 ndvi050316p
+ggsave(file = "050316.png")
+
+
 
 ndvip050316 <- ndvi050316/1000
 plot(ndvip050316)
+
