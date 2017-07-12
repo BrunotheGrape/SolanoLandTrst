@@ -1,6 +1,6 @@
 library(tiff); library(raster); library(rgdal); library(sp) 
 library(ggplot2); library(rasterVis); library(date)
-library(caret)
+library(caret); library(dplyr)
 
 
 dt <- as.Date(c("2016-05-03", "2016-05-26", "2016-06-23", "2016-06-29", "2016-07-27", "2016-08-17", "2016-08-24"))
@@ -125,11 +125,19 @@ ndvi081716us <- unstack(ndvi081716df); colnames(ndvi081716us) <- "AUG1716"
 ndvi082416us <- unstack(ndvi082416df); colnames(ndvi082416us) <- "AUG2416"
 
 
-ndvi050316p <- ggplot(ndvi050316us, aes(ndvi050316us$JUN0316)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
+ndvi050316p <- ggplot(ndvi050316us, aes(ndvi050316us$MAY0316)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
 ndvi050316p <- ndvi050316p + labs(title = "May 3, 2016 NDVI Values Histogram", x = "")
 ndvi050316p <- ndvi050316p + theme_bw()
 ndvi050316p
 ggsave(file = "050316.png")
+
+ndvi052616p <- ggplot(ndvi052616us, aes(ndvi052616us$MAY2616)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
+ndvi052616p <- ndvi052616p + labs(title = "May 26, 2016 NDVI Values Histogram", x = "")
+ndvi052616p <- ndvi052616p + theme_bw()
+ndvi052616p
+ggsave(file = "052616.png")
+
+ndvi050316rs <- sample_n(ndvi050316us, 1400000)
 
 
 
