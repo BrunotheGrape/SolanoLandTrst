@@ -137,7 +137,30 @@ ndvi052616p <- ndvi052616p + theme_bw()
 ndvi052616p
 ggsave(file = "052616.png")
 
+set.seed(131)
 ndvi050316rs <- sample_n(ndvi050316us, 1400000)
+ndvi052616rs <- sample_n(ndvi052616us, 1400000)
+ndvi062316rs <- sample_n(ndvi062316us, 1400000)
+ndvi062916rs <- sample_n(ndvi062916us, 1400000)
+ndvi072716rs <- sample_n(ndvi072716us, 1400000)
+ndvi081716rs <- sample_n(ndvi081716us, 1400000)
+ndvi082416rs <- sample_n(ndvi082416us, 1400000)
+
+rrblrs <- cbind(ndvi050316rs, ndvi052616rs)
+rrblrs <- cbind(rrblrs, ndvi062316rs)
+rrblrs <- cbind(rrblrs, ndvi062916rs)
+rrblrs <- cbind(rrblrs, ndvi072716rs)
+rrblrs <- cbind(rrblrs, ndvi081716rs)
+rrblrs <- cbind(rrblrs, ndvi082416rs)
+
+rrblrsp <- ggplot(rrblrs, aes("MAY0316", fill = "darkblue")) + geom_density()
+rrblrsp <- rrblrsp + ggplot(rrblrs, aes("MAY2616", fill = "darkblue")) + geom_density()
+rrblrsp
+
+
+
+ggplot(vegLengths, aes(length, fill = veg)) + geom_density(alpha = 0.2)
+
 
 
 
