@@ -1,6 +1,6 @@
 library(tiff); library(raster); library(rgdal); library(sp) 
 library(ggplot2); library(rasterVis); library(date)
-library(caret); library(dplyr)
+library(caret); library(dplyr); library(vioplot); library(RColorBrewer)
 
 
 dt <- as.Date(c("2016-05-03", "2016-05-26", "2016-06-23", "2016-06-29", "2016-07-27", "2016-08-17", "2016-08-24"))
@@ -90,8 +90,6 @@ ndvi082416mx <- cellStats(ndvi082416, max)
 ndvi082416mn <- cellStats(ndvi082416, min)
 ndvi082416sd <- sd(ndvi082416df$NDVI, na.rm = TRUE)
 
-
-
 ndviav <- data.frame(Average = c(ndvi050316av, ndvi052616av, ndvi062316av, ndvi062916av,
                                  ndvi072716av, ndvi081716av, ndvi082416av))
 
@@ -107,6 +105,7 @@ ndvimx <- data.frame(Maximum = c(ndvi050316mx, ndvi052616mx, ndvi062316mx, ndvi0
 ndvimn <- data.frame(Minimum = c(ndvi050316mn, ndvi052616mn, ndvi062316mn, ndvi062916mn,
                                  ndvi072716mn, ndvi081716mn, ndvi082416mn))
 
+
 rrbldf <- cbind(dt, ndviav)
 rrbldf <- cbind(rrbldf, ndvimd)
 rrbldf <- cbind(rrbldf, ndvisd)
@@ -116,13 +115,13 @@ rrbldf <- cbind(rrbldf, ndvimn)
 write.csv(rrbldf, "RushRanchBlk1_2016.csv")
 
 options(device = "RStudioGD")
-ndvi050316us <- unstack(ndvi050316df); colnames(ndvi050316us) <- "MAY0316"
-ndvi052616us <- unstack(ndvi052616df); colnames(ndvi052616us) <- "MAY2616"
-ndvi062316us <- unstack(ndvi062316df); colnames(ndvi062316us) <- "JUN2316"
-ndvi062916us <- unstack(ndvi062916df); colnames(ndvi062916us) <- "JUN2916"
-ndvi072716us <- unstack(ndvi072716df); colnames(ndvi072716us) <- "JUL2716"
-ndvi081716us <- unstack(ndvi081716df); colnames(ndvi081716us) <- "AUG1716"
-ndvi082416us <- unstack(ndvi082416df); colnames(ndvi082416us) <- "AUG2416"
+ndvi050316us <- unstack(ndvi050316df); colnames(ndvi050316us) <- "NDVI"
+ndvi052616us <- unstack(ndvi052616df); colnames(ndvi052616us) <- "NDVI"
+ndvi062316us <- unstack(ndvi062316df); colnames(ndvi062316us) <- "NDVI"
+ndvi062916us <- unstack(ndvi062916df); colnames(ndvi062916us) <- "NDVI"
+ndvi072716us <- unstack(ndvi072716df); colnames(ndvi072716us) <- "NDVI"
+ndvi081716us <- unstack(ndvi081716df); colnames(ndvi081716us) <- "NDVI"
+ndvi082416us <- unstack(ndvi082416df); colnames(ndvi082416us) <- "NDVI"
 
 
 ndvi050316p <- ggplot(ndvi050316us, aes(ndvi050316us$MAY0316)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
@@ -138,25 +137,54 @@ ndvi052616p
 ggsave(file = "052616.png")
 
 set.seed(131)
-ndvi050316rs <- sample_n(ndvi050316us, 1400000)
-ndvi052616rs <- sample_n(ndvi052616us, 1400000)
-ndvi062316rs <- sample_n(ndvi062316us, 1400000)
-ndvi062916rs <- sample_n(ndvi062916us, 1400000)
-ndvi072716rs <- sample_n(ndvi072716us, 1400000)
-ndvi081716rs <- sample_n(ndvi081716us, 1400000)
-ndvi082416rs <- sample_n(ndvi082416us, 1400000)
+ndvi050316us <- na.omit(ndvi050316us); ndvi050316rs <- sample_n(ndvi050316us, 1000000); ndvi050316rs$Date <- "a"
+ndvi052616us <- na.omit(ndvi052616us); ndvi052616rs <- sample_n(ndvi052616us, 1000000); ndvi052616rs$Date <- "b"
+ndvi062316us <- na.omit(ndvi062316us); ndvi062316rs <- sample_n(ndvi062316us, 1000000); ndvi062316rs$Date <- "c"
+ndvi062916us <- na.omit(ndvi062916us); ndvi062916rs <- sample_n(ndvi062916us, 1000000); ndvi062916rs$Date <- "d"
+ndvi072716us <- na.omit(ndvi072716us); ndvi072716rs <- sample_n(ndvi072716us, 1000000); ndvi072716rs$Date <- "e"
+ndvi081716us <- na.omit(ndvi081716us); ndvi081716rs <- sample_n(ndvi081716us, 1000000); ndvi081716rs$Date <- "f"
+ndvi082416us <- na.omit(ndvi082416us); ndvi082416rs <- sample_n(ndvi082416us, 1000000); ndvi082416rs$Date <- "g"
 
-rrblrs <- cbind(ndvi050316rs, ndvi052616rs)
-rrblrs <- cbind(rrblrs, ndvi062316rs)
-rrblrs <- cbind(rrblrs, ndvi062916rs)
-rrblrs <- cbind(rrblrs, ndvi072716rs)
-rrblrs <- cbind(rrblrs, ndvi081716rs)
-rrblrs <- cbind(rrblrs, ndvi082416rs)
+rrblrs <- rbind(ndvi082416rs, ndvi081716rs)
+rrblrs <- rbind(rrblrs, ndvi072716rs)
+rrblrs <- rbind(rrblrs, ndvi062916rs)
+rrblrs <- rbind(rrblrs, ndvi062316rs)
+rrblrs <- rbind(rrblrs, ndvi052616rs)
+rrblrs <- rbind(rrblrs, ndvi050316rs)
 
-rrblrsp <- ggplot(rrblrs, aes("MAY0316", fill = "darkblue")) + geom_density()
-rrblrsp <- rrblrsp + ggplot(rrblrs, aes("MAY2616", fill = "darkblue")) + geom_density()
+
+
+
+rrblrsp <- ggplot(rrblrs, aes(x = Date, y = NDVI)) + geom_violin(aes(fill = Date))
+rrblrsp <- rrblrsp + scale_fill_brewer(palette="BrBG", labels = c("May 3", "May 26", "June 23", "June 26", "July 27", "Aug 17", "Aug 24"))
+rrblrsp <- rrblrsp + xlab("") + theme(axis.text.x = element_blank())
+rrblrsp <- rrblrsp + stat_summary(fun.data=mean_sdl, mult=1, geom="pointrange", color="red")
 rrblrsp
 
+rrblrsp <- ggplot(rrblrs, aes(x = Date, y = NDVI)) + geom_boxplot(aes(fill = Date))
+rrblrsp <- rrblrsp + scale_fill_brewer(palette="BrBG", labels = c("May 3", "May 26", "June 23", "June 26", "July 27", "Aug 17", "Aug 24"))
+rrblrsp <- rrblrsp + xlab("") + theme(axis.text.x = element_blank())
+rrblrsp
+
+
+# vioplot(rrblrs$MAY0316, rrblrs$MAY2616, rrblrs$JUN2316, rrblrs$JUN2916, 
+#         rrblrs$JUL2716, rrblrs$AUG1716, rrblrs$AUG2416, col = brewer.pal(7,"BrBG") )
+# 
+# plot(1,1,xlim=c(0,120),ylim=range(c(a,b)),type="n",
+#      xlab="",ylab="",axes=FALSE)
+# vioplot(rrblrs$MAY0316, at=1, col = "gold", add = TRUE)
+# vioplot(rrblrs$MAY2616, at=2, col = "red", add = TRUE)
+# 
+# axis(side=1,at=1:3,labels=c("first","second","third"))
+# axis(side=2)
+# vioplot(a,at=1,col="blue",add=TRUE)
+# vioplot(b,at=2,col="red",add=TRUE)
+# vioplot(c,at=3,col="magenta",add=TRUE)
+# 
+# 
+
+ggplot(ndvi052616rs$MAY2616,aes()) + geom_violin() 
+      
 
 
 ggplot(vegLengths, aes(length, fill = veg)) + geom_density(alpha = 0.2)
