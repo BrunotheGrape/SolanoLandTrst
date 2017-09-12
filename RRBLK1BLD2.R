@@ -1175,49 +1175,49 @@ ndvi082416.6.2.us <- unstack(ndvi082416.6.2.df); colnames(ndvi082416.6.2.us) <- 
 ndvi050316.6.2.p <- ggplot(ndvi050316.6.2.us, aes(ndvi050316.6.2.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
 ndvi050316.6.2.p <- ndvi050316.6.2.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi050316.6.2.us$NDVI, na.rm = T)), color = "#b2df8a")
 ndvi050316.6.2.p <- ndvi050316.6.2.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi050316.6.2.us$NDVI, na.rm = T)), color = "#fc8d62")
-ndvi050316.6.2.p <- ndvi050316.6.2.p + labs(title = "Rush Ranch Block 1, Section 1.6\nMay 3, 2016 NDVI Values Histogram\n with mean & median", x = "")
+ndvi050316.6.2.p <- ndvi050316.6.2.p + labs(title = "Rush Ranch Block 1, Section 2.6\nMay 3, 2016 NDVI Values Histogram\n with mean & median", x = "")
 ndvi050316.6.2.p
 ggsave(file = "050316.2.6.png")
 
 ndvi052616.6.2.p <- ggplot(ndvi052616.6.2.us, aes(ndvi052616.6.2.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
 ndvi052616.6.2.p <- ndvi052616.6.2.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi052616.6.2.us$NDVI, na.rm = T)), color = "#b2df8a")
 ndvi052616.6.2.p <- ndvi052616.6.2.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi052616.6.2.us$NDVI, na.rm = T)), color = "#fc8d62")
-ndvi052616.6.2.p <- ndvi052616.6.2.p + labs(title = "Rush Ranch Block 1, Section 1.6\nMay 26, 2016 NDVI Values Histogram\n with mean & median", x = "")
+ndvi052616.6.2.p <- ndvi052616.6.2.p + labs(title = "Rush Ranch Block 1, Section 2.6\nMay 26, 2016 NDVI Values Histogram\n with mean & median", x = "")
 ndvi052616.6.2.p
 ggsave(file = "052616.2.6.png")
 
 ndvi062316.6.2.p <- ggplot(ndvi062316.6.2.us, aes(ndvi062316.6.2.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
 ndvi062316.6.2.p <- ndvi062316.6.2.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi062316.6.2.us$NDVI, na.rm = T)), color = "#b2df8a")
 ndvi062316.6.2.p <- ndvi062316.6.2.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi062316.6.2.us$NDVI, na.rm = T)), color = "#fc8d62")
-ndvi062316.6.2.p <- ndvi062316.6.2.p + labs(title = "Rush Ranch Block 1, Section 1.6\nJune 23, 2016 NDVI Values Histogram\n with mean & median", x = "")
+ndvi062316.6.2.p <- ndvi062316.6.2.p + labs(title = "Rush Ranch Block 1, Section 2.6\nJune 23, 2016 NDVI Values Histogram\n with mean & median", x = "")
 ndvi062316.6.2.p
 ggsave(file = "062316.2.6.png")
 
 ndvi062916.6.2.p <- ggplot(ndvi062916.6.2.us, aes(ndvi062916.6.2.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
 ndvi062916.6.2.p <- ndvi062916.6.2.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi062916.6.2.us$NDVI, na.rm = T)), color = "#b2df8a")
 ndvi062916.6.2.p <- ndvi062916.6.2.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi062916.6.2.us$NDVI, na.rm = T)), color = "#fc8d62")
-ndvi062916.6.2.p <- ndvi062916.6.2.p + labs(title = "Rush Ranch Block 1, Section 1.6\nJune 29, 2016 NDVI Values Histogram\n with mean & median", x = "")
+ndvi062916.6.2.p <- ndvi062916.6.2.p + labs(title = "Rush Ranch Block 1, Section 2.6\nJune 29, 2016 NDVI Values Histogram\n with mean & median", x = "")
 ndvi062916.6.2.p
 ggsave(file = "062916.2.6.png")
 
 ndvi072716.6.2.p <- ggplot(ndvi072716.6.2.us, aes(ndvi072716.6.2.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
 ndvi072716.6.2.p <- ndvi072716.6.2.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi072716.6.2.us$NDVI, na.rm = T)), color = "#b2df8a")
 ndvi072716.6.2.p <- ndvi072716.6.2.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi072716.6.2.us$NDVI, na.rm = T)), color = "#fc8d62")
-ndvi072716.6.2.p <- ndvi072716.6.2.p + labs(title = "Rush Ranch Block 1, Section 1.6\nJuly 27, 2016 NDVI Values Histogram\n with mean &median", x = "")
+ndvi072716.6.2.p <- ndvi072716.6.2.p + labs(title = "Rush Ranch Block 1, Section 2.6\nJuly 27, 2016 NDVI Values Histogram\n with mean &median", x = "")
 ndvi072716.6.2.p
 ggsave(file = "072716.2.6.png")
 
 ndvi081716.6.2.p <- ggplot(ndvi081716.6.2.us, aes(ndvi081716.6.2.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
 ndvi081716.6.2.p <- ndvi081716.6.2.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi081716.6.2.us$NDVI, na.rm = T)), color = "#b2df8a")
 ndvi081716.6.2.p <- ndvi081716.6.2.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi081716.6.2.us$NDVI, na.rm = T)), color = "#fc8d62")
-ndvi081716.6.2.p <- ndvi081716.6.2.p + labs(title = "Rush Ranch Block 1, Section 1.6\nAugust 17, 2016 NDVI Values Histogram\n with mean & median", x = "")
+ndvi081716.6.2.p <- ndvi081716.6.2.p + labs(title = "Rush Ranch Block 1, Section 2.6\nAugust 17, 2016 NDVI Values Histogram\n with mean & median", x = "")
 ndvi081716.6.2.p
 ggsave(file = "081716.2.6.png")
 
 ndvi082416.6.2.p <- ggplot(ndvi082416.6.2.us, aes(ndvi082416.6.2.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
 ndvi082416.6.2.p <- ndvi082416.6.2.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi082416.6.2.us$NDVI, na.rm = T)), color = "#b2df8a")
 ndvi082416.6.2.p <- ndvi082416.6.2.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi082416.6.2.us$NDVI, na.rm = T)), color = "#fc8d62")
-ndvi082416.6.2.p <- ndvi082416.6.2.p + labs(title = "Rush Ranch Block 1, Section 1.6\nAugust 24, 2016 NDVI Values Histogram\n with mean & median", x = "")
+ndvi082416.6.2.p <- ndvi082416.6.2.p + labs(title = "Rush Ranch Block 1, Section 2.6\nAugust 24, 2016 NDVI Values Histogram\n with mean & median", x = "")
 ndvi082416.6.2.p
 ggsave(file = "082416.2.6.png")
 
@@ -1244,14 +1244,14 @@ rrblrsp <- ggplot(rrblrs, aes(x = Date, y = NDVI)) + geom_violin(aes(fill = Date
 rrblrsp <- rrblrsp + scale_fill_brewer(palette="BrBG", labels = c("May 3", "May 26", "June 23", "June 26", "July 27", "Aug 17", "Aug 24"))
 rrblrsp <- rrblrsp + xlab("") + theme_bw()+ theme(axis.text.x = element_blank()) + theme(plot.title = element_text(hjust = 0.5))
 rrblrsp <- rrblrsp + stat_summary(fun.data=mean_sdl, mult=1, geom="pointrange", color="#bf812d")
-rrblrsp <- rrblrsp + labs(title = "Rush Ranch Block 1, Section 1.6\n2016 NDVI Values")
+rrblrsp <- rrblrsp + labs(title = "Rush Ranch Block 1, Section 2.6\n2016 NDVI Values")
 rrblrsp
 ggsave(file = "rrblrsp2016violin.2.6.png")
 
 rrblrsp <- ggplot(rrblrs, aes(x = Date, y = NDVI)) + geom_boxplot(aes(fill = Date))
 rrblrsp <- rrblrsp + scale_fill_brewer(palette="BrBG", labels = c("May 3", "May 26", "June 23", "June 26", "July 27", "Aug 17", "Aug 24"))
 rrblrsp <- rrblrsp + xlab("") + theme_bw() + theme(axis.text.x = element_blank()) + theme(plot.title = element_text(hjust = 0.5))
-rrblrsp <- rrblrsp + labs(title = "Rush Ranch Block 1, Section 1.6\n2016 NDVI Values")
+rrblrsp <- rrblrsp + labs(title = "Rush Ranch Block 1, Section 2.6\n2016 NDVI Values")
 rrblrsp
 ggsave(file = "rrblrsp2016box.2.6.png")
 
@@ -1379,49 +1379,49 @@ ndvi082416.7.2.us <- unstack(ndvi082416.7.2.df); colnames(ndvi082416.7.2.us) <- 
 ndvi050316.7.2.p <- ggplot(ndvi050316.7.2.us, aes(ndvi050316.7.2.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
 ndvi050316.7.2.p <- ndvi050316.7.2.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi050316.7.2.us$NDVI, na.rm = T)), color = "#b2df8a")
 ndvi050316.7.2.p <- ndvi050316.7.2.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi050316.7.2.us$NDVI, na.rm = T)), color = "#fc8d62")
-ndvi050316.7.2.p <- ndvi050316.7.2.p + labs(title = "Rush Ranch Block 1, Section 1.7\nMay 3, 2016 NDVI Values Histogram\n with mean & median", x = "")
+ndvi050316.7.2.p <- ndvi050316.7.2.p + labs(title = "Rush Ranch Block 1, Section 2.7\nMay 3, 2016 NDVI Values Histogram\n with mean & median", x = "")
 ndvi050316.7.2.p
 ggsave(file = "050316.2.7.png")
 
 ndvi052616.7.2.p <- ggplot(ndvi052616.7.2.us, aes(ndvi052616.7.2.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
 ndvi052616.7.2.p <- ndvi052616.7.2.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi052616.7.2.us$NDVI, na.rm = T)), color = "#b2df8a")
 ndvi052616.7.2.p <- ndvi052616.7.2.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi052616.7.2.us$NDVI, na.rm = T)), color = "#fc8d62")
-ndvi052616.7.2.p <- ndvi052616.7.2.p + labs(title = "Rush Ranch Block 1, Section 1.7\nMay 26, 2016 NDVI Values Histogram\n with mean & median", x = "")
+ndvi052616.7.2.p <- ndvi052616.7.2.p + labs(title = "Rush Ranch Block 1, Section 2.7\nMay 26, 2016 NDVI Values Histogram\n with mean & median", x = "")
 ndvi052616.7.2.p
 ggsave(file = "052616.2.7.png")
 
 ndvi062316.7.2.p <- ggplot(ndvi062316.7.2.us, aes(ndvi062316.7.2.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
 ndvi062316.7.2.p <- ndvi062316.7.2.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi062316.7.2.us$NDVI, na.rm = T)), color = "#b2df8a")
 ndvi062316.7.2.p <- ndvi062316.7.2.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi062316.7.2.us$NDVI, na.rm = T)), color = "#fc8d62")
-ndvi062316.7.2.p <- ndvi062316.7.2.p + labs(title = "Rush Ranch Block 1, Section 1.7\nJune 23, 2016 NDVI Values Histogram\n with mean & median", x = "")
+ndvi062316.7.2.p <- ndvi062316.7.2.p + labs(title = "Rush Ranch Block 1, Section 2.7\nJune 23, 2016 NDVI Values Histogram\n with mean & median", x = "")
 ndvi062316.7.2.p
 ggsave(file = "062316.2.7.png")
 
 ndvi062916.7.2.p <- ggplot(ndvi062916.7.2.us, aes(ndvi062916.7.2.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
 ndvi062916.7.2.p <- ndvi062916.7.2.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi062916.7.2.us$NDVI, na.rm = T)), color = "#b2df8a")
 ndvi062916.7.2.p <- ndvi062916.7.2.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi062916.7.2.us$NDVI, na.rm = T)), color = "#fc8d62")
-ndvi062916.7.2.p <- ndvi062916.7.2.p + labs(title = "Rush Ranch Block 1, Section 1.7\nJune 29, 2016 NDVI Values Histogram\n with mean & median", x = "")
+ndvi062916.7.2.p <- ndvi062916.7.2.p + labs(title = "Rush Ranch Block 1, Section 2.7\nJune 29, 2016 NDVI Values Histogram\n with mean & median", x = "")
 ndvi062916.7.2.p
 ggsave(file = "062916.2.7.png")
 
 ndvi072716.7.2.p <- ggplot(ndvi072716.7.2.us, aes(ndvi072716.7.2.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
 ndvi072716.7.2.p <- ndvi072716.7.2.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi072716.7.2.us$NDVI, na.rm = T)), color = "#b2df8a")
 ndvi072716.7.2.p <- ndvi072716.7.2.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi072716.7.2.us$NDVI, na.rm = T)), color = "#fc8d62")
-ndvi072716.7.2.p <- ndvi072716.7.2.p + labs(title = "Rush Ranch Block 1, Section 1.7\nJuly 27, 2016 NDVI Values Histogram\n with mean &median", x = "")
+ndvi072716.7.2.p <- ndvi072716.7.2.p + labs(title = "Rush Ranch Block 1, Section 2.7\nJuly 27, 2016 NDVI Values Histogram\n with mean &median", x = "")
 ndvi072716.7.2.p
 ggsave(file = "072716.2.7.png")
 
 ndvi081716.7.2.p <- ggplot(ndvi081716.7.2.us, aes(ndvi081716.7.2.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
 ndvi081716.7.2.p <- ndvi081716.7.2.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi081716.7.2.us$NDVI, na.rm = T)), color = "#b2df8a")
 ndvi081716.7.2.p <- ndvi081716.7.2.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi081716.7.2.us$NDVI, na.rm = T)), color = "#fc8d62")
-ndvi081716.7.2.p <- ndvi081716.7.2.p + labs(title = "Rush Ranch Block 1, Section 1.7\nAugust 17, 2016 NDVI Values Histogram\n with mean & median", x = "")
+ndvi081716.7.2.p <- ndvi081716.7.2.p + labs(title = "Rush Ranch Block 1, Section 2.7\nAugust 17, 2016 NDVI Values Histogram\n with mean & median", x = "")
 ndvi081716.7.2.p
 ggsave(file = "081716.2.7.png")
 
 ndvi082416.7.2.p <- ggplot(ndvi082416.7.2.us, aes(ndvi082416.7.2.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
 ndvi082416.7.2.p <- ndvi082416.7.2.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi082416.7.2.us$NDVI, na.rm = T)), color = "#b2df8a")
 ndvi082416.7.2.p <- ndvi082416.7.2.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi082416.7.2.us$NDVI, na.rm = T)), color = "#fc8d62")
-ndvi082416.7.2.p <- ndvi082416.7.2.p + labs(title = "Rush Ranch Block 1, Section 1.7\nAugust 24, 2016 NDVI Values Histogram\n with mean & median", x = "")
+ndvi082416.7.2.p <- ndvi082416.7.2.p + labs(title = "Rush Ranch Block 1, Section 2.7\nAugust 24, 2016 NDVI Values Histogram\n with mean & median", x = "")
 ndvi082416.7.2.p
 ggsave(file = "082416.2.7.png")
 
@@ -1448,14 +1448,14 @@ rrblrsp <- ggplot(rrblrs, aes(x = Date, y = NDVI)) + geom_violin(aes(fill = Date
 rrblrsp <- rrblrsp + scale_fill_brewer(palette="BrBG", labels = c("May 3", "May 26", "June 23", "June 26", "July 27", "Aug 17", "Aug 24"))
 rrblrsp <- rrblrsp + xlab("") + theme_bw()+ theme(axis.text.x = element_blank()) + theme(plot.title = element_text(hjust = 0.5))
 rrblrsp <- rrblrsp + stat_summary(fun.data=mean_sdl, mult=1, geom="pointrange", color="#bf812d")
-rrblrsp <- rrblrsp + labs(title = "Rush Ranch Block 1, Section 1.7\n2016 NDVI Values")
+rrblrsp <- rrblrsp + labs(title = "Rush Ranch Block 1, Section 2.7\n2016 NDVI Values")
 rrblrsp
 ggsave(file = "rrblrsp2016violin.2.7.png")
 
 rrblrsp <- ggplot(rrblrs, aes(x = Date, y = NDVI)) + geom_boxplot(aes(fill = Date))
 rrblrsp <- rrblrsp + scale_fill_brewer(palette="BrBG", labels = c("May 3", "May 26", "June 23", "June 26", "July 27", "Aug 17", "Aug 24"))
 rrblrsp <- rrblrsp + xlab("") + theme_bw() + theme(axis.text.x = element_blank()) + theme(plot.title = element_text(hjust = 0.5))
-rrblrsp <- rrblrsp + labs(title = "Rush Ranch Block 1, Section 1.7\n2016 NDVI Values")
+rrblrsp <- rrblrsp + labs(title = "Rush Ranch Block 1, Section 2.7\n2016 NDVI Values")
 rrblrsp
 ggsave(file = "rrblrsp2016box.2.7.png")
 
@@ -1583,60 +1583,60 @@ ndvi082416.8.2.us <- unstack(ndvi082416.8.2.df); colnames(ndvi082416.8.2.us) <- 
 ndvi050316.8.2.p <- ggplot(ndvi050316.8.2.us, aes(ndvi050316.8.2.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
 ndvi050316.8.2.p <- ndvi050316.8.2.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi050316.8.2.us$NDVI, na.rm = T)), color = "#b2df8a")
 ndvi050316.8.2.p <- ndvi050316.8.2.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi050316.8.2.us$NDVI, na.rm = T)), color = "#fc8d62")
-ndvi050316.8.2.p <- ndvi050316.8.2.p + labs(title = "Rush Ranch Block 1, Section 1.8\nMay 3, 2016 NDVI Values Histogram\n with mean & median", x = "")
+ndvi050316.8.2.p <- ndvi050316.8.2.p + labs(title = "Rush Ranch Block 1, Section 2.8\nMay 3, 2016 NDVI Values Histogram\n with mean & median", x = "")
 ndvi050316.8.2.p
 ggsave(file = "050316.2.8.png")
 
 ndvi052616.8.2.p <- ggplot(ndvi052616.8.2.us, aes(ndvi052616.8.2.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
 ndvi052616.8.2.p <- ndvi052616.8.2.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi052616.8.2.us$NDVI, na.rm = T)), color = "#b2df8a")
 ndvi052616.8.2.p <- ndvi052616.8.2.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi052616.8.2.us$NDVI, na.rm = T)), color = "#fc8d62")
-ndvi052616.8.2.p <- ndvi052616.8.2.p + labs(title = "Rush Ranch Block 1, Section 1.8\nMay 26, 2016 NDVI Values Histogram\n with mean & median", x = "")
+ndvi052616.8.2.p <- ndvi052616.8.2.p + labs(title = "Rush Ranch Block 1, Section 2.8\nMay 26, 2016 NDVI Values Histogram\n with mean & median", x = "")
 ndvi052616.8.2.p
 ggsave(file = "052616.2.8.png")
 
 ndvi062316.8.2.p <- ggplot(ndvi062316.8.2.us, aes(ndvi062316.8.2.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
 ndvi062316.8.2.p <- ndvi062316.8.2.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi062316.8.2.us$NDVI, na.rm = T)), color = "#b2df8a")
 ndvi062316.8.2.p <- ndvi062316.8.2.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi062316.8.2.us$NDVI, na.rm = T)), color = "#fc8d62")
-ndvi062316.8.2.p <- ndvi062316.8.2.p + labs(title = "Rush Ranch Block 1, Section 1.8\nJune 23, 2016 NDVI Values Histogram\n with mean & median", x = "")
+ndvi062316.8.2.p <- ndvi062316.8.2.p + labs(title = "Rush Ranch Block 1, Section 2.8\nJune 23, 2016 NDVI Values Histogram\n with mean & median", x = "")
 ndvi062316.8.2.p
 ggsave(file = "062316.2.8.png")
 
 ndvi062916.8.2.p <- ggplot(ndvi062916.8.2.us, aes(ndvi062916.8.2.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
 ndvi062916.8.2.p <- ndvi062916.8.2.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi062916.8.2.us$NDVI, na.rm = T)), color = "#b2df8a")
 ndvi062916.8.2.p <- ndvi062916.8.2.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi062916.8.2.us$NDVI, na.rm = T)), color = "#fc8d62")
-ndvi062916.8.2.p <- ndvi062916.8.2.p + labs(title = "Rush Ranch Block 1, Section 1.8\nJune 29, 2016 NDVI Values Histogram\n with mean & median", x = "")
+ndvi062916.8.2.p <- ndvi062916.8.2.p + labs(title = "Rush Ranch Block 1, Section 2.8\nJune 29, 2016 NDVI Values Histogram\n with mean & median", x = "")
 ndvi062916.8.2.p
 ggsave(file = "062916.2.8.png")
 
 ndvi072716.8.2.p <- ggplot(ndvi072716.8.2.us, aes(ndvi072716.8.2.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
 ndvi072716.8.2.p <- ndvi072716.8.2.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi072716.8.2.us$NDVI, na.rm = T)), color = "#b2df8a")
 ndvi072716.8.2.p <- ndvi072716.8.2.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi072716.8.2.us$NDVI, na.rm = T)), color = "#fc8d62")
-ndvi072716.8.2.p <- ndvi072716.8.2.p + labs(title = "Rush Ranch Block 1, Section 1.8\nJuly 27, 2016 NDVI Values Histogram\n with mean &median", x = "")
+ndvi072716.8.2.p <- ndvi072716.8.2.p + labs(title = "Rush Ranch Block 1, Section 2.8\nJuly 27, 2016 NDVI Values Histogram\n with mean &median", x = "")
 ndvi072716.8.2.p
 ggsave(file = "072716.2.8.png")
 
 ndvi081716.8.2.p <- ggplot(ndvi081716.8.2.us, aes(ndvi081716.8.2.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
 ndvi081716.8.2.p <- ndvi081716.8.2.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi081716.8.2.us$NDVI, na.rm = T)), color = "#b2df8a")
 ndvi081716.8.2.p <- ndvi081716.8.2.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi081716.8.2.us$NDVI, na.rm = T)), color = "#fc8d62")
-ndvi081716.8.2.p <- ndvi081716.8.2.p + labs(title = "Rush Ranch Block 1, Section 1.8\nAugust 17, 2016 NDVI Values Histogram\n with mean & median", x = "")
+ndvi081716.8.2.p <- ndvi081716.8.2.p + labs(title = "Rush Ranch Block 1, Section 2.8\nAugust 17, 2016 NDVI Values Histogram\n with mean & median", x = "")
 ndvi081716.8.2.p
 ggsave(file = "081716.2.8.png")
 
 ndvi082416.8.2.p <- ggplot(ndvi082416.8.2.us, aes(ndvi082416.8.2.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
 ndvi082416.8.2.p <- ndvi082416.8.2.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi082416.8.2.us$NDVI, na.rm = T)), color = "#b2df8a")
 ndvi082416.8.2.p <- ndvi082416.8.2.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi082416.8.2.us$NDVI, na.rm = T)), color = "#fc8d62")
-ndvi082416.8.2.p <- ndvi082416.8.2.p + labs(title = "Rush Ranch Block 1, Section 1.8\nAugust 24, 2016 NDVI Values Histogram\n with mean & median", x = "")
+ndvi082416.8.2.p <- ndvi082416.8.2.p + labs(title = "Rush Ranch Block 1, Section 2.8\nAugust 24, 2016 NDVI Values Histogram\n with mean & median", x = "")
 ndvi082416.8.2.p
 ggsave(file = "082416.2.8.png")
 
 set.seed(131)
-ndvi050316.8.2.us <- na.omit(ndvi050316.8.2.us); ndvi050316.8.2.rs <- sample_n(ndvi050316.8.2.us, 13000); ndvi050316.8.2.rs$Date <- "a"
-ndvi052616.8.2.us <- na.omit(ndvi052616.8.2.us); ndvi052616.8.2.rs <- sample_n(ndvi052616.8.2.us, 13000); ndvi052616.8.2.rs$Date <- "b"
-ndvi062316.8.2.us <- na.omit(ndvi062316.8.2.us); ndvi062316.8.2.rs <- sample_n(ndvi062316.8.2.us, 13000); ndvi062316.8.2.rs$Date <- "c"
-ndvi062916.8.2.us <- na.omit(ndvi062916.8.2.us); ndvi062916.8.2.rs <- sample_n(ndvi062916.8.2.us, 13000); ndvi062916.8.2.rs$Date <- "d"
-ndvi072716.8.2.us <- na.omit(ndvi072716.8.2.us); ndvi072716.8.2.rs <- sample_n(ndvi072716.8.2.us, 13000); ndvi072716.8.2.rs$Date <- "e"
-ndvi081716.8.2.us <- na.omit(ndvi081716.8.2.us); ndvi081716.8.2.rs <- sample_n(ndvi081716.8.2.us, 13000); ndvi081716.8.2.rs$Date <- "f"
-ndvi082416.8.2.us <- na.omit(ndvi082416.8.2.us); ndvi082416.8.2.rs <- sample_n(ndvi082416.8.2.us, 13000); ndvi082416.8.2.rs$Date <- "g"
+ndvi050316.8.2.us <- na.omit(ndvi050316.8.2.us); ndvi050316.8.2.rs <- sample_n(ndvi050316.8.2.us, 15000); ndvi050316.8.2.rs$Date <- "a"
+ndvi052616.8.2.us <- na.omit(ndvi052616.8.2.us); ndvi052616.8.2.rs <- sample_n(ndvi052616.8.2.us, 15000); ndvi052616.8.2.rs$Date <- "b"
+ndvi062316.8.2.us <- na.omit(ndvi062316.8.2.us); ndvi062316.8.2.rs <- sample_n(ndvi062316.8.2.us, 15000); ndvi062316.8.2.rs$Date <- "c"
+ndvi062916.8.2.us <- na.omit(ndvi062916.8.2.us); ndvi062916.8.2.rs <- sample_n(ndvi062916.8.2.us, 15000); ndvi062916.8.2.rs$Date <- "d"
+ndvi072716.8.2.us <- na.omit(ndvi072716.8.2.us); ndvi072716.8.2.rs <- sample_n(ndvi072716.8.2.us, 15000); ndvi072716.8.2.rs$Date <- "e"
+ndvi081716.8.2.us <- na.omit(ndvi081716.8.2.us); ndvi081716.8.2.rs <- sample_n(ndvi081716.8.2.us, 15000); ndvi081716.8.2.rs$Date <- "f"
+ndvi082416.8.2.us <- na.omit(ndvi082416.8.2.us); ndvi082416.8.2.rs <- sample_n(ndvi082416.8.2.us, 15000); ndvi082416.8.2.rs$Date <- "g"
 
 rrblrs <- rbind(ndvi082416.8.2.rs, ndvi081716.8.2.rs)
 rrblrs <- rbind(rrblrs, ndvi072716.8.2.rs)
@@ -1652,14 +1652,14 @@ rrblrsp <- ggplot(rrblrs, aes(x = Date, y = NDVI)) + geom_violin(aes(fill = Date
 rrblrsp <- rrblrsp + scale_fill_brewer(palette="BrBG", labels = c("May 3", "May 26", "June 23", "June 26", "July 27", "Aug 17", "Aug 24"))
 rrblrsp <- rrblrsp + xlab("") + theme_bw()+ theme(axis.text.x = element_blank()) + theme(plot.title = element_text(hjust = 0.5))
 rrblrsp <- rrblrsp + stat_summary(fun.data=mean_sdl, mult=1, geom="pointrange", color="#bf812d")
-rrblrsp <- rrblrsp + labs(title = "Rush Ranch Block 1, Section 1.8\n2016 NDVI Values")
+rrblrsp <- rrblrsp + labs(title = "Rush Ranch Block 1, Section 2.8\n2016 NDVI Values")
 rrblrsp
 ggsave(file = "rrblrsp2016violin.2.8.png")
 
 rrblrsp <- ggplot(rrblrs, aes(x = Date, y = NDVI)) + geom_boxplot(aes(fill = Date))
 rrblrsp <- rrblrsp + scale_fill_brewer(palette="BrBG", labels = c("May 3", "May 26", "June 23", "June 26", "July 27", "Aug 17", "Aug 24"))
 rrblrsp <- rrblrsp + xlab("") + theme_bw() + theme(axis.text.x = element_blank()) + theme(plot.title = element_text(hjust = 0.5))
-rrblrsp <- rrblrsp + labs(title = "Rush Ranch Block 1, Section 1.8\n2016 NDVI Values")
+rrblrsp <- rrblrsp + labs(title = "Rush Ranch Block 1, Section 2.8\n2016 NDVI Values")
 rrblrsp
 ggsave(file = "rrblrsp2016box.2.8.png")
 
