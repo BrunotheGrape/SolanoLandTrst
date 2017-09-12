@@ -52,7 +52,7 @@ ndvi082416.4.1 <- crop(ndvi082416, extent(ndvi082416, 240, 319, 1 ,200))
  ndvi050316.1.1
 # 
 # image(ndvi050316)
- image(ndvi082416.1.4)
+ image(ndvi082416.4.1)
 
 ndvi050316.4.1.st <- stack(ndvi050316.4.1)
 ndvi052616.4.1.st <- stack(ndvi052616.4.1)
