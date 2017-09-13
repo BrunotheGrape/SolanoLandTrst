@@ -592,7 +592,7 @@ ndvi072716.3.2.p <- ndvi072716.3.2.p + theme_bw() + geom_vline(aes(xintercept = 
 ndvi072716.3.2.p <- ndvi072716.3.2.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi072716.3.2.us$NDVI, na.rm = T)), color = "#fc8d62")
 ndvi072716.3.2.p <- ndvi072716.3.2.p + labs(title = "Rush Ranch Block 1, Section 2.3\nJuly 27, 2016 NDVI Values Histogram\n with mean &median", x = "")
 ndvi072716.3.2.p
-ggsave(file = "072716.3.2.png")
+ggsave(file = "072716.2.3.png")
 
 ndvi081716.3.2.p <- ggplot(ndvi081716.3.2.us, aes(ndvi081716.3.2.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
 ndvi081716.3.2.p <- ndvi081716.3.2.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi081716.3.2.us$NDVI, na.rm = T)), color = "#b2df8a")
@@ -869,7 +869,7 @@ ndvi082416.5.2 <- crop(ndvi082416, extent(ndvi082416, 320, 399, 201 ,400))
 # ndvi050316.1.1
 # 
 # image(ndvi050316)
-image(ndvi082416.2.5)
+image(ndvi082416.5.2)
 
 ndvi050316.5.2.st <- stack(ndvi050316.5.2)
 ndvi052616.5.2.st <- stack(ndvi052616.5.2)
