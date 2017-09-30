@@ -256,7 +256,7 @@ ndvi082416.2.3 <- crop(ndvi082416, extent(ndvi082416, 80, 159, 401, 600))
 # ndvi050316.1.1
 # 
 # image(ndvi050316)
-image(ndvi082416.3.2)
+image(ndvi082416.2.3)
 
 ndvi050316.2.3.st <- stack(ndvi050316.2.3)
 ndvi052616.2.3.st <- stack(ndvi052616.2.3)
@@ -405,13 +405,13 @@ ndvi082416.2.3.p
 ggsave(file = "082416.3.2.png")
 
 set.seed(131)
-ndvi050316.2.3.us <- na.omit(ndvi050316.2.3.us); ndvi050316.2.3.rs <- sample_n(ndvi050316.2.3.us, 4500); ndvi050316.2.3.rs$Date <- "a"
-ndvi052616.2.3.us <- na.omit(ndvi052616.2.3.us); ndvi052616.2.3.rs <- sample_n(ndvi052616.2.3.us, 4500); ndvi052616.2.3.rs$Date <- "b"
-ndvi062316.2.3.us <- na.omit(ndvi062316.2.3.us); ndvi062316.2.3.rs <- sample_n(ndvi062316.2.3.us, 4500); ndvi062316.2.3.rs$Date <- "c"
-ndvi062916.2.3.us <- na.omit(ndvi062916.2.3.us); ndvi062916.2.3.rs <- sample_n(ndvi062916.2.3.us, 4500); ndvi062916.2.3.rs$Date <- "d"
-ndvi072716.2.3.us <- na.omit(ndvi072716.2.3.us); ndvi072716.2.3.rs <- sample_n(ndvi072716.2.3.us, 4500); ndvi072716.2.3.rs$Date <- "e"
-ndvi081716.2.3.us <- na.omit(ndvi081716.2.3.us); ndvi081716.2.3.rs <- sample_n(ndvi081716.2.3.us, 4500); ndvi081716.2.3.rs$Date <- "f"
-ndvi082416.2.3.us <- na.omit(ndvi082416.2.3.us); ndvi082416.2.3.rs <- sample_n(ndvi082416.2.3.us, 4500); ndvi082416.2.3.rs$Date <- "g"
+ndvi050316.2.3.us <- na.omit(ndvi050316.2.3.us); ndvi050316.2.3.rs <- sample_n(ndvi050316.2.3.us, 6250); ndvi050316.2.3.rs$Date <- "a"
+ndvi052616.2.3.us <- na.omit(ndvi052616.2.3.us); ndvi052616.2.3.rs <- sample_n(ndvi052616.2.3.us, 6250); ndvi052616.2.3.rs$Date <- "b"
+ndvi062316.2.3.us <- na.omit(ndvi062316.2.3.us); ndvi062316.2.3.rs <- sample_n(ndvi062316.2.3.us, 6250); ndvi062316.2.3.rs$Date <- "c"
+ndvi062916.2.3.us <- na.omit(ndvi062916.2.3.us); ndvi062916.2.3.rs <- sample_n(ndvi062916.2.3.us, 6250); ndvi062916.2.3.rs$Date <- "d"
+ndvi072716.2.3.us <- na.omit(ndvi072716.2.3.us); ndvi072716.2.3.rs <- sample_n(ndvi072716.2.3.us, 6250); ndvi072716.2.3.rs$Date <- "e"
+ndvi081716.2.3.us <- na.omit(ndvi081716.2.3.us); ndvi081716.2.3.rs <- sample_n(ndvi081716.2.3.us, 6250); ndvi081716.2.3.rs$Date <- "f"
+ndvi082416.2.3.us <- na.omit(ndvi082416.2.3.us); ndvi082416.2.3.rs <- sample_n(ndvi082416.2.3.us, 6250); ndvi082416.2.3.rs$Date <- "g"
 
 rrblrs <- rbind(ndvi082416.2.3.rs, ndvi081716.2.3.rs)
 rrblrs <- rbind(rrblrs, ndvi072716.2.3.rs)
