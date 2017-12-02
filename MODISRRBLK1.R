@@ -41,12 +41,91 @@ modus2010183 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e6
 modus2010190 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/b2e3e49c-69c2-43f8-bbf9-71cef421a9ec/WELDUSWK.001_NDVI_TOA_doy2010190_aid0001.tif')
 modus2010197 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/976e0011-07fd-4284-b2c2-fa94e4bc9da1/WELDUSWK.001_NDVI_TOA_doy2010197_aid0001.tif')
 modus2010204 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/f3a7328e-5ffc-4235-8909-991e1b4ff3eb/WELDUSWK.001_NDVI_TOA_doy2010204_aid0001.tif')
-
-
-
-
-
+modus2010211 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/da14afc0-5b2c-42a0-b39f-28f7f222e80b/WELDUSWK.001_NDVI_TOA_doy2010211_aid0001.tif')
+modus2010225 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/ee4d2ed3-9871-416f-beba-c382e8419656/WELDUSWK.001_NDVI_TOA_doy2010225_aid0001.tif')
+modus2010232 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/1efbe815-56f7-416b-80a7-bfae8254b95b/WELDUSWK.001_NDVI_TOA_doy2010232_aid0001.tif')
+modus2010239 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/54910dd0-dcd7-496c-950e-01f1dcc3da5b/WELDUSWK.001_NDVI_TOA_doy2010239_aid0001.tif')
+modus2010246 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/3083e899-aa3b-4577-8f77-af3cb5b436a5/WELDUSWK.001_NDVI_TOA_doy2010246_aid0001.tif')
+modus2010253 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/fa5c330c-724d-41c3-8e97-624284e2d511/WELDUSWK.001_NDVI_TOA_doy2010253_aid0001.tif')
 modus2010260 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/95bf291b-cf11-4b23-9f16-c47d123b0aef/cc9bc7af-80de-4537-b0b2-a4ef38fbc1df/WELDUSWK.001_NDVI_TOA_doy2010260_aid0001.tif')
+modus2010267 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/857dfbc6-2392-42cc-8156-1a81c4252a2c/WELDUSWK.001_NDVI_TOA_doy2010267_aid0001.tif')
+modus2010274 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/db3a0d41-36a1-442b-992e-cf53ca725a75/WELDUSWK.001_NDVI_TOA_doy2010274_aid0001.tif')
+modus2010281 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/0ce537ca-b152-4d16-a301-b0a78937b376/WELDUSWK.001_NDVI_TOA_doy2010281_aid0001.tif')
+modus2010288 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/8894d17d-9c50-4180-a76f-f52df00e75f1/WELDUSWK.001_NDVI_TOA_doy2010288_aid0001.tif')
+modus2010295 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/cf05e0f3-4de7-484e-8f49-827af4ff2f04/WELDUSWK.001_NDVI_TOA_doy2010295_aid0001.tif')
+modus2010302 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/68971e3f-63e9-4f9d-8e6f-0cc2531538b9/WELDUSWK.001_NDVI_TOA_doy2010302_aid0001.tif')
+modus2010309 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/89cbbcd2-fb53-4c50-b3fc-43e64d3d1fa1/WELDUSWK.001_NDVI_TOA_doy2010309_aid0001.tif')
+modus2010316 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/d6c797be-0e9d-4c5e-b8e8-1f4d996c029b/WELDUSWK.001_NDVI_TOA_doy2010316_aid0001.tif')
+modus2010330 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/2b5fe225-35c3-47ee-a3b4-8792d2d72c7b/WELDUSWK.001_NDVI_TOA_doy2010330_aid0001.tif')
+modus2010337 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/caedba0b-7462-4d64-99db-778a40f22103/WELDUSWK.001_NDVI_TOA_doy2010337_aid0001.tif')
+modus2010344 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/b441598c-3fb3-4c9a-ad25-cf90e9c4b9db/WELDUSWK.001_NDVI_TOA_doy2010344_aid0001.tif')
+modus2010351 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/56619c67-e324-45d7-ac94-e3752ff6cf27/WELDUSWK.001_NDVI_TOA_doy2010351_aid0001.tif')
+
+ndvisd2010001 <- cellStats(modus2010001, stat = sd, na.rm = TRUE, asSample = TRUE)
+ndvisd2010008 <- cellStats(modus2010008, stat = sd, na.rm = TRUE, asSample = TRUE)
+ndvisd2010043 <- cellStats(modus2010043, stat = sd, na.rm = TRUE, asSample = TRUE)
+ndvisd2010050 <- cellStats(modus2010050, stat = sd, na.rm = TRUE, asSample = TRUE)
+ndvisd2010057 <- cellStats(modus2010057, stat = sd, na.rm = TRUE, asSample = TRUE)
+ndvisd2010064 <- cellStats(modus2010064, stat = sd, na.rm = TRUE, asSample = TRUE)
+ndvisd2010071 <- cellStats(modus2010071, stat = sd, na.rm = TRUE, asSample = TRUE)
+ndvisd2010078 <- cellStats(modus2010078, stat = sd, na.rm = TRUE, asSample = TRUE)
+ndvisd2010085 <- cellStats(modus2010085, stat = sd, na.rm = TRUE, asSample = TRUE)
+ndvisd2010092 <- cellStats(modus2010092, stat = sd, na.rm = TRUE, asSample = TRUE)
+ndvisd2010099 <- cellStats(modus2010099, stat = sd, na.rm = TRUE, asSample = TRUE)
+ndvisd2010106 <- cellStats(modus2010106, stat = sd, na.rm = TRUE, asSample = TRUE)
+ndvisd2010113 <- cellStats(modus2010113, stat = sd, na.rm = TRUE, asSample = TRUE)
+ndvisd2010120 <- cellStats(modus2010120, stat = sd, na.rm = TRUE, asSample = TRUE)
+ndvisd2010127 <- cellStats(modus2010127, stat = sd, na.rm = TRUE, asSample = TRUE)
+ndvisd2010134 <- cellStats(modus2010134, stat = sd, na.rm = TRUE, asSample = TRUE)
+ndvisd2010141 <- cellStats(modus2010141, stat = sd, na.rm = TRUE, asSample = TRUE)
+ndvisd2010148 <- cellStats(modus2010148, stat = sd, na.rm = TRUE, asSample = TRUE)
+ndvisd2010155 <- cellStats(modus2010155, stat = sd, na.rm = TRUE, asSample = TRUE)
+ndvisd2010162 <- cellStats(modus2010162, stat = sd, na.rm = TRUE, asSample = TRUE)
+ndvisd2010169 <- cellStats(modus2010169, stat = sd, na.rm = TRUE, asSample = TRUE)
+ndvisd2010176 <- cellStats(modus2010176, stat = sd, na.rm = TRUE, asSample = TRUE)
+ndvisd2010183 <- cellStats(modus2010183, stat = sd, na.rm = TRUE, asSample = TRUE)
+ndvisd2010190 <- cellStats(modus2010190, stat = sd, na.rm = TRUE, asSample = TRUE)
+ndvisd2010197 <- cellStats(modus2010197, stat = sd, na.rm = TRUE, asSample = TRUE)
+ndvisd2010204 <- cellStats(modus2010204, stat = sd, na.rm = TRUE, asSample = TRUE)
+ndvisd2010211 <- cellStats(modus2010211, stat = sd, na.rm = TRUE, asSample = TRUE)
+ndvisd2010225 <- cellStats(modus2010225, stat = sd, na.rm = TRUE, asSample = TRUE)
+ndvisd2010232 <- cellStats(modus2010232, stat = sd, na.rm = TRUE, asSample = TRUE)
+ndvisd2010239 <- cellStats(modus2010239, stat = sd, na.rm = TRUE, asSample = TRUE)
+ndvisd2010246 <- cellStats(modus2010246, stat = sd, na.rm = TRUE, asSample = TRUE)
+ndvisd2010253 <- cellStats(modus2010253, stat = sd, na.rm = TRUE, asSample = TRUE)
+ndvisd2010260 <- cellStats(modus2010260, stat = sd, na.rm = TRUE, asSample = TRUE)
+ndvisd2010267 <- cellStats(modus2010267, stat = sd, na.rm = TRUE, asSample = TRUE)
+ndvisd2010274 <- cellStats(modus2010274, stat = sd, na.rm = TRUE, asSample = TRUE)
+ndvisd2010281 <- cellStats(modus2010281, stat = sd, na.rm = TRUE, asSample = TRUE)
+ndvisd2010288 <- cellStats(modus2010288, stat = sd, na.rm = TRUE, asSample = TRUE)
+ndvisd2010295 <- cellStats(modus2010295, stat = sd, na.rm = TRUE, asSample = TRUE)
+ndvisd2010302 <- cellStats(modus2010302, stat = sd, na.rm = TRUE, asSample = TRUE)
+ndvisd2010309 <- cellStats(modus2010309, stat = sd, na.rm = TRUE, asSample = TRUE)
+ndvisd2010316 <- cellStats(modus2010316, stat = sd, na.rm = TRUE, asSample = TRUE)
+ndvisd2010330 <- cellStats(modus2010330, stat = sd, na.rm = TRUE, asSample = TRUE)
+ndvisd2010337 <- cellStats(modus2010337, stat = sd, na.rm = TRUE, asSample = TRUE)
+ndvisd2010344 <- cellStats(modus2010344, stat = sd, na.rm = TRUE, asSample = TRUE)
+ndvisd2010351 <- cellStats(modus2010351, stat = sd, na.rm = TRUE, asSample = TRUE)
+
+
+
+ndvisd2010 <- do.call(rbind, as.list(c(ndvisd2010001, ndvisd2010008, ndvisd2010043, ndvisd2010050, ndvisd2010057,
+                                ndvisd2010064, ndvisd2010071, ndvisd2010078, ndvisd2010078, ndvisd2010085,
+                                ndvisd2010092, ndvisd2010099, ndvisd2010106, ndvisd2010113, ndvisd2010120, 
+                                ndvisd2010127, ndvisd2010134, ndvisd2010141, ndvisd2010148, ndvisd2010155, 
+                                ndvisd2010162, ndvisd2010169, ndvisd2010176, ndvisd2010183, ndvisd2010190, 
+                                ndvisd2010197, ndvisd2010204, ndvisd2010211, ndvisd2010225, ndvisd2010232,
+                                ndvisd2010239, ndvisd2010246, ndvisd2010253, ndvisd2010260, ndvisd2010267, 
+                                ndvisd2010274, ndvisd2010281, ndvisd2010288, ndvisd2010295, ndvisd2010302, 
+                                ndvisd2010309, ndvisd2010316, ndvisd2010330, ndvisd2010337, ndvisd2010344, 
+                                ndvisd2010351))) 
+
+
+
+
+
+cellStats(x, stat = sd, na.rm = TRUE, asSample = TRUE)
+
 
 
 cellStats(modus2010260, stat = sd, na.rm = TRUE, asSample = TRUE)
