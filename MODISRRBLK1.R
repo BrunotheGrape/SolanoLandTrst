@@ -13,7 +13,12 @@ writeOGR(obj=RRBLK1SHP, dsn="tempdir", layer="torn", driver="ESRI Shapefile") # 
 #rld2003001 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/252b1f7e-feee-4b70-b34b-1666b57b5fcd/5e603ef0-dbf9-4d9b-b995-f83b22cabb24/WELDUSWK.001_ACCA_State_doy2003001_aid0001.tif')
 #rld2003001 <- crop(rld2003001, RRBLK1SHP)
                     
-
+DOY <- c(1262325600, 1262325608, 1262325643, 1262325650, 1262325657, 1262325664, 1262325671, 1262325678,
+         1262325685, 1262325692, 1262325699, 1262325706, 1262325713, 1262325720, 1262325727, 1262325734,  
+         1262325741, 1262325748, 1262325755, 1262325762, 1262325769, 1262325776, 1262325783, 1262325790, 
+         1262325797, 1262325804, 1262325811, 1262325825, 1262325832, 1262325839, 1262325846, 1262325853,  
+         1262325860, 1262325867, 1262325874, 1262325881, 1262325888, 1262325895, 1262325902, 1262325909,  
+         1262325916, 1262325930, 1262325937, 1262325944, 1262325951)
 
 modus2010001 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/c49a7d87-e9eb-4211-9aeb-e71f51d3e2ac/WELDUSWK.001_NDVI_TOA_doy2010001_aid0001.tif')
 modus2010008 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/f62b0452-e40e-467f-b71a-ac475c4ef080/WELDUSWK.001_NDVI_TOA_doy2010008_aid0001.tif')
@@ -110,18 +115,20 @@ ndvisd2010351 <- cellStats(modus2010351, stat = sd, na.rm = TRUE, asSample = TRU
 
 
 ndvisd2010 <- do.call(rbind, as.list(c(ndvisd2010001, ndvisd2010008, ndvisd2010043, ndvisd2010050, ndvisd2010057,
-                                ndvisd2010064, ndvisd2010071, ndvisd2010078, ndvisd2010078, ndvisd2010085,
-                                ndvisd2010092, ndvisd2010099, ndvisd2010106, ndvisd2010113, ndvisd2010120, 
-                                ndvisd2010127, ndvisd2010134, ndvisd2010141, ndvisd2010148, ndvisd2010155, 
-                                ndvisd2010162, ndvisd2010169, ndvisd2010176, ndvisd2010183, ndvisd2010190, 
-                                ndvisd2010197, ndvisd2010204, ndvisd2010211, ndvisd2010225, ndvisd2010232,
-                                ndvisd2010239, ndvisd2010246, ndvisd2010253, ndvisd2010260, ndvisd2010267, 
-                                ndvisd2010274, ndvisd2010281, ndvisd2010288, ndvisd2010295, ndvisd2010302, 
-                                ndvisd2010309, ndvisd2010316, ndvisd2010330, ndvisd2010337, ndvisd2010344, 
-                                ndvisd2010351))) 
+                                ndvisd2010064, ndvisd2010071, ndvisd2010078, ndvisd2010085, ndvisd2010092,
+                                ndvisd2010099, ndvisd2010106, ndvisd2010113, ndvisd2010120, ndvisd2010127, 
+                                ndvisd2010134, ndvisd2010141, ndvisd2010148, ndvisd2010155, ndvisd2010162, 
+                                ndvisd2010169, ndvisd2010176, ndvisd2010183, ndvisd2010190, ndvisd2010197, 
+                                ndvisd2010204, ndvisd2010211, ndvisd2010225, ndvisd2010232, ndvisd2010239, 
+                                ndvisd2010246, ndvisd2010253, ndvisd2010260, ndvisd2010267, ndvisd2010274, 
+                                ndvisd2010281, ndvisd2010288, ndvisd2010295, ndvisd2010302, ndvisd2010309, 
+                                ndvisd2010316, ndvisd2010330, ndvisd2010337, ndvisd2010344, ndvisd2010351)))
+                                 
+df2010 <- as.data.frame(cbind(DOY, ndvisd2010))
+colnames(df2010)[2] <- "NDVI"
 
-
-
+sdp2010 <- ggplot(data = df2010, aes(x = DOY, y = NDVI)) + geom_line(color = "black") + geom_point()
+ 
 
 
 cellStats(x, stat = sd, na.rm = TRUE, asSample = TRUE)
