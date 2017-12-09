@@ -3,6 +3,7 @@
 library(tiff); library(raster); library(rgdal); library(sp); library(maptools) 
 library(ggplot2); library(rasterVis); library(date); library(GISTools)
 library(caret); library(dplyr); library(vioplot); library(RColorBrewer)
+library(tidyverse)
 
 RRBLK1RSTR <- raster("https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/95bf291b-cf11-4b23-9f16-c47d123b0aef/4cd180c9-0468-4cfb-8410-d226b6288a01/WELDUSWK.001_NDVI_TOA_doy2010001_aid0001.tif")
 RRBLK1SHP <- rasterToPolygons(RRBLK1RSTR)
@@ -125,7 +126,7 @@ ndvisd2010 <- do.call(rbind, as.list(c(ndvisd2010001, ndvisd2010008, ndvisd20100
                                 ndvisd2010316, ndvisd2010330, ndvisd2010337, ndvisd2010344, ndvisd2010351)))
                                  
 df2010 <- as.data.frame(cbind(DOY, ndvisd2010))
-colnames(df2010)[2] <- "NDVI"
+colnames(df2010)[2] <- "NDVI_STD_DEV"
 
 sdp2010 <- ggplot(data = df2010, aes(x = DOY, y = NDVI)) + geom_line(color = "black") + geom_point()
  
@@ -186,4 +187,84 @@ MOD2014001crp.mx <- cellStats(MOD2014001crp, max)
 MOD2014001crp.mn <- cellStats(MOD2014001crp, min)
 MOD2014001crp.sd <- sd(MOD2014001crp.df$NDVI, na.rm = TRUE)
 
+
+mod2010001 <- as.matrix(as.data.frame(values(modus2010001)))
+mod2010008 <- as.matrix(as.data.frame(values(modus2010008)))
+mod2010043 <- as.data.frame(values(modus2010043))
+mod2010050 <- as.data.frame(values(modus2010050))
+mod2010057 <- as.data.frame(values(modus2010057))
+mod2010064 <- as.data.frame(values(modus2010064))
+mod2010071 <- as.data.frame(values(modus2010071))
+mod2010078 <- as.data.frame(values(modus2010078))
+mod2010085 <- as.data.frame(values(modus2010085))
+mod2010092 <- as.data.frame(values(modus2010092))
+mod2010099 <- as.data.frame(values(modus2010099))
+mod2010106 <- as.data.frame(values(modus2010106))
+mod2010113 <- as.data.frame(values(modus2010113))
+mod2010120 <- as.data.frame(values(modus2010120))
+mod2010127 <- as.data.frame(values(modus2010127))
+mod2010134 <- as.data.frame(values(modus2010134))
+mod2010141 <- as.data.frame(values(modus2010141))
+mod2010148 <- as.data.frame(values(modus2010148))
+mod2010155 <- as.data.frame(values(modus2010155))
+mod2010162 <- as.data.frame(values(modus2010162))
+mod2010169 <- as.data.frame(values(modus2010169))
+mod2010176 <- as.data.frame(values(modus2010176))
+
+mod2010 <- as.data.frame(cbind(mod2010001, mod2010008, mod2010043, mod2010050, mod2010057,
+                              mod2010064, mod2010071, mod2010078, mod2010085, mod2010092,
+                              mod2010099, mod2010106, mod2010113, mod2010120, mod2010127,
+                              mod2010134))
+
+
+
+
+cellStats(modus2010043, stat = mean, na.rm = TRUE, asSample = TRUE)
+modmn <- cellStats(x, stat = mean, na.rm = TRUE)
+x <- as.list(c(modmn2010008, modmn2010071))
+
+xmn <- lapply(x, function(x) mean)
+
+outlist <- list() #create empty list to store outputs from loop
+
+for (i in 1:length(mod)) { #for each raster in rasterlist
+  r <- raster(mod[[i]]) #read element i of rasterlist into R
+  val <- getValues(r) #get raster values
+  m <- mean(val,na.rm=T) #remove NAs and compute mean
+  outlist[[i]] <- c(mod[[i]],m) #store raster path with mean
+  return("complete")
+}
+
+df <- data.frame(do.call(rbind,outlist)) #convert list to data frame
+colnames(df) <- c("raster path","mean")
+
+ml <- mean(x)
+
+a <- c(3,5,6)
+b <- c(4,2,7)
+
+myls <- c(a,b)
+mean(myls)
+ 
+apply(arr, 1:2, mean)
+
+arr <- array(unlist(x), c(1,136,2))
+arr <- array(x, c(1,136,2))
+rowMeans(arr, dims = 1, na.rm = TRUE)
+apply(arr, 1:3, mean)
+mapply(arr,  mean)
+
+apply(arr, 1,mean)
+
+tapply(x, function(x) mean(x,na.rm=TRUE))
+
+sapply(arr,function(x) sapply(x, function(x) mean(x,na.rm=TRUE)) )
+
+ans1 = plyr::aaply(plyr::laply(x, as.matrix), c(2, 3), mean)
+
+modmn2010008
+modmn <- map(modmn2010008, modmn2010071)
+
+modmn <- as.data.frame(do.call(cbind, x))
+mod2010 <- as.data.frame(cbind(mod2010001, mod2010008))
 
