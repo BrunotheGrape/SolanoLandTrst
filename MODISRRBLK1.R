@@ -210,11 +210,40 @@ mod2010155 <- as.data.frame(values(modus2010155))
 mod2010162 <- as.data.frame(values(modus2010162))
 mod2010169 <- as.data.frame(values(modus2010169))
 mod2010176 <- as.data.frame(values(modus2010176))
+mod2010183 <- as.data.frame(values(modus2010183))
+mod2010190 <- as.data.frame(values(modus2010190))
+mod2010197 <- as.data.frame(values(modus2010197))
+mod2010204 <- as.data.frame(values(modus2010204))
+mod2010211 <- as.data.frame(values(modus2010211))
+mod2010225 <- as.data.frame(values(modus2010225))
+mod2010232 <- as.data.frame(values(modus2010232))
+mod2010239 <- as.data.frame(values(modus2010239))
+mod2010246 <- as.data.frame(values(modus2010246))
+mod2010253 <- as.data.frame(values(modus2010253))
+mod2010260 <- as.data.frame(values(modus2010260))
+mod2010267 <- as.data.frame(values(modus2010267))
+mod2010274 <- as.data.frame(values(modus2010274))
+mod2010281 <- as.data.frame(values(modus2010281))
+mod2010288 <- as.data.frame(values(modus2010288))
+mod2010295 <- as.data.frame(values(modus2010295))
+mod2010302 <- as.data.frame(values(modus2010302))
+mod2010309 <- as.data.frame(values(modus2010309))
+mod2010316 <- as.data.frame(values(modus2010316))
+mod2010330 <- as.data.frame(values(modus2010330))
+mod2010337 <- as.data.frame(values(modus2010337))
+mod2010344 <- as.data.frame(values(modus2010344))
+mod2010351 <- as.data.frame(values(modus2010351))
 
 mod2010 <- as.data.frame(cbind(mod2010001, mod2010008, mod2010043, mod2010050, mod2010057,
                               mod2010064, mod2010071, mod2010078, mod2010085, mod2010092,
                               mod2010099, mod2010106, mod2010113, mod2010120, mod2010127,
-                              mod2010134))
+                              mod2010134, mod2010141, mod2010148, mod2010155, mod2010162, 
+                              mod2010169, mod2010176, mod2010183, mod2010190, mod2010197,
+                              mod2010204, mod2010211, mod2010225, mod2010232, mod2010239,
+                              mod2010246, mod2010253, mod2010260, mod2010267, mod2010274,
+                              mod2010281, mod2010288, mod2010295, mod2010302, mod2010309,
+                              mod2010316, mod2010330, mod2010337, mod2010344, mod2010351,
+                              mod2010351))
 
 
 
