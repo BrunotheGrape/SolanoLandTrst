@@ -67,125 +67,6 @@ modus2010337 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e6
 modus2010344 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/b441598c-3fb3-4c9a-ad25-cf90e9c4b9db/WELDUSWK.001_NDVI_TOA_doy2010344_aid0001.tif')
 modus2010351 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/56619c67-e324-45d7-ac94-e3752ff6cf27/WELDUSWK.001_NDVI_TOA_doy2010351_aid0001.tif')
 
-ndvisd2010001 <- cellStats(modus2010001, stat = sd, na.rm = TRUE, asSample = TRUE)
-ndvisd2010008 <- cellStats(modus2010008, stat = sd, na.rm = TRUE, asSample = TRUE)
-ndvisd2010043 <- cellStats(modus2010043, stat = sd, na.rm = TRUE, asSample = TRUE)
-ndvisd2010050 <- cellStats(modus2010050, stat = sd, na.rm = TRUE, asSample = TRUE)
-ndvisd2010057 <- cellStats(modus2010057, stat = sd, na.rm = TRUE, asSample = TRUE)
-ndvisd2010064 <- cellStats(modus2010064, stat = sd, na.rm = TRUE, asSample = TRUE)
-ndvisd2010071 <- cellStats(modus2010071, stat = sd, na.rm = TRUE, asSample = TRUE)
-ndvisd2010078 <- cellStats(modus2010078, stat = sd, na.rm = TRUE, asSample = TRUE)
-ndvisd2010085 <- cellStats(modus2010085, stat = sd, na.rm = TRUE, asSample = TRUE)
-ndvisd2010092 <- cellStats(modus2010092, stat = sd, na.rm = TRUE, asSample = TRUE)
-ndvisd2010099 <- cellStats(modus2010099, stat = sd, na.rm = TRUE, asSample = TRUE)
-ndvisd2010106 <- cellStats(modus2010106, stat = sd, na.rm = TRUE, asSample = TRUE)
-ndvisd2010113 <- cellStats(modus2010113, stat = sd, na.rm = TRUE, asSample = TRUE)
-ndvisd2010120 <- cellStats(modus2010120, stat = sd, na.rm = TRUE, asSample = TRUE)
-ndvisd2010127 <- cellStats(modus2010127, stat = sd, na.rm = TRUE, asSample = TRUE)
-ndvisd2010134 <- cellStats(modus2010134, stat = sd, na.rm = TRUE, asSample = TRUE)
-ndvisd2010141 <- cellStats(modus2010141, stat = sd, na.rm = TRUE, asSample = TRUE)
-ndvisd2010148 <- cellStats(modus2010148, stat = sd, na.rm = TRUE, asSample = TRUE)
-ndvisd2010155 <- cellStats(modus2010155, stat = sd, na.rm = TRUE, asSample = TRUE)
-ndvisd2010162 <- cellStats(modus2010162, stat = sd, na.rm = TRUE, asSample = TRUE)
-ndvisd2010169 <- cellStats(modus2010169, stat = sd, na.rm = TRUE, asSample = TRUE)
-ndvisd2010176 <- cellStats(modus2010176, stat = sd, na.rm = TRUE, asSample = TRUE)
-ndvisd2010183 <- cellStats(modus2010183, stat = sd, na.rm = TRUE, asSample = TRUE)
-ndvisd2010190 <- cellStats(modus2010190, stat = sd, na.rm = TRUE, asSample = TRUE)
-ndvisd2010197 <- cellStats(modus2010197, stat = sd, na.rm = TRUE, asSample = TRUE)
-ndvisd2010204 <- cellStats(modus2010204, stat = sd, na.rm = TRUE, asSample = TRUE)
-ndvisd2010211 <- cellStats(modus2010211, stat = sd, na.rm = TRUE, asSample = TRUE)
-ndvisd2010225 <- cellStats(modus2010225, stat = sd, na.rm = TRUE, asSample = TRUE)
-ndvisd2010232 <- cellStats(modus2010232, stat = sd, na.rm = TRUE, asSample = TRUE)
-ndvisd2010239 <- cellStats(modus2010239, stat = sd, na.rm = TRUE, asSample = TRUE)
-ndvisd2010246 <- cellStats(modus2010246, stat = sd, na.rm = TRUE, asSample = TRUE)
-ndvisd2010253 <- cellStats(modus2010253, stat = sd, na.rm = TRUE, asSample = TRUE)
-ndvisd2010260 <- cellStats(modus2010260, stat = sd, na.rm = TRUE, asSample = TRUE)
-ndvisd2010267 <- cellStats(modus2010267, stat = sd, na.rm = TRUE, asSample = TRUE)
-ndvisd2010274 <- cellStats(modus2010274, stat = sd, na.rm = TRUE, asSample = TRUE)
-ndvisd2010281 <- cellStats(modus2010281, stat = sd, na.rm = TRUE, asSample = TRUE)
-ndvisd2010288 <- cellStats(modus2010288, stat = sd, na.rm = TRUE, asSample = TRUE)
-ndvisd2010295 <- cellStats(modus2010295, stat = sd, na.rm = TRUE, asSample = TRUE)
-ndvisd2010302 <- cellStats(modus2010302, stat = sd, na.rm = TRUE, asSample = TRUE)
-ndvisd2010309 <- cellStats(modus2010309, stat = sd, na.rm = TRUE, asSample = TRUE)
-ndvisd2010316 <- cellStats(modus2010316, stat = sd, na.rm = TRUE, asSample = TRUE)
-ndvisd2010330 <- cellStats(modus2010330, stat = sd, na.rm = TRUE, asSample = TRUE)
-ndvisd2010337 <- cellStats(modus2010337, stat = sd, na.rm = TRUE, asSample = TRUE)
-ndvisd2010344 <- cellStats(modus2010344, stat = sd, na.rm = TRUE, asSample = TRUE)
-ndvisd2010351 <- cellStats(modus2010351, stat = sd, na.rm = TRUE, asSample = TRUE)
-
-
-
-ndvisd2010 <- do.call(rbind, as.list(c(ndvisd2010001, ndvisd2010008, ndvisd2010043, ndvisd2010050, ndvisd2010057,
-                                ndvisd2010064, ndvisd2010071, ndvisd2010078, ndvisd2010085, ndvisd2010092,
-                                ndvisd2010099, ndvisd2010106, ndvisd2010113, ndvisd2010120, ndvisd2010127, 
-                                ndvisd2010134, ndvisd2010141, ndvisd2010148, ndvisd2010155, ndvisd2010162, 
-                                ndvisd2010169, ndvisd2010176, ndvisd2010183, ndvisd2010190, ndvisd2010197, 
-                                ndvisd2010204, ndvisd2010211, ndvisd2010225, ndvisd2010232, ndvisd2010239, 
-                                ndvisd2010246, ndvisd2010253, ndvisd2010260, ndvisd2010267, ndvisd2010274, 
-                                ndvisd2010281, ndvisd2010288, ndvisd2010295, ndvisd2010302, ndvisd2010309, 
-                                ndvisd2010316, ndvisd2010330, ndvisd2010337, ndvisd2010344, ndvisd2010351)))
-                                 
-df2010 <- as.data.frame(cbind(DOY, ndvisd2010))
-colnames(df2010)[2] <- "NDVI_STD_DEV"
-
-sdp2010 <- ggplot(data = df2010, aes(x = DOY, y = NDVI)) + geom_line(color = "black") + geom_point()
- 
-
-
-cellStats(x, stat = sd, na.rm = TRUE, asSample = TRUE)
-
-
-
-cellStats(modus2010260, stat = sd, na.rm = TRUE, asSample = TRUE)
-density(modus2010260)
-hist(modus2010260)
-
-rld2010260 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/95bf291b-cf11-4b23-9f16-c47d123b0aef/99bc7dfb-9f39-4010-bf4a-f70fcffd6723/WELDUSWK.001_ACCA_State_doy2010260_aid0001.tif')
-#rld2003148 <- crop(rld2003148, RRBLK1SHP) 
-
-###consider boxcox transformations before computing correlations
-                     
-r2 <- crop(rld2010260, extent(RRBLK1SHP))
-r3 <- mask(r2, rld2010260)
-
-image(modus2010260)
-image(r3)
-rld2010260
-r3
-extent(RRBLK1SHP)
-rld2003148.crp <- crop(rld2003148, extent(rld2003148, -122.0404, -122.0355, 38.21149, 38.21344))
-rld2003148.crp <- crop(rld2003148, extent(rld2003148, -122.0355, -122.0404, 38.21344, 38.21149))
-
-
-                     
-rld2003148                     
-RRBLK1SHPdf <- as.data.frame(RRBLK1SHP)                    
-max(RRBLK1SHPdf, na.rm = TRUE)                    
-                     
-                     
-                     
-
-#nproj <- "+proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0 "
-#MOD2014001trm <- projectRaster(MOD2014001, crs = nproj)
-#MOD2014001trm
-#image(MOD2014001trm)
-#l <- length(vlst)
-#for(i in 1:length(vlst)) {
-#  vlst[i] <- crop(vlst[i], RRBLK1SHP)
-#}
-  
-rld2003015  
-rldf2003001 <- as.data.frame(rld2003001)
-rldf2003148 <- as.data.frame(rld2003148)
-
-
-MOD2014001crp.df <- as.data.frame(MOD2014001crp);colnames(MOD2014001crp.df) <- "NDVI"; MOD2014001crp.df$observation <- 1:nrow(MOD2014001crp.df)
-
-MOD2014001crp.av <- cellStats(MOD2014001crp, mean)
-MOD2014001crp.md <- cellStats(MOD2014001crp, median)
-MOD2014001crp.mx <- cellStats(MOD2014001crp, max)
-MOD2014001crp.mn <- cellStats(MOD2014001crp, min)
-MOD2014001crp.sd <- sd(MOD2014001crp.df$NDVI, na.rm = TRUE)
 
 
 mod2010001 <- as.matrix(as.data.frame(values(modus2010001)))
@@ -246,54 +127,12 @@ mod2010 <- as.data.frame(cbind(mod2010001, mod2010008, mod2010043, mod2010050, m
                               mod2010351))
 
 
+modsd2010 <- apply(mod2010, 2, sd)
+modmn2010 <- apply(mod2010, 2, mean)
+modmdn2010 <- apply(mod2010, 2, median)
+modmin2010 <- apply(mod2010, 2, min)
+modmax2010 <- apply(mod2010, 2, max)
 
-
-cellStats(modus2010043, stat = mean, na.rm = TRUE, asSample = TRUE)
-modmn <- cellStats(x, stat = mean, na.rm = TRUE)
-x <- as.list(c(modmn2010008, modmn2010071))
-
-xmn <- lapply(x, function(x) mean)
-
-outlist <- list() #create empty list to store outputs from loop
-
-for (i in 1:length(mod)) { #for each raster in rasterlist
-  r <- raster(mod[[i]]) #read element i of rasterlist into R
-  val <- getValues(r) #get raster values
-  m <- mean(val,na.rm=T) #remove NAs and compute mean
-  outlist[[i]] <- c(mod[[i]],m) #store raster path with mean
-  return("complete")
-}
-
-df <- data.frame(do.call(rbind,outlist)) #convert list to data frame
-colnames(df) <- c("raster path","mean")
-
-ml <- mean(x)
-
-a <- c(3,5,6)
-b <- c(4,2,7)
-
-myls <- c(a,b)
-mean(myls)
- 
-apply(arr, 1:2, mean)
-
-arr <- array(unlist(x), c(1,136,2))
-arr <- array(x, c(1,136,2))
-rowMeans(arr, dims = 1, na.rm = TRUE)
-apply(arr, 1:3, mean)
-mapply(arr,  mean)
-
-apply(arr, 1,mean)
-
-tapply(x, function(x) mean(x,na.rm=TRUE))
-
-sapply(arr,function(x) sapply(x, function(x) mean(x,na.rm=TRUE)) )
-
-ans1 = plyr::aaply(plyr::laply(x, as.matrix), c(2, 3), mean)
-
-modmn2010008
-modmn <- map(modmn2010008, modmn2010071)
-
-modmn <- as.data.frame(do.call(cbind, x))
-mod2010 <- as.data.frame(cbind(mod2010001, mod2010008))
-
+modsts2010 <- as.data.frame(cbind(modmn2010, modmdn2010, modsd2010, modmax2010, modmin2010))
+colnames(modsts2010) <- c('Mean', 'Median', 'StdDev', 'Max', 'Min')
+write.csv(modsts2010, 'NDVI_YR_2010_STATS.csv')
