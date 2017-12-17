@@ -14,12 +14,20 @@ writeOGR(obj=RRBLK1SHP, dsn="tempdir", layer="torn", driver="ESRI Shapefile") # 
 #rld2003001 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/252b1f7e-feee-4b70-b34b-1666b57b5fcd/5e603ef0-dbf9-4d9b-b995-f83b22cabb24/WELDUSWK.001_ACCA_State_doy2003001_aid0001.tif')
 #rld2003001 <- crop(rld2003001, RRBLK1SHP)
                     
-DOY <- c(1262325600, 1262325608, 1262325643, 1262325650, 1262325657, 1262325664, 1262325671, 1262325678,
-         1262325685, 1262325692, 1262325699, 1262325706, 1262325713, 1262325720, 1262325727, 1262325734,  
-         1262325741, 1262325748, 1262325755, 1262325762, 1262325769, 1262325776, 1262325783, 1262325790, 
-         1262325797, 1262325804, 1262325811, 1262325825, 1262325832, 1262325839, 1262325846, 1262325853,  
-         1262325860, 1262325867, 1262325874, 1262325881, 1262325888, 1262325895, 1262325902, 1262325909,  
-         1262325916, 1262325930, 1262325937, 1262325944, 1262325951)
+DOY <- c(1262325600, 1262325607, 1262325642, 1262325649, 1262325656, 1262325663, 1262325670, 1262325677,
+         1262325684, 1262325691, 1262325698, 1262325705, 1262325712, 1262325719, 1262325726, 1262325733,  
+         1262325740, 1262325747, 1262325754, 1262325761, 1262325768, 1262325775, 1262325782, 1262325789, 
+         1262325796, 1262325803, 1262325810, 1262325824, 1262325831, 1262325838, 1262325845, 1262325852,  
+         1262325859, 1262325866, 1262325873, 1262325880, 1262325887, 1262325894, 1262325901, 1262325908,  
+         1262325915, 1262325929, 1262325936, 1262325943, 1262325950)
+Date <- c("Jan 1, 2010", "Jan 8, 2010", "Feb 12, 2010", "Feb 19, 2010", "Feb 26, 2010", "Mar 5, 2010",
+          "Mar 12, 2010", "Mar 19, 2010", "Mar 26, 2010", "Apr 2, 2010", "Apr 9, 2010", "Apr 16, 2010",
+          "Apr 23, 2010", "Apr 30, 2010", "May 7 2010", "May 14 2010", "May 21, 2010", "May 28, 2010",
+          "Jun 4, 2010", "Jun 11, 2010", "Jun 18, 2010", "Jun 25, 2010", "Jul 2, 2010", "Jul 9, 2010",
+          "Jul 16, 2010", "Jul 23, 2010", "Jul 30, 2010", "Aug 13, 2010", "Aug 20, 2010", "Aug 27, 2010",
+          "Sep 3, 2010", "Sep 10, 2010", "Sep 17, 2010", "Sep 24, 2010", "Oct 1, 2010", "Oct 8, 2010", 
+          "Oct 15, 2010", "Oct 22, 2010", "Oct 29, 2010", "Nov 9, 2010", "Nov 12, 2010", "Nov 26, 2010",
+          "Dec 3, 2010", "Dec 10, 2010", "Dec 17, 2010")
 
 modus2010001 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/c49a7d87-e9eb-4211-9aeb-e71f51d3e2ac/WELDUSWK.001_NDVI_TOA_doy2010001_aid0001.tif')
 modus2010008 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/f62b0452-e40e-467f-b71a-ac475c4ef080/WELDUSWK.001_NDVI_TOA_doy2010008_aid0001.tif')
@@ -123,8 +131,7 @@ mod2010 <- as.data.frame(cbind(mod2010001, mod2010008, mod2010043, mod2010050, m
                               mod2010204, mod2010211, mod2010225, mod2010232, mod2010239,
                               mod2010246, mod2010253, mod2010260, mod2010267, mod2010274,
                               mod2010281, mod2010288, mod2010295, mod2010302, mod2010309,
-                              mod2010316, mod2010330, mod2010337, mod2010344, mod2010351,
-                              mod2010351))
+                              mod2010316, mod2010330, mod2010337, mod2010344, mod2010351))
 
 
 modsd2010 <- apply(mod2010, 2, sd)
@@ -136,3 +143,22 @@ modmax2010 <- apply(mod2010, 2, max)
 modsts2010 <- as.data.frame(cbind(modmn2010, modmdn2010, modsd2010, modmax2010, modmin2010))
 colnames(modsts2010) <- c('Mean', 'Median', 'StdDev', 'Max', 'Min')
 write.csv(modsts2010, 'NDVI_YR_2010_STATS.csv')
+
+modsts2010 <- cbind(Date, DOY, modsts2010)
+
+modmnp2010 <- as.data.frame(modmn2010)
+modmnp2010$stat <- "Mean"
+modmnp2010 <- cbind(Date, DOY, modmnp2010)
+colnames(modmnp2010)[3] <- "Values"
+modminp2010 <- as.data.frame(modmin2010)
+modminp2010$stat <- "Min"
+modminp2010 <- cbind(Date, DOY, modminp2010)
+colnames(modminp2010)[3] <- "Values"
+modmaxp2010 <- as.data.frame(modmax2010)
+modmaxp2010$stat <- "Max"
+modmaxp2010 <- cbind(Date, DOY, modmaxp2010)
+colnames(modmaxp2010)[3] <- "Values"
+modstsp2010 <- rbind(modmnp2010, modminp2010, modmaxp2010)
+
+
+
