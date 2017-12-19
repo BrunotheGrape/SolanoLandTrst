@@ -147,18 +147,28 @@ write.csv(modsts2010, 'NDVI_YR_2010_STATS.csv')
 modsts2010 <- cbind(Date, DOY, modsts2010)
 
 modmnp2010 <- as.data.frame(modmn2010)
-modmnp2010$stat <- "Mean"
+modmnp2010$Stat <- "Mean"
 modmnp2010 <- cbind(Date, DOY, modmnp2010)
 colnames(modmnp2010)[3] <- "Values"
 modminp2010 <- as.data.frame(modmin2010)
-modminp2010$stat <- "Min"
+modminp2010$Stat <- "Min"
 modminp2010 <- cbind(Date, DOY, modminp2010)
 colnames(modminp2010)[3] <- "Values"
 modmaxp2010 <- as.data.frame(modmax2010)
-modmaxp2010$stat <- "Max"
+modmaxp2010$Stat <- "Max"
 modmaxp2010 <- cbind(Date, DOY, modmaxp2010)
 colnames(modmaxp2010)[3] <- "Values"
 modstsp2010 <- rbind(modmnp2010, modminp2010, modmaxp2010)
+modstsp2010$Stat <- as.factor(modstsp2010$Stat)
+#modstsp2010$DOY <- as.factor(modstsp2010$DOY)
+
+
+p10 <- ggplot(modstsp2010, aes(DOY, Values, colour = Stat), na.rm = TRUE) + geom_point() 
+p10 <- p10 + labs(title = "Rush Ranch Block 1, 2010 NDVI Values\n with minimum, maximum, and mean", x = "Date")
+p10 <- p10 + theme( axis.text.x = element_blank())
+p10
+ggsave(file = "Stats2010.png")
+
 
 
 
