@@ -161,13 +161,19 @@ colnames(modmaxp2010)[3] <- "Values"
 modstsp2010 <- rbind(modmnp2010, modminp2010, modmaxp2010)
 modstsp2010$Stat <- as.factor(modstsp2010$Stat)
 #modstsp2010$DOY <- as.factor(modstsp2010$DOY)
+modstxl2010 <- filter(modstsp2010, Values != 'NA')
+#write.csv(modstsp2010, 'modstsp2010.csv')
+write.csv(modstxl2010, 'modstxl2010.csv')
 
-
-p10 <- ggplot(modstsp2010, aes(DOY, Values, colour = Stat), na.rm = TRUE) + geom_point() 
+p10 <- ggplot(modstxl2010, aes(DOY, Values, color = Stat), na.rm = TRUE) + geom_point() + geom_path()
 p10 <- p10 + labs(title = "Rush Ranch Block 1, 2010 NDVI Values\n with minimum, maximum, and mean", x = "Date")
 p10 <- p10 + theme( axis.text.x = element_blank())
 p10
 ggsave(file = "Stats2010.png")
+
+ggplot(data=modsts2010, aes(x=DOY)) +
+  geom_line(aes(y = Mean))
+
 
 
 
