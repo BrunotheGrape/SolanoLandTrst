@@ -167,7 +167,7 @@ write.csv(modstxl2010, 'modstxl2010.csv')
 
 p10 <- ggplot(modstxl2010, aes(DOY, Values, color = Stat), na.rm = TRUE) + geom_point() + geom_path()
 p10 <- p10 + labs(title = "Rush Ranch Block 1, 2010 NDVI Values\n with minimum, maximum, and mean", x = "Date")
-p10 <- p10 + theme( axis.text.x = element_blank())
+p10 <- p10 + theme( axis.text.x = element_blank()) + scale_colour_brewer(palette="Dark2")
 p10
 ggsave(file = "Stats2010.png")
 
