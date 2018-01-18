@@ -204,15 +204,67 @@ Bnd1.2010337 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e6
 Bnd1.2010344 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/7ea637d1-abaf-48bc-9410-32ad748cc0d5/WELDUSWK.001_Band1_TOA_REF_doy2010344_aid0001.tif')
 Bnd1.2010351 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/118eaefb-dc25-4126-bcab-25d6183987d2/WELDUSWK.001_Band1_TOA_REF_doy2010351_aid0001.tif')
 
-Bnd12010 <- as.data.frame(cbind(Bnd12010001, Bnd12010008, Bnd12010043, Bnd12010050, Bnd12010057,
-                              Bnd12010064, Bnd12010071, Bnd12010078, Bnd12010085, Bnd12010092,
-                              Bnd12010099, Bnd12010106, Bnd12010113, Bnd12010120, Bnd12010127,
-                              Bnd12010134, Bnd12010141, Bnd12010148, Bnd12010155, Bnd12010162, 
-                              Bnd12010169, Bnd12010176, Bnd12010183, Bnd12010190, Bnd12010197,
-                              Bnd12010204, Bnd12010211, Bnd12010225, Bnd12010232, Bnd12010239,
-                              Bnd12010246, Bnd12010253, Bnd12010260, Bnd12010267, Bnd12010274,
-                              Bnd12010281, Bnd12010288, Bnd12010295, Bnd12010302, Bnd12010309,
-                              Bnd12010316, Bnd12010330, Bnd12010337, Bnd12010344, Bnd12010351))
+Bnd1.2010001 <- as.matrix(as.data.frame(values(Bnd1.2010001)))
+Bnd1.2010008 <- as.matrix(as.data.frame(values(Bnd1.2010008)))
+Bnd1.2010043 <- as.data.frame(values(Bnd1.2010043))
+Bnd1.2010050 <- as.data.frame(values(Bnd1.2010050))
+Bnd1.2010057 <- as.data.frame(values(Bnd1.2010057))
+Bnd1.2010064 <- as.data.frame(values(Bnd1.2010064))
+Bnd1.2010071 <- as.data.frame(values(Bnd1.2010071))
+Bnd1.2010078 <- as.data.frame(values(Bnd1.2010078))
+Bnd1.2010085 <- as.data.frame(values(Bnd1.2010085))
+Bnd1.2010092 <- as.data.frame(values(Bnd1.2010092))
+Bnd1.2010099 <- as.data.frame(values(Bnd1.2010099))
+Bnd1.2010106 <- as.data.frame(values(Bnd1.2010106))
+Bnd1.2010113 <- as.data.frame(values(Bnd1.2010113))
+Bnd1.2010120 <- as.data.frame(values(Bnd1.2010120))
+Bnd1.2010127 <- as.data.frame(values(Bnd1.2010127))
+Bnd1.2010134 <- as.data.frame(values(Bnd1.2010134))
+Bnd1.2010141 <- as.data.frame(values(Bnd1.2010141))
+Bnd1.2010148 <- as.data.frame(values(Bnd1.2010148))
+Bnd1.2010155 <- as.data.frame(values(Bnd1.2010155))
+Bnd1.2010162 <- as.data.frame(values(Bnd1.2010162))
+Bnd1.2010169 <- as.data.frame(values(Bnd1.2010169))
+Bnd1.2010176 <- as.data.frame(values(Bnd1.2010176))
+Bnd1.2010183 <- as.data.frame(values(Bnd1.2010183))
+Bnd1.2010190 <- as.data.frame(values(Bnd1.2010190))
+Bnd1.2010197 <- as.data.frame(values(Bnd1.2010197))
+Bnd1.2010204 <- as.data.frame(values(Bnd1.2010204))
+Bnd1.2010211 <- as.data.frame(values(Bnd1.2010211))
+Bnd1.2010225 <- as.data.frame(values(Bnd1.2010225))
+Bnd1.2010232 <- as.data.frame(values(Bnd1.2010232))
+Bnd1.2010239 <- as.data.frame(values(Bnd1.2010239))
+Bnd1.2010246 <- as.data.frame(values(Bnd1.2010246))
+Bnd1.2010253 <- as.data.frame(values(Bnd1.2010253))
+Bnd1.2010260 <- as.data.frame(values(Bnd1.2010260))
+Bnd1.2010267 <- as.data.frame(values(Bnd1.2010267))
+Bnd1.2010274 <- as.data.frame(values(Bnd1.2010274))
+Bnd1.2010281 <- as.data.frame(values(Bnd1.2010281))
+Bnd1.2010288 <- as.data.frame(values(Bnd1.2010288))
+Bnd1.2010295 <- as.data.frame(values(Bnd1.2010295))
+Bnd1.2010302 <- as.data.frame(values(Bnd1.2010302))
+Bnd1.2010309 <- as.data.frame(values(Bnd1.2010309))
+Bnd1.2010316 <- as.data.frame(values(Bnd1.2010316))
+Bnd1.2010330 <- as.data.frame(values(Bnd1.2010330))
+Bnd1.2010337 <- as.data.frame(values(Bnd1.2010337))
+Bnd1.2010344 <- as.data.frame(values(Bnd1.2010344))
+Bnd1.2010351 <- as.data.frame(values(Bnd1.2010351))
+
+
+
+
+
+
+
+Bnd12010 <- as.data.frame(cbind(Bnd1.2010001, Bnd1.2010008, Bnd1.2010043, Bnd1.2010050, Bnd1.2010057,
+                              Bnd1.2010064, Bnd1.2010071, Bnd1.2010078, Bnd1.2010085, Bnd1.2010092,
+                              Bnd1.2010099, Bnd1.2010106, Bnd1.2010113, Bnd1.2010120, Bnd1.2010127,
+                              Bnd1.2010134, Bnd1.2010141, Bnd1.2010148, Bnd1.2010155, Bnd1.2010162, 
+                              Bnd1.2010169, Bnd1.2010176, Bnd1.2010183, Bnd1.2010190, Bnd1.2010197,
+                              Bnd1.2010204, Bnd1.2010211, Bnd1.2010225, Bnd1.2010232, Bnd1.2010239,
+                              Bnd1.2010246, Bnd1.2010253, Bnd1.2010260, Bnd1.2010267, Bnd1.2010274,
+                              Bnd1.2010281, Bnd1.2010288, Bnd1.2010295, Bnd1.2010302, Bnd1.2010309,
+                              Bnd1.2010316, Bnd1.2010330, Bnd1.2010337, Bnd1.2010344, Bnd1.2010351))
 
 
 Bnd1sd2010 <- apply(Bnd12010, 2, sd)
@@ -292,6 +344,54 @@ Bnd2.2010330 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e6
 Bnd2.2010337 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/99af7a98-8c06-4883-a6a7-3f1b0ff31519/WELDUSWK.001_Band2_TOA_REF_doy2010337_aid0001.tif')
 Bnd2.2010344 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/a864d397-80c6-445c-bd93-78976d99d592/WELDUSWK.001_Band2_TOA_REF_doy2010344_aid0001.tif')
 Bnd2.2010351 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/3b9c6689-4570-4afe-b8bf-38388d0942d3/WELDUSWK.001_Band2_TOA_REF_doy2010351_aid0001.tif')
+
+Bnd2.2010001 <- as.matrix(as.data.frame(values(Bnd2.2010001)))
+Bnd2.2010008 <- as.matrix(as.data.frame(values(Bnd2.2010008)))
+Bnd2.2010043 <- as.data.frame(values(Bnd2.2010043))
+Bnd2.2010050 <- as.data.frame(values(Bnd2.2010050))
+Bnd2.2010057 <- as.data.frame(values(Bnd2.2010057))
+Bnd2.2010064 <- as.data.frame(values(Bnd2.2010064))
+Bnd2.2010071 <- as.data.frame(values(Bnd2.2010071))
+Bnd2.2010078 <- as.data.frame(values(Bnd2.2010078))
+Bnd2.2010085 <- as.data.frame(values(Bnd2.2010085))
+Bnd2.2010092 <- as.data.frame(values(Bnd2.2010092))
+Bnd2.2010099 <- as.data.frame(values(Bnd2.2010099))
+Bnd2.2010106 <- as.data.frame(values(Bnd2.2010106))
+Bnd2.2010113 <- as.data.frame(values(Bnd2.2010113))
+Bnd2.2010120 <- as.data.frame(values(Bnd2.2010120))
+Bnd2.2010127 <- as.data.frame(values(Bnd2.2010127))
+Bnd2.2010134 <- as.data.frame(values(Bnd2.2010134))
+Bnd2.2010141 <- as.data.frame(values(Bnd2.2010141))
+Bnd2.2010148 <- as.data.frame(values(Bnd2.2010148))
+Bnd2.2010155 <- as.data.frame(values(Bnd2.2010155))
+Bnd2.2010162 <- as.data.frame(values(Bnd2.2010162))
+Bnd2.2010169 <- as.data.frame(values(Bnd2.2010169))
+Bnd2.2010176 <- as.data.frame(values(Bnd2.2010176))
+Bnd2.2010183 <- as.data.frame(values(Bnd2.2010183))
+Bnd2.2010190 <- as.data.frame(values(Bnd2.2010190))
+Bnd2.2010197 <- as.data.frame(values(Bnd2.2010197))
+Bnd2.2010204 <- as.data.frame(values(Bnd2.2010204))
+Bnd2.2010211 <- as.data.frame(values(Bnd2.2010211))
+Bnd2.2010225 <- as.data.frame(values(Bnd2.2010225))
+Bnd2.2010232 <- as.data.frame(values(Bnd2.2010232))
+Bnd2.2010239 <- as.data.frame(values(Bnd2.2010239))
+Bnd2.2010246 <- as.data.frame(values(Bnd2.2010246))
+Bnd2.2010253 <- as.data.frame(values(Bnd2.2010253))
+Bnd2.2010260 <- as.data.frame(values(Bnd2.2010260))
+Bnd2.2010267 <- as.data.frame(values(Bnd2.2010267))
+Bnd2.2010274 <- as.data.frame(values(Bnd2.2010274))
+Bnd2.2010281 <- as.data.frame(values(Bnd2.2010281))
+Bnd2.2010288 <- as.data.frame(values(Bnd2.2010288))
+Bnd2.2010295 <- as.data.frame(values(Bnd2.2010295))
+Bnd2.2010302 <- as.data.frame(values(Bnd2.2010302))
+Bnd2.2010309 <- as.data.frame(values(Bnd2.2010309))
+Bnd2.2010316 <- as.data.frame(values(Bnd2.2010316))
+Bnd2.2010330 <- as.data.frame(values(Bnd2.2010330))
+Bnd2.2010337 <- as.data.frame(values(Bnd2.2010337))
+Bnd2.2010344 <- as.data.frame(values(Bnd2.2010344))
+Bnd2.2010351 <- as.data.frame(values(Bnd2.2010351))
+
+
 
 Bnd22010 <- as.data.frame(cbind(Bnd22010001, Bnd22010008, Bnd22010043, Bnd22010050, Bnd22010057,
                                 Bnd22010064, Bnd22010071, Bnd22010078, Bnd22010085, Bnd22010092,
