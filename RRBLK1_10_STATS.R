@@ -576,4 +576,142 @@ write.csv(Bnd3stxl2010, 'Bnd3stxl2010.csv')
 
 
 
+Bnd4.2010001 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/3ad01b62-7181-4129-a7e7-882a4e77f50f/WELDUSWK.001_Band4_TOA_REF_doy2010001_aid0001.tif')
+Bnd4.2010008 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/1e53de53-1d28-4ffc-9c30-55d9aa6a0091/WELDUSWK.001_Band4_TOA_REF_doy2010008_aid0001.tif')
+Bnd4.2010043 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/e2b019e1-9e39-439c-8c97-7b47f3ad125e/WELDUSWK.001_Band4_TOA_REF_doy2010043_aid0001.tif')
+Bnd4.2010050 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/e35c984b-f542-47d3-a305-5e434e7df2bd/WELDUSWK.001_Band4_TOA_REF_doy2010050_aid0001.tif')
+Bnd4.2010057 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/0e78da64-fcb0-485e-9c82-f38565fd55e5/WELDUSWK.001_Band4_TOA_REF_doy2010057_aid0001.tif')
+Bnd4.2010064 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/677098e1-0b49-4b0d-8fb0-94dd98d4cbb0/WELDUSWK.001_Band4_TOA_REF_doy2010064_aid0001.tif')
+Bnd4.2010071 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/ee2eb9da-09d2-4312-bbc0-302e5090234e/WELDUSWK.001_Band4_TOA_REF_doy2010071_aid0001.tif')
+Bnd4.2010078 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/4ef4f9db-4296-42d2-9ab5-47ae091eb4ec/WELDUSWK.001_Band4_TOA_REF_doy2010078_aid0001.tif')
+Bnd4.2010085 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/145059d2-4b6a-4f29-ba3d-197efa417d77/WELDUSWK.001_Band4_TOA_REF_doy2010085_aid0001.tif')
+Bnd4.2010092 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/dc022cda-e623-44b8-ad7f-e36fda81f2e2/WELDUSWK.001_Band4_TOA_REF_doy2010092_aid0001.tif')
+Bnd4.2010099 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/20f87174-3084-4fe9-bcec-94b2655e9724/WELDUSWK.001_Band4_TOA_REF_doy2010099_aid0001.tif')
+Bnd4.2010106 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/027305ac-1bbc-41db-ac1b-268a062c77dc/WELDUSWK.001_Band4_TOA_REF_doy2010106_aid0001.tif')
+Bnd4.2010113 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/7aef5bed-84c5-4cb7-8657-277c9e974c3a/WELDUSWK.001_Band4_TOA_REF_doy2010113_aid0001.tif')
+Bnd4.2010120 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/60c161f3-e6bf-4b5d-831a-ca91705dceca/WELDUSWK.001_Band4_TOA_REF_doy2010120_aid0001.tif')
+Bnd4.2010127 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/f940c6c9-bf12-4db9-b310-0c0c0d64744a/WELDUSWK.001_Band4_TOA_REF_doy2010127_aid0001.tif')
+Bnd4.2010134 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/d87f5bd8-cc41-4f5d-b682-8db0bded88cb/WELDUSWK.001_Band4_TOA_REF_doy2010134_aid0001.tif')
+Bnd4.2010141 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/65c9ab59-edc0-4b3c-8050-e6af8e4dd564/WELDUSWK.001_Band4_TOA_REF_doy2010141_aid0001.tif')
+Bnd4.2010148 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/1add2f46-e3ce-407a-804c-f87089ede632/WELDUSWK.001_Band4_TOA_REF_doy2010148_aid0001.tif')
+Bnd4.2010155 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/94caff93-1bb9-4383-a890-7d92fc8f7c66/WELDUSWK.001_Band4_TOA_REF_doy2010155_aid0001.tif')
+Bnd4.2010162 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/45161e20-a2e4-4f6a-8656-14ad06a3cc66/WELDUSWK.001_Band4_TOA_REF_doy2010162_aid0001.tif')
+Bnd4.2010169 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/983425d2-eda1-4060-bd2f-7eccab959b6b/WELDUSWK.001_Band4_TOA_REF_doy2010169_aid0001.tif')
+Bnd4.2010176 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/344933d2-3d27-42be-bc26-8ab280eb9c5e/WELDUSWK.001_Band4_TOA_REF_doy2010176_aid0001.tif')
+Bnd4.2010183 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/77f9aaa2-28e2-4db7-9c29-cf1d4c7b11b9/WELDUSWK.001_Band4_TOA_REF_doy2010183_aid0001.tif')
+Bnd4.2010190 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/ca605da6-00d4-4450-a681-207a6e6b1062/WELDUSWK.001_Band4_TOA_REF_doy2010190_aid0001.tif')
+Bnd4.2010197 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/20d1ccbb-9fe6-48b3-a3be-420e5dcbfd9e/WELDUSWK.001_Band4_TOA_REF_doy2010197_aid0001.tif')
+Bnd4.2010204 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/58de4eee-a3c3-483e-8cff-2a5085964c77/WELDUSWK.001_Band4_TOA_REF_doy2010204_aid0001.tif')
+Bnd4.2010211 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/e3ce0ace-7c18-4809-b7b6-3a9c7d19df14/WELDUSWK.001_Band4_TOA_REF_doy2010211_aid0001.tif')
+Bnd4.2010225 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/004db022-8022-476f-a95b-e7c7f1b49b2d/WELDUSWK.001_Band4_TOA_REF_doy2010225_aid0001.tif')
+Bnd4.2010232 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/5d242fcd-71f3-40f0-862c-a8620c882c83/WELDUSWK.001_Band4_TOA_REF_doy2010232_aid0001.tif')
+Bnd4.2010239 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/280beac0-d1b2-4f94-9d6d-9a824934672c/WELDUSWK.001_Band4_TOA_REF_doy2010239_aid0001.tif')
+Bnd4.2010246 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/e4e2fb3a-7f39-466b-9c54-e25a9ad337ef/WELDUSWK.001_Band4_TOA_REF_doy2010246_aid0001.tif')
+Bnd4.2010253 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/76a7688c-a5d6-4de9-b77f-e568922db4e3/WELDUSWK.001_Band4_TOA_REF_doy2010253_aid0001.tif')
+Bnd4.2010260 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/4fedb87c-7f77-42a3-99a8-878bf70adcb4/WELDUSWK.001_Band4_TOA_REF_doy2010260_aid0001.tif')
+Bnd4.2010267 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/7425ff7c-9a40-4e71-9da7-49cbb77b8d29/WELDUSWK.001_Band4_TOA_REF_doy2010267_aid0001.tif')
+Bnd4.2010274 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/a6f4f345-75de-4c09-966c-151f548dc77d/WELDUSWK.001_Band4_TOA_REF_doy2010274_aid0001.tif')
+Bnd4.2010281 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/973f50a9-93b4-4248-9f02-e2bc8f4697e2/WELDUSWK.001_Band4_TOA_REF_doy2010281_aid0001.tif')
+Bnd4.2010288 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/aa57b147-bc5d-471f-a356-e944c900e818/WELDUSWK.001_Band4_TOA_REF_doy2010288_aid0001.tif')
+Bnd4.2010295 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/7b62f2fe-2467-4a8f-90e3-0857692488c2/WELDUSWK.001_Band4_TOA_REF_doy2010295_aid0001.tif')
+Bnd4.2010302 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/7cd48fef-94a3-4a39-b4ed-6eb69d6db4d7/WELDUSWK.001_Band4_TOA_REF_doy2010302_aid0001.tif')
+Bnd4.2010309 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/87b1f5c4-3adc-4542-94ad-69e378ed2e4f/WELDUSWK.001_Band4_TOA_REF_doy2010309_aid0001.tif')
+Bnd4.2010316 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/f6465170-bc61-4c2e-88e0-8c5306688c4e/WELDUSWK.001_Band4_TOA_REF_doy2010316_aid0001.tif')
+Bnd4.2010330 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/dbfe5c19-2d3f-4020-8499-b932ef0fd496/WELDUSWK.001_Band4_TOA_REF_doy2010330_aid0001.tif')
+Bnd4.2010337 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/4ef5cd93-44bf-465f-a22e-03960c81e9a6/WELDUSWK.001_Band4_TOA_REF_doy2010337_aid0001.tif')
+Bnd4.2010344 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/d37d9ac2-b350-4d08-b505-6215e4e4d7dd/WELDUSWK.001_Band4_TOA_REF_doy2010344_aid0001.tif')
+Bnd4.2010351 <- raster('https://lpdaacsvc.cr.usgs.gov/appeears/api/bundle/54c9e60d-be3e-4008-92c9-5a14f8cc270f/517217e5-a1bb-4134-8c42-d0880fd06604/WELDUSWK.001_Band4_TOA_REF_doy2010351_aid0001.tif')
+
+
+
+Bnd4.2010001 <- as.matrix(as.data.frame(values(Bnd4.2010001)))
+Bnd4.2010008 <- as.matrix(as.data.frame(values(Bnd4.2010008)))
+Bnd4.2010043 <- as.data.frame(values(Bnd4.2010043))
+Bnd4.2010050 <- as.data.frame(values(Bnd4.2010050))
+Bnd4.2010057 <- as.data.frame(values(Bnd4.2010057))
+Bnd4.2010064 <- as.data.frame(values(Bnd4.2010064))
+Bnd4.2010071 <- as.data.frame(values(Bnd4.2010071))
+Bnd4.2010078 <- as.data.frame(values(Bnd4.2010078))
+Bnd4.2010085 <- as.data.frame(values(Bnd4.2010085))
+Bnd4.2010092 <- as.data.frame(values(Bnd4.2010092))
+Bnd4.2010099 <- as.data.frame(values(Bnd4.2010099))
+Bnd4.2010106 <- as.data.frame(values(Bnd4.2010106))
+Bnd4.2010113 <- as.data.frame(values(Bnd4.2010113))
+Bnd4.2010120 <- as.data.frame(values(Bnd4.2010120))
+Bnd4.2010127 <- as.data.frame(values(Bnd4.2010127))
+Bnd4.2010134 <- as.data.frame(values(Bnd4.2010134))
+Bnd4.2010141 <- as.data.frame(values(Bnd4.2010141))
+Bnd4.2010148 <- as.data.frame(values(Bnd4.2010148))
+Bnd4.2010155 <- as.data.frame(values(Bnd4.2010155))
+Bnd4.2010162 <- as.data.frame(values(Bnd4.2010162))
+Bnd4.2010169 <- as.data.frame(values(Bnd4.2010169))
+Bnd4.2010176 <- as.data.frame(values(Bnd4.2010176))
+Bnd4.2010183 <- as.data.frame(values(Bnd4.2010183))
+Bnd4.2010190 <- as.data.frame(values(Bnd4.2010190))
+Bnd4.2010197 <- as.data.frame(values(Bnd4.2010197))
+Bnd4.2010204 <- as.data.frame(values(Bnd4.2010204))
+Bnd4.2010211 <- as.data.frame(values(Bnd4.2010211))
+Bnd4.2010225 <- as.data.frame(values(Bnd4.2010225))
+Bnd4.2010232 <- as.data.frame(values(Bnd4.2010232))
+Bnd4.2010239 <- as.data.frame(values(Bnd4.2010239))
+Bnd4.2010246 <- as.data.frame(values(Bnd4.2010246))
+Bnd4.2010253 <- as.data.frame(values(Bnd4.2010253))
+Bnd4.2010260 <- as.data.frame(values(Bnd4.2010260))
+Bnd4.2010267 <- as.data.frame(values(Bnd4.2010267))
+Bnd4.2010274 <- as.data.frame(values(Bnd4.2010274))
+Bnd4.2010281 <- as.data.frame(values(Bnd4.2010281))
+Bnd4.2010288 <- as.data.frame(values(Bnd4.2010288))
+Bnd4.2010295 <- as.data.frame(values(Bnd4.2010295))
+Bnd4.2010302 <- as.data.frame(values(Bnd4.2010302))
+Bnd4.2010309 <- as.data.frame(values(Bnd4.2010309))
+Bnd4.2010316 <- as.data.frame(values(Bnd4.2010316))
+Bnd4.2010330 <- as.data.frame(values(Bnd4.2010330))
+Bnd4.2010337 <- as.data.frame(values(Bnd4.2010337))
+Bnd4.2010344 <- as.data.frame(values(Bnd4.2010344))
+Bnd4.2010351 <- as.data.frame(values(Bnd4.2010351))
+
+
+
+Bnd42010 <- as.data.frame(cbind(Bnd4.2010001, Bnd4.2010008, Bnd4.2010043, Bnd4.2010050, Bnd4.2010057,
+                                Bnd4.2010064, Bnd4.2010071, Bnd4.2010078, Bnd4.2010085, Bnd4.2010092,
+                                Bnd4.2010099, Bnd4.2010106, Bnd4.2010113, Bnd4.2010120, Bnd4.2010127,
+                                Bnd4.2010134, Bnd4.2010141, Bnd4.2010148, Bnd4.2010155, Bnd4.2010162, 
+                                Bnd4.2010169, Bnd4.2010176, Bnd4.2010183, Bnd4.2010190, Bnd4.2010197,
+                                Bnd4.2010204, Bnd4.2010211, Bnd4.2010225, Bnd4.2010232, Bnd4.2010239,
+                                Bnd4.2010246, Bnd4.2010253, Bnd4.2010260, Bnd4.2010267, Bnd4.2010274,
+                                Bnd4.2010281, Bnd4.2010288, Bnd4.2010295, Bnd4.2010302, Bnd4.2010309,
+                                Bnd4.2010316, Bnd4.2010330, Bnd4.2010337, Bnd4.2010344, Bnd4.2010351))
+
+
+Bnd4sd2010 <- apply(Bnd42010, 2, sd)
+Bnd4mn2010 <- apply(Bnd42010, 2, mean)
+Bnd4mdn2010 <- apply(Bnd42010, 2, median)
+Bnd4min2010 <- apply(Bnd42010, 2, min)
+Bnd4max2010 <- apply(Bnd42010, 2, max)
+
+Bnd4sts2010 <- as.data.frame(cbind(Bnd4mn2010, Bnd4mdn2010, Bnd4sd2010, Bnd4max2010, Bnd4min2010))
+colnames(Bnd4sts2010) <- c('Mean', 'Median', 'StdDev', 'Max', 'Min')
+write.csv(Bnd4sts2010, 'Bnd4CA_YR_2010_STATS.csv')
+
+Bnd4sts2010 <- cbind(Date, DOY, Bnd4sts2010)
+
+Bnd4mnp2010 <- as.data.frame(Bnd4mn2010)
+Bnd4mnp2010$Stat <- "Mean"
+Bnd4mnp2010 <- cbind(Date, DOY, Bnd4mnp2010)
+colnames(Bnd4mnp2010)[3] <- "Values"
+Bnd4minp2010 <- as.data.frame(Bnd4min2010)
+Bnd4minp2010$Stat <- "Min"
+Bnd4minp2010 <- cbind(Date, DOY, Bnd4minp2010)
+colnames(Bnd4minp2010)[3] <- "Values"
+Bnd4maxp2010 <- as.data.frame(Bnd4max2010)
+Bnd4maxp2010$Stat <- "Max"
+Bnd4maxp2010 <- cbind(Date, DOY, Bnd4maxp2010)
+colnames(Bnd4maxp2010)[3] <- "Values"
+Bnd4stsp2010 <- rbind(Bnd4mnp2010, Bnd4minp2010, Bnd4maxp2010)
+Bnd4stsp2010$Stat <- as.factor(Bnd4stsp2010$Stat)
+#Bnd4stsp2010$DOY <- as.factor(Bnd4stsp2010$DOY)
+Bnd4stxl2010 <- filter(Bnd4stsp2010, Values != 'NA')
+#write.csv(Bnd4stsp2010, 'Bnd4stsp2010.csv')
+write.csv(Bnd4stxl2010, 'Bnd4stxl2010.csv')
+
 
