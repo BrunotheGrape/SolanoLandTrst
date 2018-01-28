@@ -590,7 +590,7 @@ ggsave(file = "062916.6.3.png")
 ndvi072716.3.6.p <- ggplot(ndvi072716.3.6.us, aes(ndvi072716.3.6.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
 ndvi072716.3.6.p <- ndvi072716.3.6.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi072716.3.6.us$NDVI, na.rm = T)), color = "#b2df8a")
 ndvi072716.3.6.p <- ndvi072716.3.6.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi072716.3.6.us$NDVI, na.rm = T)), color = "#fc8d62")
-ndvi072716.3.6.p <- ndvi072716.3.6.p + labs(title = "Rush Ranch Block 1, Section 4.3\nJuly 27, 2016 NDVI Values Histogram\n with mean &median", x = "")
+ndvi072716.3.6.p <- ndvi072716.3.6.p + labs(title = "Rush Ranch Block 1, Section 6.3\nJuly 27, 2016 NDVI Values Histogram\n with mean &median", x = "")
 ndvi072716.3.6.p
 ggsave(file = "072716.6.3.png")
 
