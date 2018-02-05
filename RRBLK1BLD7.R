@@ -548,7 +548,7 @@ rrbldf <- cbind(rrbldf, ndvimd)
 rrbldf <- cbind(rrbldf, ndvisd)
 rrbldf <- cbind(rrbldf, ndvimx)
 rrbldf <- cbind(rrbldf, ndvimn)
-write.csv(rrbldf, "RushRanchBlk1_2016.6.3.csv")
+write.csv(rrbldf, "RushRanchBlk1_2016.7.3.csv")
 
 options(device = "RStudioGD")
 ndvi050316.3.7.us <- unstack(ndvi050316.3.7.df); colnames(ndvi050316.3.7.us) <- "NDVI"
