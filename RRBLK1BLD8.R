@@ -201,13 +201,13 @@ ndvi082416.1.8.p
 ggsave(file = "082416.8.1.png")
 
 set.seed(131)
-ndvi050316.1.8.us <- na.omit(ndvi050316.1.8.us); ndvi050316.1.8.rs <- sample_n(ndvi050316.1.8.us, 13700); ndvi050316.1.8.rs$Date <- "a"
-ndvi052616.1.8.us <- na.omit(ndvi052616.1.8.us); ndvi052616.1.8.rs <- sample_n(ndvi052616.1.8.us, 13700); ndvi052616.1.8.rs$Date <- "b"
-ndvi062316.1.8.us <- na.omit(ndvi062316.1.8.us); ndvi062316.1.8.rs <- sample_n(ndvi062316.1.8.us, 13700); ndvi062316.1.8.rs$Date <- "c"
-ndvi062916.1.8.us <- na.omit(ndvi062916.1.8.us); ndvi062916.1.8.rs <- sample_n(ndvi062916.1.8.us, 13700); ndvi062916.1.8.rs$Date <- "d"
-ndvi072716.1.8.us <- na.omit(ndvi072716.1.8.us); ndvi072716.1.8.rs <- sample_n(ndvi072716.1.8.us, 13700); ndvi072716.1.8.rs$Date <- "e"
-ndvi081716.1.8.us <- na.omit(ndvi081716.1.8.us); ndvi081716.1.8.rs <- sample_n(ndvi081716.1.8.us, 13700); ndvi081716.1.8.rs$Date <- "f"
-ndvi082416.1.8.us <- na.omit(ndvi082416.1.8.us); ndvi082416.1.8.rs <- sample_n(ndvi082416.1.8.us, 13700); ndvi082416.1.8.rs$Date <- "g"
+ndvi050316.1.8.us <- na.omit(ndvi050316.1.8.us); ndvi050316.1.8.rs <- sample_n(ndvi050316.1.8.us, 10300); ndvi050316.1.8.rs$Date <- "a"
+ndvi052616.1.8.us <- na.omit(ndvi052616.1.8.us); ndvi052616.1.8.rs <- sample_n(ndvi052616.1.8.us, 10300); ndvi052616.1.8.rs$Date <- "b"
+ndvi062316.1.8.us <- na.omit(ndvi062316.1.8.us); ndvi062316.1.8.rs <- sample_n(ndvi062316.1.8.us, 10300); ndvi062316.1.8.rs$Date <- "c"
+ndvi062916.1.8.us <- na.omit(ndvi062916.1.8.us); ndvi062916.1.8.rs <- sample_n(ndvi062916.1.8.us, 10300); ndvi062916.1.8.rs$Date <- "d"
+ndvi072716.1.8.us <- na.omit(ndvi072716.1.8.us); ndvi072716.1.8.rs <- sample_n(ndvi072716.1.8.us, 10300); ndvi072716.1.8.rs$Date <- "e"
+ndvi081716.1.8.us <- na.omit(ndvi081716.1.8.us); ndvi081716.1.8.rs <- sample_n(ndvi081716.1.8.us, 10300); ndvi081716.1.8.rs$Date <- "f"
+ndvi082416.1.8.us <- na.omit(ndvi082416.1.8.us); ndvi082416.1.8.rs <- sample_n(ndvi082416.1.8.us, 10300); ndvi082416.1.8.rs$Date <- "g"
 
 rrblrs <- rbind(ndvi082416.1.8.rs, ndvi081716.1.8.rs)
 rrblrs <- rbind(rrblrs, ndvi072716.1.8.rs)
