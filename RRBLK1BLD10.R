@@ -240,9 +240,9 @@ ndvi050316.2.9 <- crop(ndvi050316, extent(ndvi050316, 80, 159, 1801, 2016))
 ndvi052616.2.9 <- crop(ndvi052616, extent(ndvi052616, 80, 159, 1801, 2023))
 ndvi062316.2.9 <- crop(ndvi062316, extent(ndvi062316, 80, 159, 1801, 2011))
 ndvi062916.2.9 <- crop(ndvi062916, extent(ndvi062916, 80, 159, 1801, 1949))
-ndvi072716.2.9 <- crop(ndvi072716, extent(ndvi072716, 80, 159, 1601, 1800))
-ndvi081716.2.9 <- crop(ndvi081716, extent(ndvi081716, 80, 159, 1601, 1800))
-ndvi082416.2.9 <- crop(ndvi082416, extent(ndvi082416, 80, 159, 1601, 1800))
+ndvi072716.2.9 <- crop(ndvi072716, extent(ndvi072716, 80, 159, 1801, 1937))
+ndvi081716.2.9 <- crop(ndvi081716, extent(ndvi081716, 80, 159, 1801, 1948))
+ndvi082416.2.9 <- crop(ndvi082416, extent(ndvi082416, 80, 159, 1801, 1996))
 
 
 
@@ -444,9 +444,9 @@ ndvi050316.3.9 <- crop(ndvi050316, extent(ndvi050316, 160, 239, 1801, 2016))
 ndvi052616.3.9 <- crop(ndvi052616, extent(ndvi052616, 160, 239, 1801, 2023))
 ndvi062316.3.9 <- crop(ndvi062316, extent(ndvi062316, 160, 239, 1801, 2011))
 ndvi062916.3.9 <- crop(ndvi062916, extent(ndvi062916, 160, 239, 1801, 1949))
-ndvi072716.3.9 <- crop(ndvi072716, extent(ndvi072716, 160, 239, 1601, 1800))
-ndvi081716.3.9 <- crop(ndvi081716, extent(ndvi081716, 160, 239, 1601, 1800))
-ndvi082416.3.9 <- crop(ndvi082416, extent(ndvi082416, 160, 239, 1601, 1800))
+ndvi072716.3.9 <- crop(ndvi072716, extent(ndvi072716, 160, 239, 1801, 1937))
+ndvi081716.3.9 <- crop(ndvi081716, extent(ndvi081716, 160, 239, 1801, 1948))
+ndvi082416.3.9 <- crop(ndvi082416, extent(ndvi082416, 160, 239, 1801, 1996))
 
 
 
@@ -647,9 +647,9 @@ ndvi050316.4.9 <- crop(ndvi050316, extent(ndvi050316, 240, 319, 1801, 2016))
 ndvi052616.4.9 <- crop(ndvi052616, extent(ndvi052616, 240, 319, 1801, 2023))
 ndvi062316.4.9 <- crop(ndvi062316, extent(ndvi062316, 240, 319, 1801, 2011))
 ndvi062916.4.9 <- crop(ndvi062916, extent(ndvi062916, 240, 319, 1801, 1949))
-ndvi072716.4.9 <- crop(ndvi072716, extent(ndvi072716, 240, 319, 1601, 1800))
-ndvi081716.4.9 <- crop(ndvi081716, extent(ndvi081716, 240, 319, 1601, 1800))
-ndvi082416.4.9 <- crop(ndvi082416, extent(ndvi082416, 240, 319, 1601, 1800))
+ndvi072716.4.9 <- crop(ndvi072716, extent(ndvi072716, 240, 319, 1801, 1937))
+ndvi081716.4.9 <- crop(ndvi081716, extent(ndvi081716, 240, 319, 1801, 1948))
+ndvi082416.4.9 <- crop(ndvi082416, extent(ndvi082416, 240, 319, 1801, 1996))
 
 
 
@@ -853,9 +853,9 @@ ndvi050316.5.9 <- crop(ndvi050316, extent(ndvi050316, 320, 399, 1801, 2016))
 ndvi052616.5.9 <- crop(ndvi052616, extent(ndvi052616, 320, 399, 1801, 2023))
 ndvi062316.5.9 <- crop(ndvi062316, extent(ndvi062316, 320, 399, 1801, 2011))
 ndvi062916.5.9 <- crop(ndvi062916, extent(ndvi062916, 320, 399, 1801, 1949))
-ndvi072716.5.9 <- crop(ndvi072716, extent(ndvi072716, 320, 399, 1601, 1800))
-ndvi081716.5.9 <- crop(ndvi081716, extent(ndvi081716, 320, 399, 1601, 1800))
-ndvi082416.5.9 <- crop(ndvi082416, extent(ndvi082416, 320, 399, 1601, 1800))
+ndvi072716.5.9 <- crop(ndvi072716, extent(ndvi072716, 320, 399, 1801, 1937))
+ndvi081716.5.9 <- crop(ndvi081716, extent(ndvi081716, 320, 399, 1801, 1948))
+ndvi082416.5.9 <- crop(ndvi082416, extent(ndvi082416, 320, 399, 1801, 1996))
 
 
 
@@ -1057,9 +1057,9 @@ ndvi050316.6.9 <- crop(ndvi050316, extent(ndvi050316, 400, 479, 1801, 2016))
 ndvi052616.6.9 <- crop(ndvi052616, extent(ndvi052616, 400, 479, 1801, 2023))
 ndvi062316.6.9 <- crop(ndvi062316, extent(ndvi062316, 400, 479, 1801, 2011))
 ndvi062916.6.9 <- crop(ndvi062916, extent(ndvi062916, 400, 479, 1801, 1949))
-ndvi072716.6.9 <- crop(ndvi072716, extent(ndvi072716, 400, 479, 1601, 1800))
-ndvi081716.6.9 <- crop(ndvi081716, extent(ndvi081716, 400, 479, 1601, 1800))
-ndvi082416.6.9 <- crop(ndvi082416, extent(ndvi082416, 400, 479, 1601, 1800))
+ndvi072716.6.9 <- crop(ndvi072716, extent(ndvi072716, 400, 479, 1801, 1937))
+ndvi081716.6.9 <- crop(ndvi081716, extent(ndvi081716, 400, 479, 1801, 1948))
+ndvi082416.6.9 <- crop(ndvi082416, extent(ndvi082416, 400, 479, 1801, 1996))
 
 
 
@@ -1261,9 +1261,9 @@ ndvi050316.7.9 <- crop(ndvi050316, extent(ndvi050316, 480, 559, 1801, 2016))
 ndvi052616.7.9 <- crop(ndvi052616, extent(ndvi052616, 480, 559, 1801, 2023))
 ndvi062316.7.9 <- crop(ndvi062316, extent(ndvi062316, 480, 559, 1801, 2011))
 ndvi062916.7.9 <- crop(ndvi062916, extent(ndvi062916, 480, 559, 1801, 1949))
-ndvi072716.7.9 <- crop(ndvi072716, extent(ndvi072716, 480, 559, 1601, 1800))
-ndvi081716.7.9 <- crop(ndvi081716, extent(ndvi081716, 480, 559, 1601, 1800))
-ndvi082416.7.9 <- crop(ndvi082416, extent(ndvi082416, 480, 559, 1601, 1800))
+ndvi072716.7.9 <- crop(ndvi072716, extent(ndvi072716, 480, 559, 1801, 1937))
+ndvi081716.7.9 <- crop(ndvi081716, extent(ndvi081716, 480, 559, 1801, 1948))
+ndvi082416.7.9 <- crop(ndvi082416, extent(ndvi082416, 480, 559, 1801, 1996))
 
 
 
@@ -1465,9 +1465,9 @@ ndvi050316.8.9 <- crop(ndvi050316, extent(ndvi050316, 560, 639, 1801, 2016))
 ndvi052616.8.9 <- crop(ndvi052616, extent(ndvi052616, 560, 639, 1801, 2023))
 ndvi062316.8.9 <- crop(ndvi062316, extent(ndvi062316, 560, 639, 1801, 2011))
 ndvi062916.8.9 <- crop(ndvi062916, extent(ndvi062916, 560, 639, 1801, 1949))
-ndvi072716.8.9 <- crop(ndvi072716, extent(ndvi072716, 560, 639, 1601, 1800))
-ndvi081716.8.9 <- crop(ndvi081716, extent(ndvi081716, 560, 639, 1601, 1800))
-ndvi082416.8.9 <- crop(ndvi082416, extent(ndvi082416, 560, 639, 1601, 1800))
+ndvi072716.8.9 <- crop(ndvi072716, extent(ndvi072716, 560, 639, 1801, 1937))
+ndvi081716.8.9 <- crop(ndvi081716, extent(ndvi081716, 560, 639, 1801, 1948))
+ndvi082416.8.9 <- crop(ndvi082416, extent(ndvi082416, 560, 639, 1801, 1996))
 
 
 
@@ -1669,9 +1669,9 @@ ndvi050316.9.9 <- crop(ndvi050316, extent(ndvi050316, 640, 719, 1801, 2016))
 ndvi052616.9.9 <- crop(ndvi052616, extent(ndvi052616, 640, 719, 1801, 2023))
 ndvi062316.9.9 <- crop(ndvi062316, extent(ndvi062316, 640, 719, 1801, 2011))
 ndvi062916.9.9 <- crop(ndvi062916, extent(ndvi062916, 640, 719, 1801, 1949))
-ndvi072716.9.9 <- crop(ndvi072716, extent(ndvi072716, 640, 719, 1601, 1800))
-ndvi081716.9.9 <- crop(ndvi081716, extent(ndvi081716, 640, 719, 1601, 1800))
-ndvi082416.9.9 <- crop(ndvi082416, extent(ndvi082416, 640, 719, 1601, 1800))
+ndvi072716.9.9 <- crop(ndvi072716, extent(ndvi072716, 640, 719, 1801, 1937))
+ndvi081716.9.9 <- crop(ndvi081716, extent(ndvi081716, 640, 719, 1801, 1948))
+ndvi082416.9.9 <- crop(ndvi082416, extent(ndvi082416, 640, 719, 1801, 1996))
 
 
 
@@ -1874,9 +1874,9 @@ ndvi050316.10.9 <- crop(ndvi050316, extent(ndvi050316, 720, 798, 1801, 2016))
 ndvi052616.10.9 <- crop(ndvi052616, extent(ndvi052616, 720, 798, 1801, 2023))
 ndvi062316.10.9 <- crop(ndvi062316, extent(ndvi062316, 720, 795, 1801, 2011))
 ndvi062916.10.9 <- crop(ndvi062916, extent(ndvi062916, 720, 771, 1801, 1949))
-ndvi072716.10.9 <- crop(ndvi072716, extent(ndvi072716, 720, 766, 1601, 1800))
-ndvi081716.10.9 <- crop(ndvi081716, extent(ndvi081716, 720, 771, 1601, 1800))
-ndvi082416.10.9 <- crop(ndvi082416, extent(ndvi082416, 720, 790, 1601, 1800))
+ndvi072716.10.9 <- crop(ndvi072716, extent(ndvi072716, 720, 766, 1801, 1937))
+ndvi081716.10.9 <- crop(ndvi081716, extent(ndvi081716, 720, 771, 1801, 1948))
+ndvi082416.10.9 <- crop(ndvi082416, extent(ndvi082416, 720, 790, 1801, 1996))
 
 
 
