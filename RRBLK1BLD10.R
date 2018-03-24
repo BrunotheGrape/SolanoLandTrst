@@ -256,7 +256,7 @@ ndvi082416.2.1 <- crop(ndvi082416, extent(ndvi082416, 80, 159, 1801, 1996))
 # ndvi050316.1.1
 # 
 # image(ndvi050316)
-image(ndvi082416.2.9)
+image(ndvi082416.2.10)
 
 ndvi050316.2.10.st <- stack(ndvi050316.2.10)
 ndvi052616.2.10.st <- stack(ndvi052616.2.10)
@@ -460,7 +460,7 @@ ndvi082416.3.10 <- crop(ndvi082416, extent(ndvi082416, 160, 239, 1801, 1996))
 # ndvi050316.1.1
 # 
 # image(ndvi050316)
-image(ndvi082416.3.9)
+image(ndvi082416.3.10)
 
 ndvi050316.3.10.st <- stack(ndvi050316.3.10)
 ndvi052616.3.10.st <- stack(ndvi052616.3.10)
@@ -562,49 +562,49 @@ ndvi082416.3.10.us <- unstack(ndvi082416.3.10.df); colnames(ndvi082416.3.10.us) 
 ndvi050316.3.10.p <- ggplot(ndvi050316.3.10.us, aes(ndvi050316.3.10.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
 ndvi050316.3.10.p <- ndvi050316.3.10.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi050316.3.10.us$NDVI, na.rm = T)), color = "#b2df8a")
 ndvi050316.3.10.p <- ndvi050316.3.10.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi050316.3.10.us$NDVI, na.rm = T)), color = "#fc8d62")
-ndvi050316.3.10.p <- ndvi050316.3.10.p + labs(title = "Rush Ranch Block 1, Section 8.3\nMay 3, 2016 NDVI Values Histogram\n with mean & median", x = "")
+ndvi050316.3.10.p <- ndvi050316.3.10.p + labs(title = "Rush Ranch Block 1, Section 10.3\nMay 3, 2016 NDVI Values Histogram\n with mean & median", x = "")
 ndvi050316.3.10.p
 ggsave(file = "050316.10.3.png")
 
 ndvi052616.3.10.p <- ggplot(ndvi052616.3.10.us, aes(ndvi052616.3.10.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
 ndvi052616.3.10.p <- ndvi052616.3.10.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi052616.3.10.us$NDVI, na.rm = T)), color = "#b2df8a")
 ndvi052616.3.10.p <- ndvi052616.3.10.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi052616.3.10.us$NDVI, na.rm = T)), color = "#fc8d62")
-ndvi052616.3.10.p <- ndvi052616.3.10.p + labs(title = "Rush Ranch Block 1, Section 8.3\nMay 26, 2016 NDVI Values Histogram\n with mean & median", x = "")
+ndvi052616.3.10.p <- ndvi052616.3.10.p + labs(title = "Rush Ranch Block 1, Section 10.3\nMay 26, 2016 NDVI Values Histogram\n with mean & median", x = "")
 ndvi052616.3.10.p
 ggsave(file = "052616.10.3.png")
 
 ndvi062316.3.10.p <- ggplot(ndvi062316.3.10.us, aes(ndvi062316.3.10.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
 ndvi062316.3.10.p <- ndvi062316.3.10.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi062316.3.10.us$NDVI, na.rm = T)), color = "#b2df8a")
 ndvi062316.3.10.p <- ndvi062316.3.10.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi062316.3.10.us$NDVI, na.rm = T)), color = "#fc8d62")
-ndvi062316.3.10.p <- ndvi062316.3.10.p + labs(title = "Rush Ranch Block 1, Section 8.3\nJune 23, 2016 NDVI Values Histogram\n with mean & median", x = "")
+ndvi062316.3.10.p <- ndvi062316.3.10.p + labs(title = "Rush Ranch Block 1, Section 10.3\nJune 23, 2016 NDVI Values Histogram\n with mean & median", x = "")
 ndvi062316.3.10.p
 ggsave(file = "062316.10.3.png")
 
 ndvi062916.3.10.p <- ggplot(ndvi062916.3.10.us, aes(ndvi062916.3.10.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
 ndvi062916.3.10.p <- ndvi062916.3.10.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi062916.3.10.us$NDVI, na.rm = T)), color = "#b2df8a")
 ndvi062916.3.10.p <- ndvi062916.3.10.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi062916.3.10.us$NDVI, na.rm = T)), color = "#fc8d62")
-ndvi062916.3.10.p <- ndvi062916.3.10.p + labs(title = "Rush Ranch Block 1, Section 8.3\nJune 29, 2016 NDVI Values Histogram\n with mean & median", x = "")
+ndvi062916.3.10.p <- ndvi062916.3.10.p + labs(title = "Rush Ranch Block 1, Section 10.3\nJune 29, 2016 NDVI Values Histogram\n with mean & median", x = "")
 ndvi062916.3.10.p
 ggsave(file = "062916.10.3.png")
 
 ndvi072716.3.10.p <- ggplot(ndvi072716.3.10.us, aes(ndvi072716.3.10.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
 ndvi072716.3.10.p <- ndvi072716.3.10.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi072716.3.10.us$NDVI, na.rm = T)), color = "#b2df8a")
 ndvi072716.3.10.p <- ndvi072716.3.10.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi072716.3.10.us$NDVI, na.rm = T)), color = "#fc8d62")
-ndvi072716.3.10.p <- ndvi072716.3.10.p + labs(title = "Rush Ranch Block 1, Section 8.3\nJuly 27, 2016 NDVI Values Histogram\n with mean &median", x = "")
+ndvi072716.3.10.p <- ndvi072716.3.10.p + labs(title = "Rush Ranch Block 1, Section 10.3\nJuly 27, 2016 NDVI Values Histogram\n with mean &median", x = "")
 ndvi072716.3.10.p
 ggsave(file = "072716.10.3.png")
 
 ndvi081716.3.10.p <- ggplot(ndvi081716.3.10.us, aes(ndvi081716.3.10.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
 ndvi081716.3.10.p <- ndvi081716.3.10.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi081716.3.10.us$NDVI, na.rm = T)), color = "#b2df8a")
 ndvi081716.3.10.p <- ndvi081716.3.10.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi081716.3.10.us$NDVI, na.rm = T)), color = "#fc8d62")
-ndvi081716.3.10.p <- ndvi081716.3.10.p + labs(title = "Rush Ranch Block 1, Section 8.3\nAugust 17, 2016 NDVI Values Histogram\n with mean & median", x = "")
+ndvi081716.3.10.p <- ndvi081716.3.10.p + labs(title = "Rush Ranch Block 1, Section 10.3\nAugust 17, 2016 NDVI Values Histogram\n with mean & median", x = "")
 ndvi081716.3.10.p
 ggsave(file = "081716.10.3.png")
 
 ndvi082416.3.10.p <- ggplot(ndvi082416.3.10.us, aes(ndvi082416.3.10.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
 ndvi082416.3.10.p <- ndvi082416.3.10.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi082416.3.10.us$NDVI, na.rm = T)), color = "#b2df8a")
 ndvi082416.3.10.p <- ndvi082416.3.10.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi082416.3.10.us$NDVI, na.rm = T)), color = "#fc8d62")
-ndvi082416.3.10.p <- ndvi082416.3.10.p + labs(title = "Rush Ranch Block 1, Section 8.3\nAugust 24, 2016 NDVI Values Histogram\n with mean & median", x = "")
+ndvi082416.3.10.p <- ndvi082416.3.10.p + labs(title = "Rush Ranch Block 1, Section 10.3\nAugust 24, 2016 NDVI Values Histogram\n with mean & median", x = "")
 ndvi082416.3.10.p
 ggsave(file = "082416.10.3.png")
 
@@ -631,25 +631,25 @@ rrblrsp <- ggplot(rrblrs, aes(x = Date, y = NDVI)) + geom_violin(aes(fill = Date
 rrblrsp <- rrblrsp + scale_fill_brewer(palette="BrBG", labels = c("May 3", "May 26", "June 23", "June 26", "July 27", "Aug 17", "Aug 24"))
 rrblrsp <- rrblrsp + xlab("") + theme_bw()+ theme(axis.text.x = element_blank()) + theme(plot.title = element_text(hjust = 0.5))
 rrblrsp <- rrblrsp + stat_summary(fun.data=mean_sdl, mult=1, geom="pointrange", color="#bf812d")
-rrblrsp <- rrblrsp + labs(title = "Rush Ranch Block 1, Section 8.3\n2016 NDVI Values")
+rrblrsp <- rrblrsp + labs(title = "Rush Ranch Block 1, Section 10.3\n2016 NDVI Values")
 rrblrsp
 ggsave(file = "rrblrsp2016violin.10.3.png")
 
 rrblrsp <- ggplot(rrblrs, aes(x = Date, y = NDVI)) + geom_boxplot(aes(fill = Date))
 rrblrsp <- rrblrsp + scale_fill_brewer(palette="BrBG", labels = c("May 3", "May 26", "June 23", "June 26", "July 27", "Aug 17", "Aug 24"))
 rrblrsp <- rrblrsp + xlab("") + theme_bw() + theme(axis.text.x = element_blank()) + theme(plot.title = element_text(hjust = 0.5))
-rrblrsp <- rrblrsp + labs(title = "Rush Ranch Block 1, Section 8.3\n2016 NDVI Values")
+rrblrsp <- rrblrsp + labs(title = "Rush Ranch Block 1, Section 10.3\n2016 NDVI Values")
 rrblrsp
 ggsave(file = "rrblrsp2016box.10.3.png")
 
 ##############################################################
-ndvi050316.4.9 <- crop(ndvi050316, extent(ndvi050316, 240, 319, 1801, 2016))
-ndvi052616.4.9 <- crop(ndvi052616, extent(ndvi052616, 240, 319, 1801, 2023))
-ndvi062316.4.9 <- crop(ndvi062316, extent(ndvi062316, 240, 319, 1801, 2011))
-ndvi062916.4.9 <- crop(ndvi062916, extent(ndvi062916, 240, 319, 1801, 1949))
-ndvi072716.4.9 <- crop(ndvi072716, extent(ndvi072716, 240, 319, 1801, 1937))
-ndvi081716.4.9 <- crop(ndvi081716, extent(ndvi081716, 240, 319, 1801, 1948))
-ndvi082416.4.9 <- crop(ndvi082416, extent(ndvi082416, 240, 319, 1801, 1996))
+ndvi050316.4.10 <- crop(ndvi050316, extent(ndvi050316, 240, 319, 1801, 2016))
+ndvi052616.4.10 <- crop(ndvi052616, extent(ndvi052616, 240, 319, 1801, 2023))
+ndvi062316.4.10 <- crop(ndvi062316, extent(ndvi062316, 240, 319, 1801, 2011))
+ndvi062916.4.10 <- crop(ndvi062916, extent(ndvi062916, 240, 319, 1801, 1949))
+ndvi072716.4.10 <- crop(ndvi072716, extent(ndvi072716, 240, 319, 1801, 1937))
+ndvi081716.4.10 <- crop(ndvi081716, extent(ndvi081716, 240, 319, 1801, 1948))
+ndvi082416.4.10 <- crop(ndvi082416, extent(ndvi082416, 240, 319, 1801, 1996))
 
 
 
@@ -663,87 +663,87 @@ ndvi082416.4.9 <- crop(ndvi082416, extent(ndvi082416, 240, 319, 1801, 1996))
 #ndvi050316.1.1
 # 
 # image(ndvi050316)
-image(ndvi082416.4.9)
+image(ndvi082416.4.10)
 
-ndvi050316.4.9.st <- stack(ndvi050316.4.9)
-ndvi052616.4.9.st <- stack(ndvi052616.4.9)
-ndvi062316.4.9.st <- stack(ndvi062316.4.9)
-ndvi062916.4.9.st <- stack(ndvi062916.4.9)
-ndvi072716.4.9.st <- stack(ndvi072716.4.9)
-ndvi081716.4.9.st <- stack(ndvi081716.4.9)
-ndvi082416.4.9.st <- stack(ndvi082416.4.9)
+ndvi050316.4.10.st <- stack(ndvi050316.4.10)
+ndvi052616.4.10.st <- stack(ndvi052616.4.10)
+ndvi062316.4.10.st <- stack(ndvi062316.4.10)
+ndvi062916.4.10.st <- stack(ndvi062916.4.10)
+ndvi072716.4.10.st <- stack(ndvi072716.4.10)
+ndvi081716.4.10.st <- stack(ndvi081716.4.10)
+ndvi082416.4.10.st <- stack(ndvi082416.4.10)
 
-ndvi050316.4.9.df <- as.data.frame(ndvi050316.4.9.st);colnames(ndvi050316.4.9.df) <- "NDVI"; ndvi050316.4.9.df$observation <- 1:nrow(ndvi050316.4.9.df)
+ndvi050316.4.10.df <- as.data.frame(ndvi050316.4.10.st);colnames(ndvi050316.4.10.df) <- "NDVI"; ndvi050316.4.10.df$observation <- 1:nrow(ndvi050316.4.10.df)
 
-ndvi052616.4.9.df <- as.data.frame(ndvi052616.4.9.st);colnames(ndvi052616.4.9.df) <- "NDVI"; ndvi052616.4.9.df$observation <- 1:nrow(ndvi052616.4.9.df)
+ndvi052616.4.10.df <- as.data.frame(ndvi052616.4.10.st);colnames(ndvi052616.4.10.df) <- "NDVI"; ndvi052616.4.10.df$observation <- 1:nrow(ndvi052616.4.10.df)
 
-ndvi062316.4.9.df <- as.data.frame(ndvi062316.4.9.st); colnames(ndvi062316.4.9.df) <- "NDVI"; ndvi062316.4.9.df$observation <- 1:nrow(ndvi062316.4.9.df)
+ndvi062316.4.10.df <- as.data.frame(ndvi062316.4.10.st); colnames(ndvi062316.4.10.df) <- "NDVI"; ndvi062316.4.10.df$observation <- 1:nrow(ndvi062316.4.10.df)
 
-ndvi062916.4.9.df <- as.data.frame(ndvi062916.4.9.st); colnames(ndvi062916.4.9.df) <- "NDVI"; ndvi062916.4.9.df$observation <- 1:nrow(ndvi062916.4.9.df)
+ndvi062916.4.10.df <- as.data.frame(ndvi062916.4.10.st); colnames(ndvi062916.4.10.df) <- "NDVI"; ndvi062916.4.10.df$observation <- 1:nrow(ndvi062916.4.10.df)
 
-ndvi072716.4.9.df <- as.data.frame(ndvi072716.4.9.st); colnames(ndvi072716.4.9.df) <- "NDVI"; ndvi072716.4.9.df$observation <- 1:nrow(ndvi072716.4.9.df)
+ndvi072716.4.10.df <- as.data.frame(ndvi072716.4.10.st); colnames(ndvi072716.4.10.df) <- "NDVI"; ndvi072716.4.10.df$observation <- 1:nrow(ndvi072716.4.10.df)
 
-ndvi081716.4.9.df <- as.data.frame(ndvi081716.4.9.st); colnames(ndvi081716.4.9.df) <- "NDVI"; ndvi081716.4.9.df$observation <- 1:nrow(ndvi081716.4.9.df)
+ndvi081716.4.10.df <- as.data.frame(ndvi081716.4.10.st); colnames(ndvi081716.4.10.df) <- "NDVI"; ndvi081716.4.10.df$observation <- 1:nrow(ndvi081716.4.10.df)
 
-ndvi082416.4.9.df <- as.data.frame(ndvi082416.4.9.st);colnames(ndvi082416.4.9.df) <- "NDVI"; ndvi082416.4.9.df$observation <- 1:nrow(ndvi082416.4.9.df)
+ndvi082416.4.10.df <- as.data.frame(ndvi082416.4.10.st);colnames(ndvi082416.4.10.df) <- "NDVI"; ndvi082416.4.10.df$observation <- 1:nrow(ndvi082416.4.10.df)
 
 
-ndvi050316.4.9.st.av <- cellStats(ndvi050316.4.9.st, mean)
-ndvi050316.4.9.st.md <- cellStats(ndvi050316.4.9.st, median)
-ndvi050316.4.9.st.mx <- cellStats(ndvi050316.4.9.st, max)
-ndvi050316.4.9.st.mn <- cellStats(ndvi050316.4.9.st, min)
-ndvi050316.4.9.st.sd <- sd(ndvi050316.4.9.df$NDVI, na.rm = TRUE)
+ndvi050316.4.10.st.av <- cellStats(ndvi050316.4.10.st, mean)
+ndvi050316.4.10.st.md <- cellStats(ndvi050316.4.10.st, median)
+ndvi050316.4.10.st.mx <- cellStats(ndvi050316.4.10.st, max)
+ndvi050316.4.10.st.mn <- cellStats(ndvi050316.4.10.st, min)
+ndvi050316.4.10.st.sd <- sd(ndvi050316.4.10.df$NDVI, na.rm = TRUE)
 
-ndvi052616.4.9.st.av <- cellStats(ndvi052616.4.9.st, mean)
-ndvi052616.4.9.st.md <- cellStats(ndvi052616.4.9.st, median)
-ndvi052616.4.9.st.mx <- cellStats(ndvi052616.4.9.st, max)
-ndvi052616.4.9.st.mn <- cellStats(ndvi052616.4.9.st, min)
-ndvi052616.4.9.st.sd <- sd(ndvi052616.4.9.df$NDVI, na.rm = TRUE)
+ndvi052616.4.10.st.av <- cellStats(ndvi052616.4.10.st, mean)
+ndvi052616.4.10.st.md <- cellStats(ndvi052616.4.10.st, median)
+ndvi052616.4.10.st.mx <- cellStats(ndvi052616.4.10.st, max)
+ndvi052616.4.10.st.mn <- cellStats(ndvi052616.4.10.st, min)
+ndvi052616.4.10.st.sd <- sd(ndvi052616.4.10.df$NDVI, na.rm = TRUE)
 
-ndvi062316.4.9.st.av <- cellStats(ndvi062316.4.9.st, mean)
-ndvi062316.4.9.st.md <- cellStats(ndvi062316.4.9.st, median)
-ndvi062316.4.9.st.mx <- cellStats(ndvi062316.4.9.st, max)
-ndvi062316.4.9.st.mn <- cellStats(ndvi062316.4.9.st, min)
-ndvi062316.4.9.st.sd <- sd(ndvi062316.4.9.df$NDVI, na.rm = TRUE)
+ndvi062316.4.10.st.av <- cellStats(ndvi062316.4.10.st, mean)
+ndvi062316.4.10.st.md <- cellStats(ndvi062316.4.10.st, median)
+ndvi062316.4.10.st.mx <- cellStats(ndvi062316.4.10.st, max)
+ndvi062316.4.10.st.mn <- cellStats(ndvi062316.4.10.st, min)
+ndvi062316.4.10.st.sd <- sd(ndvi062316.4.10.df$NDVI, na.rm = TRUE)
 
-ndvi062916.4.9.st.av <- cellStats(ndvi062916.4.9.st, mean)
-ndvi062916.4.9.st.md <- cellStats(ndvi062916.4.9.st, median)
-ndvi062916.4.9.st.mx <- cellStats(ndvi062916.4.9.st, max)
-ndvi062916.4.9.st.mn <- cellStats(ndvi062916.4.9.st, min)
-ndvi062916.4.9.st.sd <- sd(ndvi062916.4.9.df$NDVI, na.rm = TRUE)
+ndvi062916.4.10.st.av <- cellStats(ndvi062916.4.10.st, mean)
+ndvi062916.4.10.st.md <- cellStats(ndvi062916.4.10.st, median)
+ndvi062916.4.10.st.mx <- cellStats(ndvi062916.4.10.st, max)
+ndvi062916.4.10.st.mn <- cellStats(ndvi062916.4.10.st, min)
+ndvi062916.4.10.st.sd <- sd(ndvi062916.4.10.df$NDVI, na.rm = TRUE)
 
-ndvi072716.4.9.st.av <- cellStats(ndvi072716.4.9.st, mean)
-ndvi072716.4.9.st.md <- cellStats(ndvi072716.4.9.st, median)
-ndvi072716.4.9.st.mx <- cellStats(ndvi072716.4.9.st, max)
-ndvi072716.4.9.st.mn <- cellStats(ndvi072716.4.9.st, min)
-ndvi072716.4.9.st.sd <- sd(ndvi072716.4.9.df$NDVI, na.rm = TRUE)
+ndvi072716.4.10.st.av <- cellStats(ndvi072716.4.10.st, mean)
+ndvi072716.4.10.st.md <- cellStats(ndvi072716.4.10.st, median)
+ndvi072716.4.10.st.mx <- cellStats(ndvi072716.4.10.st, max)
+ndvi072716.4.10.st.mn <- cellStats(ndvi072716.4.10.st, min)
+ndvi072716.4.10.st.sd <- sd(ndvi072716.4.10.df$NDVI, na.rm = TRUE)
 
-ndvi081716.4.9.st.av <- cellStats(ndvi081716.4.9.st, mean)
-ndvi081716.4.9.st.md <- cellStats(ndvi081716.4.9.st, median)
-ndvi081716.4.9.st.mx <- cellStats(ndvi081716.4.9.st, max)
-ndvi081716.4.9.st.mn <- cellStats(ndvi081716.4.9.st, min)
-ndvi081716.4.9.st.sd <- sd(ndvi081716.4.9.df$NDVI, na.rm = TRUE)
+ndvi081716.4.10.st.av <- cellStats(ndvi081716.4.10.st, mean)
+ndvi081716.4.10.st.md <- cellStats(ndvi081716.4.10.st, median)
+ndvi081716.4.10.st.mx <- cellStats(ndvi081716.4.10.st, max)
+ndvi081716.4.10.st.mn <- cellStats(ndvi081716.4.10.st, min)
+ndvi081716.4.10.st.sd <- sd(ndvi081716.4.10.df$NDVI, na.rm = TRUE)
 
-ndvi082416.4.9.st.av <- cellStats(ndvi082416.4.9.st, mean)
-ndvi082416.4.9.st.md <- cellStats(ndvi082416.4.9.st, median)
-ndvi082416.4.9.st.mx <- cellStats(ndvi082416.4.9.st, max)
-ndvi082416.4.9.st.mn <- cellStats(ndvi082416.4.9.st, min)
-ndvi082416.4.9.st.sd <- sd(ndvi082416.4.9.df$NDVI, na.rm = TRUE)
+ndvi082416.4.10.st.av <- cellStats(ndvi082416.4.10.st, mean)
+ndvi082416.4.10.st.md <- cellStats(ndvi082416.4.10.st, median)
+ndvi082416.4.10.st.mx <- cellStats(ndvi082416.4.10.st, max)
+ndvi082416.4.10.st.mn <- cellStats(ndvi082416.4.10.st, min)
+ndvi082416.4.10.st.sd <- sd(ndvi082416.4.10.df$NDVI, na.rm = TRUE)
 
-ndviav <- data.frame(Average = c(ndvi050316.4.9.st.av, ndvi052616.4.9.st.av, ndvi062316.4.9.st.av, ndvi062916.4.9.st.av,
-                                 ndvi072716.4.9.st.av, ndvi081716.4.9.st.av, ndvi082416.4.9.st.av))
+ndviav <- data.frame(Average = c(ndvi050316.4.10.st.av, ndvi052616.4.10.st.av, ndvi062316.4.10.st.av, ndvi062916.4.10.st.av,
+                                 ndvi072716.4.10.st.av, ndvi081716.4.10.st.av, ndvi082416.4.10.st.av))
 
-ndvimd <- data.frame(Median = c(ndvi050316.4.9.st.md, ndvi052616.4.9.st.md, ndvi062316.4.9.st.md, ndvi062916.4.9.st.md,
-                                ndvi072716.4.9.st.md, ndvi081716.4.9.st.md, ndvi082416.4.9.st.md))
+ndvimd <- data.frame(Median = c(ndvi050316.4.10.st.md, ndvi052616.4.10.st.md, ndvi062316.4.10.st.md, ndvi062916.4.10.st.md,
+                                ndvi072716.4.10.st.md, ndvi081716.4.10.st.md, ndvi082416.4.10.st.md))
 
-ndvisd <- data.frame(StandardDeviation = c(ndvi050316.4.9.st.sd, ndvi052616.4.9.st.sd, ndvi062316.4.9.st.sd, ndvi062916.4.9.st.sd,
-                                           ndvi072716.4.9.st.sd, ndvi081716.4.9.st.sd, ndvi082416.4.9.st.sd))
+ndvisd <- data.frame(StandardDeviation = c(ndvi050316.4.10.st.sd, ndvi052616.4.10.st.sd, ndvi062316.4.10.st.sd, ndvi062916.4.10.st.sd,
+                                           ndvi072716.4.10.st.sd, ndvi081716.4.10.st.sd, ndvi082416.4.10.st.sd))
 
-ndvimx <- data.frame(Maximum = c(ndvi050316.4.9.st.mx, ndvi052616.4.9.st.mx, ndvi062316.4.9.st.mx, ndvi062916.4.9.st.mx,
-                                 ndvi072716.4.9.st.mx, ndvi081716.4.9.st.mx, ndvi082416.4.9.st.mx))
+ndvimx <- data.frame(Maximum = c(ndvi050316.4.10.st.mx, ndvi052616.4.10.st.mx, ndvi062316.4.10.st.mx, ndvi062916.4.10.st.mx,
+                                 ndvi072716.4.10.st.mx, ndvi081716.4.10.st.mx, ndvi082416.4.10.st.mx))
 
-ndvimn <- data.frame(Minimum = c(ndvi050316.4.9.st.mn, ndvi052616.4.9.st.mn, ndvi062316.4.9.st.mn, ndvi062916.4.9.st.mn,
-                                 ndvi072716.4.9.st.mn, ndvi081716.4.9.st.mn, ndvi082416.4.9.st.mn))
+ndvimn <- data.frame(Minimum = c(ndvi050316.4.10.st.mn, ndvi052616.4.10.st.mn, ndvi062316.4.10.st.mn, ndvi062916.4.10.st.mn,
+                                 ndvi072716.4.10.st.mn, ndvi081716.4.10.st.mn, ndvi082416.4.10.st.mn))
 
 
 rrbldf <- cbind(dt, ndviav)
@@ -751,81 +751,81 @@ rrbldf <- cbind(rrbldf, ndvimd)
 rrbldf <- cbind(rrbldf, ndvisd)
 rrbldf <- cbind(rrbldf, ndvimx)
 rrbldf <- cbind(rrbldf, ndvimn)
-write.csv(rrbldf, "RushRanchBlk1_2016.9.4.csv")
+write.csv(rrbldf, "RushRanchBlk1_2016.10.4.csv")
 
 options(device = "RStudioGD")
-ndvi050316.4.9.us <- unstack(ndvi050316.4.9.df); colnames(ndvi050316.4.9.us) <- "NDVI"
-ndvi052616.4.9.us <- unstack(ndvi052616.4.9.df); colnames(ndvi052616.4.9.us) <- "NDVI"
-ndvi062316.4.9.us <- unstack(ndvi062316.4.9.df); colnames(ndvi062316.4.9.us) <- "NDVI"
-ndvi062916.4.9.us <- unstack(ndvi062916.4.9.df); colnames(ndvi062916.4.9.us) <- "NDVI"
-ndvi072716.4.9.us <- unstack(ndvi072716.4.9.df); colnames(ndvi072716.4.9.us) <- "NDVI"
-ndvi081716.4.9.us <- unstack(ndvi081716.4.9.df); colnames(ndvi081716.4.9.us) <- "NDVI"
-ndvi082416.4.9.us <- unstack(ndvi082416.4.9.df); colnames(ndvi082416.4.9.us) <- "NDVI"
+ndvi050316.4.10.us <- unstack(ndvi050316.4.10.df); colnames(ndvi050316.4.10.us) <- "NDVI"
+ndvi052616.4.10.us <- unstack(ndvi052616.4.10.df); colnames(ndvi052616.4.10.us) <- "NDVI"
+ndvi062316.4.10.us <- unstack(ndvi062316.4.10.df); colnames(ndvi062316.4.10.us) <- "NDVI"
+ndvi062916.4.10.us <- unstack(ndvi062916.4.10.df); colnames(ndvi062916.4.10.us) <- "NDVI"
+ndvi072716.4.10.us <- unstack(ndvi072716.4.10.df); colnames(ndvi072716.4.10.us) <- "NDVI"
+ndvi081716.4.10.us <- unstack(ndvi081716.4.10.df); colnames(ndvi081716.4.10.us) <- "NDVI"
+ndvi082416.4.10.us <- unstack(ndvi082416.4.10.df); colnames(ndvi082416.4.10.us) <- "NDVI"
 
-ndvi050316.4.9.p <- ggplot(ndvi050316.4.9.us, aes(ndvi050316.4.9.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
-ndvi050316.4.9.p <- ndvi050316.4.9.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi050316.4.9.us$NDVI, na.rm = T)), color = "#b2df8a")
-ndvi050316.4.9.p <- ndvi050316.4.9.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi050316.4.9.us$NDVI, na.rm = T)), color = "#fc8d62")
-ndvi050316.4.9.p <- ndvi050316.4.9.p + labs(title = "Rush Ranch Block 1, Section 8.4\nMay 3, 2016 NDVI Values Histogram\n with mean & median", x = "")
-ndvi050316.4.9.p
-ggsave(file = "050316.9.4.png")
+ndvi050316.4.10.p <- ggplot(ndvi050316.4.10.us, aes(ndvi050316.4.10.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
+ndvi050316.4.10.p <- ndvi050316.4.10.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi050316.4.10.us$NDVI, na.rm = T)), color = "#b2df8a")
+ndvi050316.4.10.p <- ndvi050316.4.10.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi050316.4.10.us$NDVI, na.rm = T)), color = "#fc8d62")
+ndvi050316.4.10.p <- ndvi050316.4.10.p + labs(title = "Rush Ranch Block 1, Section 10.4\nMay 3, 2016 NDVI Values Histogram\n with mean & median", x = "")
+ndvi050316.4.10.p
+ggsave(file = "050316.10.4.png")
 
-ndvi052616.4.9.p <- ggplot(ndvi052616.4.9.us, aes(ndvi052616.4.9.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
-ndvi052616.4.9.p <- ndvi052616.4.9.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi052616.4.9.us$NDVI, na.rm = T)), color = "#b2df8a")
-ndvi052616.4.9.p <- ndvi052616.4.9.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi052616.4.9.us$NDVI, na.rm = T)), color = "#fc8d62")
-ndvi052616.4.9.p <- ndvi052616.4.9.p + labs(title = "Rush Ranch Block 1, Section 8.4\nMay 26, 2016 NDVI Values Histogram\n with mean & median", x = "")
-ndvi052616.4.9.p
-ggsave(file = "052616.9.4.png")
+ndvi052616.4.10.p <- ggplot(ndvi052616.4.10.us, aes(ndvi052616.4.10.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
+ndvi052616.4.10.p <- ndvi052616.4.10.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi052616.4.10.us$NDVI, na.rm = T)), color = "#b2df8a")
+ndvi052616.4.10.p <- ndvi052616.4.10.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi052616.4.10.us$NDVI, na.rm = T)), color = "#fc8d62")
+ndvi052616.4.10.p <- ndvi052616.4.10.p + labs(title = "Rush Ranch Block 1, Section 10.4\nMay 26, 2016 NDVI Values Histogram\n with mean & median", x = "")
+ndvi052616.4.10.p
+ggsave(file = "052616.10.4.png")
 
-ndvi062316.4.9.p <- ggplot(ndvi062316.4.9.us, aes(ndvi062316.4.9.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
-ndvi062316.4.9.p <- ndvi062316.4.9.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi062316.4.9.us$NDVI, na.rm = T)), color = "#b2df8a")
-ndvi062316.4.9.p <- ndvi062316.4.9.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi062316.4.9.us$NDVI, na.rm = T)), color = "#fc8d62")
-ndvi062316.4.9.p <- ndvi062316.4.9.p + labs(title = "Rush Ranch Block 1, Section 8.4\nJune 23, 2016 NDVI Values Histogram\n with mean & median", x = "")
-ndvi062316.4.9.p
-ggsave(file = "062316.9.4.png")
+ndvi062316.4.10.p <- ggplot(ndvi062316.4.10.us, aes(ndvi062316.4.10.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
+ndvi062316.4.10.p <- ndvi062316.4.10.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi062316.4.10.us$NDVI, na.rm = T)), color = "#b2df8a")
+ndvi062316.4.10.p <- ndvi062316.4.10.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi062316.4.10.us$NDVI, na.rm = T)), color = "#fc8d62")
+ndvi062316.4.10.p <- ndvi062316.4.10.p + labs(title = "Rush Ranch Block 1, Section 10.4\nJune 23, 2016 NDVI Values Histogram\n with mean & median", x = "")
+ndvi062316.4.10.p
+ggsave(file = "062316.10.4.png")
 
-ndvi062916.4.9.p <- ggplot(ndvi062916.4.9.us, aes(ndvi062916.4.9.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
-ndvi062916.4.9.p <- ndvi062916.4.9.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi062916.4.9.us$NDVI, na.rm = T)), color = "#b2df8a")
-ndvi062916.4.9.p <- ndvi062916.4.9.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi062916.4.9.us$NDVI, na.rm = T)), color = "#fc8d62")
-ndvi062916.4.9.p <- ndvi062916.4.9.p + labs(title = "Rush Ranch Block 1, Section 8.4\nJune 29, 2016 NDVI Values Histogram\n with mean & median", x = "")
-ndvi062916.4.9.p
-ggsave(file = "062916.9.4.png")
+ndvi062916.4.10.p <- ggplot(ndvi062916.4.10.us, aes(ndvi062916.4.10.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
+ndvi062916.4.10.p <- ndvi062916.4.10.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi062916.4.10.us$NDVI, na.rm = T)), color = "#b2df8a")
+ndvi062916.4.10.p <- ndvi062916.4.10.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi062916.4.10.us$NDVI, na.rm = T)), color = "#fc8d62")
+ndvi062916.4.10.p <- ndvi062916.4.10.p + labs(title = "Rush Ranch Block 1, Section 10.4\nJune 29, 2016 NDVI Values Histogram\n with mean & median", x = "")
+ndvi062916.4.10.p
+ggsave(file = "062916.10.4.png")
 
-ndvi072716.4.9.p <- ggplot(ndvi072716.4.9.us, aes(ndvi072716.4.9.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
-ndvi072716.4.9.p <- ndvi072716.4.9.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi072716.4.9.us$NDVI, na.rm = T)), color = "#b2df8a")
-ndvi072716.4.9.p <- ndvi072716.4.9.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi072716.4.9.us$NDVI, na.rm = T)), color = "#fc8d62")
-ndvi072716.4.9.p <- ndvi072716.4.9.p + labs(title = "Rush Ranch Block 1, Section 8.4\nJuly 27, 2016 NDVI Values Histogram\n with mean &median", x = "")
-ndvi072716.4.9.p
-ggsave(file = "072716.9.4.png")
+ndvi072716.4.10.p <- ggplot(ndvi072716.4.10.us, aes(ndvi072716.4.10.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
+ndvi072716.4.10.p <- ndvi072716.4.10.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi072716.4.10.us$NDVI, na.rm = T)), color = "#b2df8a")
+ndvi072716.4.10.p <- ndvi072716.4.10.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi072716.4.10.us$NDVI, na.rm = T)), color = "#fc8d62")
+ndvi072716.4.10.p <- ndvi072716.4.10.p + labs(title = "Rush Ranch Block 1, Section 10.4\nJuly 27, 2016 NDVI Values Histogram\n with mean &median", x = "")
+ndvi072716.4.10.p
+ggsave(file = "072716.10.4.png")
 
-ndvi081716.4.9.p <- ggplot(ndvi081716.4.9.us, aes(ndvi081716.4.9.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
-ndvi081716.4.9.p <- ndvi081716.4.9.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi081716.4.9.us$NDVI, na.rm = T)), color = "#b2df8a")
-ndvi081716.4.9.p <- ndvi081716.4.9.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi081716.4.9.us$NDVI, na.rm = T)), color = "#fc8d62")
-ndvi081716.4.9.p <- ndvi081716.4.9.p + labs(title = "Rush Ranch Block 1, Section 8.4\nAugust 17, 2016 NDVI Values Histogram\n with mean & median", x = "")
-ndvi081716.4.9.p
-ggsave(file = "081716.9.4.png")
+ndvi081716.4.10.p <- ggplot(ndvi081716.4.10.us, aes(ndvi081716.4.10.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
+ndvi081716.4.10.p <- ndvi081716.4.10.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi081716.4.10.us$NDVI, na.rm = T)), color = "#b2df8a")
+ndvi081716.4.10.p <- ndvi081716.4.10.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi081716.4.10.us$NDVI, na.rm = T)), color = "#fc8d62")
+ndvi081716.4.10.p <- ndvi081716.4.10.p + labs(title = "Rush Ranch Block 1, Section 10.4\nAugust 17, 2016 NDVI Values Histogram\n with mean & median", x = "")
+ndvi081716.4.10.p
+ggsave(file = "081716.10.4.png")
 
-ndvi082416.4.9.p <- ggplot(ndvi082416.4.9.us, aes(ndvi082416.4.9.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
-ndvi082416.4.9.p <- ndvi082416.4.9.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi082416.4.9.us$NDVI, na.rm = T)), color = "#b2df8a")
-ndvi082416.4.9.p <- ndvi082416.4.9.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi082416.4.9.us$NDVI, na.rm = T)), color = "#fc8d62")
-ndvi082416.4.9.p <- ndvi082416.4.9.p + labs(title = "Rush Ranch Block 1, Section 8.4\nAugust 24, 2016 NDVI Values Histogram\n with mean & median", x = "")
-ndvi082416.4.9.p
-ggsave(file = "082416.9.4.png")
+ndvi082416.4.10.p <- ggplot(ndvi082416.4.10.us, aes(ndvi082416.4.10.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
+ndvi082416.4.10.p <- ndvi082416.4.10.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi082416.4.10.us$NDVI, na.rm = T)), color = "#b2df8a")
+ndvi082416.4.10.p <- ndvi082416.4.10.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi082416.4.10.us$NDVI, na.rm = T)), color = "#fc8d62")
+ndvi082416.4.10.p <- ndvi082416.4.10.p + labs(title = "Rush Ranch Block 1, Section 10.4\nAugust 24, 2016 NDVI Values Histogram\n with mean & median", x = "")
+ndvi082416.4.10.p
+ggsave(file = "082416.10.4.png")
 
 set.seed(131)
-ndvi050316.4.9.us <- na.omit(ndvi050316.4.9.us); ndvi050316.4.9.rs <- sample_n(ndvi050316.4.9.us, 15000); ndvi050316.4.9.rs$Date <- "a"
-ndvi052616.4.9.us <- na.omit(ndvi052616.4.9.us); ndvi052616.4.9.rs <- sample_n(ndvi052616.4.9.us, 15000); ndvi052616.4.9.rs$Date <- "b"
-ndvi062316.4.9.us <- na.omit(ndvi062316.4.9.us); ndvi062316.4.9.rs <- sample_n(ndvi062316.4.9.us, 15000); ndvi062316.4.9.rs$Date <- "c"
-ndvi062916.4.9.us <- na.omit(ndvi062916.4.9.us); ndvi062916.4.9.rs <- sample_n(ndvi062916.4.9.us, 15000); ndvi062916.4.9.rs$Date <- "d"
-ndvi072716.4.9.us <- na.omit(ndvi072716.4.9.us); ndvi072716.4.9.rs <- sample_n(ndvi072716.4.9.us, 15000); ndvi072716.4.9.rs$Date <- "e"
-ndvi081716.4.9.us <- na.omit(ndvi081716.4.9.us); ndvi081716.4.9.rs <- sample_n(ndvi081716.4.9.us, 15000); ndvi081716.4.9.rs$Date <- "f"
-ndvi082416.4.9.us <- na.omit(ndvi082416.4.9.us); ndvi082416.4.9.rs <- sample_n(ndvi082416.4.9.us, 15000); ndvi082416.4.9.rs$Date <- "g"
+ndvi050316.4.10.us <- na.omit(ndvi050316.4.10.us); ndvi050316.4.10.rs <- sample_n(ndvi050316.4.10.us, 15000); ndvi050316.4.10.rs$Date <- "a"
+ndvi052616.4.10.us <- na.omit(ndvi052616.4.10.us); ndvi052616.4.10.rs <- sample_n(ndvi052616.4.10.us, 15000); ndvi052616.4.10.rs$Date <- "b"
+ndvi062316.4.10.us <- na.omit(ndvi062316.4.10.us); ndvi062316.4.10.rs <- sample_n(ndvi062316.4.10.us, 15000); ndvi062316.4.10.rs$Date <- "c"
+ndvi062916.4.10.us <- na.omit(ndvi062916.4.10.us); ndvi062916.4.10.rs <- sample_n(ndvi062916.4.10.us, 15000); ndvi062916.4.10.rs$Date <- "d"
+ndvi072716.4.10.us <- na.omit(ndvi072716.4.10.us); ndvi072716.4.10.rs <- sample_n(ndvi072716.4.10.us, 15000); ndvi072716.4.10.rs$Date <- "e"
+ndvi081716.4.10.us <- na.omit(ndvi081716.4.10.us); ndvi081716.4.10.rs <- sample_n(ndvi081716.4.10.us, 15000); ndvi081716.4.10.rs$Date <- "f"
+ndvi082416.4.10.us <- na.omit(ndvi082416.4.10.us); ndvi082416.4.10.rs <- sample_n(ndvi082416.4.10.us, 15000); ndvi082416.4.10.rs$Date <- "g"
 
-rrblrs <- rbind(ndvi082416.4.9.rs, ndvi081716.4.9.rs)
-rrblrs <- rbind(rrblrs, ndvi072716.4.9.rs)
-rrblrs <- rbind(rrblrs, ndvi062916.4.9.rs)
-rrblrs <- rbind(rrblrs, ndvi062316.4.9.rs)
-rrblrs <- rbind(rrblrs, ndvi052616.4.9.rs)
-rrblrs <- rbind(rrblrs, ndvi050316.4.9.rs)
+rrblrs <- rbind(ndvi082416.4.10.rs, ndvi081716.4.10.rs)
+rrblrs <- rbind(rrblrs, ndvi072716.4.10.rs)
+rrblrs <- rbind(rrblrs, ndvi062916.4.10.rs)
+rrblrs <- rbind(rrblrs, ndvi062316.4.10.rs)
+rrblrs <- rbind(rrblrs, ndvi052616.4.10.rs)
+rrblrs <- rbind(rrblrs, ndvi050316.4.10.rs)
 
 
 
@@ -834,28 +834,28 @@ rrblrsp <- ggplot(rrblrs, aes(x = Date, y = NDVI)) + geom_violin(aes(fill = Date
 rrblrsp <- rrblrsp + scale_fill_brewer(palette="BrBG", labels = c("May 3", "May 26", "June 23", "June 26", "July 27", "Aug 17", "Aug 24"))
 rrblrsp <- rrblrsp + xlab("") + theme_bw()+ theme(axis.text.x = element_blank()) + theme(plot.title = element_text(hjust = 0.5))
 rrblrsp <- rrblrsp + stat_summary(fun.data=mean_sdl, mult=1, geom="pointrange", color="#bf812d")
-rrblrsp <- rrblrsp + labs(title = "Rush Ranch Block 1, Section 8.4\n2016 NDVI Values")
+rrblrsp <- rrblrsp + labs(title = "Rush Ranch Block 1, Section 10.4\n2016 NDVI Values")
 rrblrsp
-ggsave(file = "rrblrsp2016violin.9.4.png")
+ggsave(file = "rrblrsp2016violin.10.4.png")
 
 rrblrsp <- ggplot(rrblrs, aes(x = Date, y = NDVI)) + geom_boxplot(aes(fill = Date))
 rrblrsp <- rrblrsp + scale_fill_brewer(palette="BrBG", labels = c("May 3", "May 26", "June 23", "June 26", "July 27", "Aug 17", "Aug 24"))
 rrblrsp <- rrblrsp + xlab("") + theme_bw() + theme(axis.text.x = element_blank()) + theme(plot.title = element_text(hjust = 0.5))
-rrblrsp <- rrblrsp + labs(title = "Rush Ranch Block 1, Section 8.4\n2016 NDVI Values")
+rrblrsp <- rrblrsp + labs(title = "Rush Ranch Block 1, Section 10.4\n2016 NDVI Values")
 rrblrsp
-ggsave(file = "rrblrsp2016box.9.4.png")
+ggsave(file = "rrblrsp2016box.10.4.png")
 
 
 ################################################################
 
 
-ndvi050316.5.9 <- crop(ndvi050316, extent(ndvi050316, 320, 399, 1801, 2016))
-ndvi052616.5.9 <- crop(ndvi052616, extent(ndvi052616, 320, 399, 1801, 2023))
-ndvi062316.5.9 <- crop(ndvi062316, extent(ndvi062316, 320, 399, 1801, 2011))
-ndvi062916.5.9 <- crop(ndvi062916, extent(ndvi062916, 320, 399, 1801, 1949))
-ndvi072716.5.9 <- crop(ndvi072716, extent(ndvi072716, 320, 399, 1801, 1937))
-ndvi081716.5.9 <- crop(ndvi081716, extent(ndvi081716, 320, 399, 1801, 1948))
-ndvi082416.5.9 <- crop(ndvi082416, extent(ndvi082416, 320, 399, 1801, 1996))
+ndvi050316.5.10 <- crop(ndvi050316, extent(ndvi050316, 320, 399, 1801, 2016))
+ndvi052616.5.10 <- crop(ndvi052616, extent(ndvi052616, 320, 399, 1801, 2023))
+ndvi062316.5.10 <- crop(ndvi062316, extent(ndvi062316, 320, 399, 1801, 2011))
+ndvi062916.5.10 <- crop(ndvi062916, extent(ndvi062916, 320, 399, 1801, 1949))
+ndvi072716.5.10 <- crop(ndvi072716, extent(ndvi072716, 320, 399, 1801, 1937))
+ndvi081716.5.10 <- crop(ndvi081716, extent(ndvi081716, 320, 399, 1801, 1948))
+ndvi082416.5.10 <- crop(ndvi082416, extent(ndvi082416, 320, 399, 1801, 1996))
 
 
 
@@ -869,87 +869,87 @@ ndvi082416.5.9 <- crop(ndvi082416, extent(ndvi082416, 320, 399, 1801, 1996))
 # ndvi050316.1.1
 # 
 # image(ndvi050316)
-image(ndvi082416.5.9)
+image(ndvi082416.5.10)
 
-ndvi050316.5.9.st <- stack(ndvi050316.5.9)
-ndvi052616.5.9.st <- stack(ndvi052616.5.9)
-ndvi062316.5.9.st <- stack(ndvi062316.5.9)
-ndvi062916.5.9.st <- stack(ndvi062916.5.9)
-ndvi072716.5.9.st <- stack(ndvi072716.5.9)
-ndvi081716.5.9.st <- stack(ndvi081716.5.9)
-ndvi082416.5.9.st <- stack(ndvi082416.5.9)
+ndvi050316.5.10.st <- stack(ndvi050316.5.10)
+ndvi052616.5.10.st <- stack(ndvi052616.5.10)
+ndvi062316.5.10.st <- stack(ndvi062316.5.10)
+ndvi062916.5.10.st <- stack(ndvi062916.5.10)
+ndvi072716.5.10.st <- stack(ndvi072716.5.10)
+ndvi081716.5.10.st <- stack(ndvi081716.5.10)
+ndvi082416.5.10.st <- stack(ndvi082416.5.10)
 
-ndvi050316.5.9.df <- as.data.frame(ndvi050316.5.9.st);colnames(ndvi050316.5.9.df) <- "NDVI"; ndvi050316.5.9.df$observation <- 1:nrow(ndvi050316.5.9.df)
+ndvi050316.5.10.df <- as.data.frame(ndvi050316.5.10.st);colnames(ndvi050316.5.10.df) <- "NDVI"; ndvi050316.5.10.df$observation <- 1:nrow(ndvi050316.5.10.df)
 
-ndvi052616.5.9.df <- as.data.frame(ndvi052616.5.9.st);colnames(ndvi052616.5.9.df) <- "NDVI"; ndvi052616.5.9.df$observation <- 1:nrow(ndvi052616.5.9.df)
+ndvi052616.5.10.df <- as.data.frame(ndvi052616.5.10.st);colnames(ndvi052616.5.10.df) <- "NDVI"; ndvi052616.5.10.df$observation <- 1:nrow(ndvi052616.5.10.df)
 
-ndvi062316.5.9.df <- as.data.frame(ndvi062316.5.9.st); colnames(ndvi062316.5.9.df) <- "NDVI"; ndvi062316.5.9.df$observation <- 1:nrow(ndvi062316.5.9.df)
+ndvi062316.5.10.df <- as.data.frame(ndvi062316.5.10.st); colnames(ndvi062316.5.10.df) <- "NDVI"; ndvi062316.5.10.df$observation <- 1:nrow(ndvi062316.5.10.df)
 
-ndvi062916.5.9.df <- as.data.frame(ndvi062916.5.9.st); colnames(ndvi062916.5.9.df) <- "NDVI"; ndvi062916.5.9.df$observation <- 1:nrow(ndvi062916.5.9.df)
+ndvi062916.5.10.df <- as.data.frame(ndvi062916.5.10.st); colnames(ndvi062916.5.10.df) <- "NDVI"; ndvi062916.5.10.df$observation <- 1:nrow(ndvi062916.5.10.df)
 
-ndvi072716.5.9.df <- as.data.frame(ndvi072716.5.9.st); colnames(ndvi072716.5.9.df) <- "NDVI"; ndvi072716.5.9.df$observation <- 1:nrow(ndvi072716.5.9.df)
+ndvi072716.5.10.df <- as.data.frame(ndvi072716.5.10.st); colnames(ndvi072716.5.10.df) <- "NDVI"; ndvi072716.5.10.df$observation <- 1:nrow(ndvi072716.5.10.df)
 
-ndvi081716.5.9.df <- as.data.frame(ndvi081716.5.9.st); colnames(ndvi081716.5.9.df) <- "NDVI"; ndvi081716.5.9.df$observation <- 1:nrow(ndvi081716.5.9.df)
+ndvi081716.5.10.df <- as.data.frame(ndvi081716.5.10.st); colnames(ndvi081716.5.10.df) <- "NDVI"; ndvi081716.5.10.df$observation <- 1:nrow(ndvi081716.5.10.df)
 
-ndvi082416.5.9.df <- as.data.frame(ndvi082416.5.9.st);colnames(ndvi082416.5.9.df) <- "NDVI"; ndvi082416.5.9.df$observation <- 1:nrow(ndvi082416.5.9.df)
+ndvi082416.5.10.df <- as.data.frame(ndvi082416.5.10.st);colnames(ndvi082416.5.10.df) <- "NDVI"; ndvi082416.5.10.df$observation <- 1:nrow(ndvi082416.5.10.df)
 
 
-ndvi050316.5.9.st.av <- cellStats(ndvi050316.5.9.st, mean)
-ndvi050316.5.9.st.md <- cellStats(ndvi050316.5.9.st, median)
-ndvi050316.5.9.st.mx <- cellStats(ndvi050316.5.9.st, max)
-ndvi050316.5.9.st.mn <- cellStats(ndvi050316.5.9.st, min)
-ndvi050316.5.9.st.sd <- sd(ndvi050316.5.9.df$NDVI, na.rm = TRUE)
+ndvi050316.5.10.st.av <- cellStats(ndvi050316.5.10.st, mean)
+ndvi050316.5.10.st.md <- cellStats(ndvi050316.5.10.st, median)
+ndvi050316.5.10.st.mx <- cellStats(ndvi050316.5.10.st, max)
+ndvi050316.5.10.st.mn <- cellStats(ndvi050316.5.10.st, min)
+ndvi050316.5.10.st.sd <- sd(ndvi050316.5.10.df$NDVI, na.rm = TRUE)
 
-ndvi052616.5.9.st.av <- cellStats(ndvi052616.5.9.st, mean)
-ndvi052616.5.9.st.md <- cellStats(ndvi052616.5.9.st, median)
-ndvi052616.5.9.st.mx <- cellStats(ndvi052616.5.9.st, max)
-ndvi052616.5.9.st.mn <- cellStats(ndvi052616.5.9.st, min)
-ndvi052616.5.9.st.sd <- sd(ndvi052616.5.9.df$NDVI, na.rm = TRUE)
+ndvi052616.5.10.st.av <- cellStats(ndvi052616.5.10.st, mean)
+ndvi052616.5.10.st.md <- cellStats(ndvi052616.5.10.st, median)
+ndvi052616.5.10.st.mx <- cellStats(ndvi052616.5.10.st, max)
+ndvi052616.5.10.st.mn <- cellStats(ndvi052616.5.10.st, min)
+ndvi052616.5.10.st.sd <- sd(ndvi052616.5.10.df$NDVI, na.rm = TRUE)
 
-ndvi062316.5.9.st.av <- cellStats(ndvi062316.5.9.st, mean)
-ndvi062316.5.9.st.md <- cellStats(ndvi062316.5.9.st, median)
-ndvi062316.5.9.st.mx <- cellStats(ndvi062316.5.9.st, max)
-ndvi062316.5.9.st.mn <- cellStats(ndvi062316.5.9.st, min)
-ndvi062316.5.9.st.sd <- sd(ndvi062316.5.9.df$NDVI, na.rm = TRUE)
+ndvi062316.5.10.st.av <- cellStats(ndvi062316.5.10.st, mean)
+ndvi062316.5.10.st.md <- cellStats(ndvi062316.5.10.st, median)
+ndvi062316.5.10.st.mx <- cellStats(ndvi062316.5.10.st, max)
+ndvi062316.5.10.st.mn <- cellStats(ndvi062316.5.10.st, min)
+ndvi062316.5.10.st.sd <- sd(ndvi062316.5.10.df$NDVI, na.rm = TRUE)
 
-ndvi062916.5.9.st.av <- cellStats(ndvi062916.5.9.st, mean)
-ndvi062916.5.9.st.md <- cellStats(ndvi062916.5.9.st, median)
-ndvi062916.5.9.st.mx <- cellStats(ndvi062916.5.9.st, max)
-ndvi062916.5.9.st.mn <- cellStats(ndvi062916.5.9.st, min)
-ndvi062916.5.9.st.sd <- sd(ndvi062916.5.9.df$NDVI, na.rm = TRUE)
+ndvi062916.5.10.st.av <- cellStats(ndvi062916.5.10.st, mean)
+ndvi062916.5.10.st.md <- cellStats(ndvi062916.5.10.st, median)
+ndvi062916.5.10.st.mx <- cellStats(ndvi062916.5.10.st, max)
+ndvi062916.5.10.st.mn <- cellStats(ndvi062916.5.10.st, min)
+ndvi062916.5.10.st.sd <- sd(ndvi062916.5.10.df$NDVI, na.rm = TRUE)
 
-ndvi072716.5.9.st.av <- cellStats(ndvi072716.5.9.st, mean)
-ndvi072716.5.9.st.md <- cellStats(ndvi072716.5.9.st, median)
-ndvi072716.5.9.st.mx <- cellStats(ndvi072716.5.9.st, max)
-ndvi072716.5.9.st.mn <- cellStats(ndvi072716.5.9.st, min)
-ndvi072716.5.9.st.sd <- sd(ndvi072716.5.9.df$NDVI, na.rm = TRUE)
+ndvi072716.5.10.st.av <- cellStats(ndvi072716.5.10.st, mean)
+ndvi072716.5.10.st.md <- cellStats(ndvi072716.5.10.st, median)
+ndvi072716.5.10.st.mx <- cellStats(ndvi072716.5.10.st, max)
+ndvi072716.5.10.st.mn <- cellStats(ndvi072716.5.10.st, min)
+ndvi072716.5.10.st.sd <- sd(ndvi072716.5.10.df$NDVI, na.rm = TRUE)
 
-ndvi081716.5.9.st.av <- cellStats(ndvi081716.5.9.st, mean)
-ndvi081716.5.9.st.md <- cellStats(ndvi081716.5.9.st, median)
-ndvi081716.5.9.st.mx <- cellStats(ndvi081716.5.9.st, max)
-ndvi081716.5.9.st.mn <- cellStats(ndvi081716.5.9.st, min)
-ndvi081716.5.9.st.sd <- sd(ndvi081716.5.9.df$NDVI, na.rm = TRUE)
+ndvi081716.5.10.st.av <- cellStats(ndvi081716.5.10.st, mean)
+ndvi081716.5.10.st.md <- cellStats(ndvi081716.5.10.st, median)
+ndvi081716.5.10.st.mx <- cellStats(ndvi081716.5.10.st, max)
+ndvi081716.5.10.st.mn <- cellStats(ndvi081716.5.10.st, min)
+ndvi081716.5.10.st.sd <- sd(ndvi081716.5.10.df$NDVI, na.rm = TRUE)
 
-ndvi082416.5.9.st.av <- cellStats(ndvi082416.5.9.st, mean)
-ndvi082416.5.9.st.md <- cellStats(ndvi082416.5.9.st, median)
-ndvi082416.5.9.st.mx <- cellStats(ndvi082416.5.9.st, max)
-ndvi082416.5.9.st.mn <- cellStats(ndvi082416.5.9.st, min)
-ndvi082416.5.9.st.sd <- sd(ndvi082416.5.9.df$NDVI, na.rm = TRUE)
+ndvi082416.5.10.st.av <- cellStats(ndvi082416.5.10.st, mean)
+ndvi082416.5.10.st.md <- cellStats(ndvi082416.5.10.st, median)
+ndvi082416.5.10.st.mx <- cellStats(ndvi082416.5.10.st, max)
+ndvi082416.5.10.st.mn <- cellStats(ndvi082416.5.10.st, min)
+ndvi082416.5.10.st.sd <- sd(ndvi082416.5.10.df$NDVI, na.rm = TRUE)
 
-ndviav <- data.frame(Average = c(ndvi050316.5.9.st.av, ndvi052616.5.9.st.av, ndvi062316.5.9.st.av, ndvi062916.5.9.st.av,
-                                 ndvi072716.5.9.st.av, ndvi081716.5.9.st.av, ndvi082416.5.9.st.av))
+ndviav <- data.frame(Average = c(ndvi050316.5.10.st.av, ndvi052616.5.10.st.av, ndvi062316.5.10.st.av, ndvi062916.5.10.st.av,
+                                 ndvi072716.5.10.st.av, ndvi081716.5.10.st.av, ndvi082416.5.10.st.av))
 
-ndvimd <- data.frame(Median = c(ndvi050316.5.9.st.md, ndvi052616.5.9.st.md, ndvi062316.5.9.st.md, ndvi062916.5.9.st.md,
-                                ndvi072716.5.9.st.md, ndvi081716.5.9.st.md, ndvi082416.5.9.st.md))
+ndvimd <- data.frame(Median = c(ndvi050316.5.10.st.md, ndvi052616.5.10.st.md, ndvi062316.5.10.st.md, ndvi062916.5.10.st.md,
+                                ndvi072716.5.10.st.md, ndvi081716.5.10.st.md, ndvi082416.5.10.st.md))
 
-ndvisd <- data.frame(StandardDeviation = c(ndvi050316.5.9.st.sd, ndvi052616.5.9.st.sd, ndvi062316.5.9.st.sd, ndvi062916.5.9.st.sd,
-                                           ndvi072716.5.9.st.sd, ndvi081716.5.9.st.sd, ndvi082416.5.9.st.sd))
+ndvisd <- data.frame(StandardDeviation = c(ndvi050316.5.10.st.sd, ndvi052616.5.10.st.sd, ndvi062316.5.10.st.sd, ndvi062916.5.10.st.sd,
+                                           ndvi072716.5.10.st.sd, ndvi081716.5.10.st.sd, ndvi082416.5.10.st.sd))
 
-ndvimx <- data.frame(Maximum = c(ndvi050316.5.9.st.mx, ndvi052616.5.9.st.mx, ndvi062316.5.9.st.mx, ndvi062916.5.9.st.mx,
-                                 ndvi072716.5.9.st.mx, ndvi081716.5.9.st.mx, ndvi082416.5.9.st.mx))
+ndvimx <- data.frame(Maximum = c(ndvi050316.5.10.st.mx, ndvi052616.5.10.st.mx, ndvi062316.5.10.st.mx, ndvi062916.5.10.st.mx,
+                                 ndvi072716.5.10.st.mx, ndvi081716.5.10.st.mx, ndvi082416.5.10.st.mx))
 
-ndvimn <- data.frame(Minimum = c(ndvi050316.5.9.st.mn, ndvi052616.5.9.st.mn, ndvi062316.5.9.st.mn, ndvi062916.5.9.st.mn,
-                                 ndvi072716.5.9.st.mn, ndvi081716.5.9.st.mn, ndvi082416.5.9.st.mn))
+ndvimn <- data.frame(Minimum = c(ndvi050316.5.10.st.mn, ndvi052616.5.10.st.mn, ndvi062316.5.10.st.mn, ndvi062916.5.10.st.mn,
+                                 ndvi072716.5.10.st.mn, ndvi081716.5.10.st.mn, ndvi082416.5.10.st.mn))
 
 
 rrbldf <- cbind(dt, ndviav)
@@ -957,81 +957,81 @@ rrbldf <- cbind(rrbldf, ndvimd)
 rrbldf <- cbind(rrbldf, ndvisd)
 rrbldf <- cbind(rrbldf, ndvimx)
 rrbldf <- cbind(rrbldf, ndvimn)
-write.csv(rrbldf, "RushRanchBlk1_2016.9.5.csv")
+write.csv(rrbldf, "RushRanchBlk1_2016.10.5.csv")
 
 options(device = "RStudioGD")
-ndvi050316.5.9.us <- unstack(ndvi050316.5.9.df); colnames(ndvi050316.5.9.us) <- "NDVI"
-ndvi052616.5.9.us <- unstack(ndvi052616.5.9.df); colnames(ndvi052616.5.9.us) <- "NDVI"
-ndvi062316.5.9.us <- unstack(ndvi062316.5.9.df); colnames(ndvi062316.5.9.us) <- "NDVI"
-ndvi062916.5.9.us <- unstack(ndvi062916.5.9.df); colnames(ndvi062916.5.9.us) <- "NDVI"
-ndvi072716.5.9.us <- unstack(ndvi072716.5.9.df); colnames(ndvi072716.5.9.us) <- "NDVI"
-ndvi081716.5.9.us <- unstack(ndvi081716.5.9.df); colnames(ndvi081716.5.9.us) <- "NDVI"
-ndvi082416.5.9.us <- unstack(ndvi082416.5.9.df); colnames(ndvi082416.5.9.us) <- "NDVI"
+ndvi050316.5.10.us <- unstack(ndvi050316.5.10.df); colnames(ndvi050316.5.10.us) <- "NDVI"
+ndvi052616.5.10.us <- unstack(ndvi052616.5.10.df); colnames(ndvi052616.5.10.us) <- "NDVI"
+ndvi062316.5.10.us <- unstack(ndvi062316.5.10.df); colnames(ndvi062316.5.10.us) <- "NDVI"
+ndvi062916.5.10.us <- unstack(ndvi062916.5.10.df); colnames(ndvi062916.5.10.us) <- "NDVI"
+ndvi072716.5.10.us <- unstack(ndvi072716.5.10.df); colnames(ndvi072716.5.10.us) <- "NDVI"
+ndvi081716.5.10.us <- unstack(ndvi081716.5.10.df); colnames(ndvi081716.5.10.us) <- "NDVI"
+ndvi082416.5.10.us <- unstack(ndvi082416.5.10.df); colnames(ndvi082416.5.10.us) <- "NDVI"
 
-ndvi050316.5.9.p <- ggplot(ndvi050316.5.9.us, aes(ndvi050316.5.9.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
-ndvi050316.5.9.p <- ndvi050316.5.9.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi050316.5.9.us$NDVI, na.rm = T)), color = "#b2df8a")
-ndvi050316.5.9.p <- ndvi050316.5.9.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi050316.5.9.us$NDVI, na.rm = T)), color = "#fc8d62")
-ndvi050316.5.9.p <- ndvi050316.5.9.p + labs(title = "Rush Ranch Block 1, Section 8.5\nMay 3, 2016 NDVI Values Histogram\n with mean & median", x = "")
-ndvi050316.5.9.p
-ggsave(file = "050316.9.5.png")
+ndvi050316.5.10.p <- ggplot(ndvi050316.5.10.us, aes(ndvi050316.5.10.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
+ndvi050316.5.10.p <- ndvi050316.5.10.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi050316.5.10.us$NDVI, na.rm = T)), color = "#b2df8a")
+ndvi050316.5.10.p <- ndvi050316.5.10.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi050316.5.10.us$NDVI, na.rm = T)), color = "#fc8d62")
+ndvi050316.5.10.p <- ndvi050316.5.10.p + labs(title = "Rush Ranch Block 1, Section 10.5\nMay 3, 2016 NDVI Values Histogram\n with mean & median", x = "")
+ndvi050316.5.10.p
+ggsave(file = "050316.10.5.png")
 
-ndvi052616.5.9.p <- ggplot(ndvi052616.5.9.us, aes(ndvi052616.5.9.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
-ndvi052616.5.9.p <- ndvi052616.5.9.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi052616.5.9.us$NDVI, na.rm = T)), color = "#b2df8a")
-ndvi052616.5.9.p <- ndvi052616.5.9.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi052616.5.9.us$NDVI, na.rm = T)), color = "#fc8d62")
-ndvi052616.5.9.p <- ndvi052616.5.9.p + labs(title = "Rush Ranch Block 1, Section 8.5\nMay 26, 2016 NDVI Values Histogram\n with mean & median", x = "")
-ndvi052616.5.9.p
-ggsave(file = "052616.9.5.png")
+ndvi052616.5.10.p <- ggplot(ndvi052616.5.10.us, aes(ndvi052616.5.10.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
+ndvi052616.5.10.p <- ndvi052616.5.10.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi052616.5.10.us$NDVI, na.rm = T)), color = "#b2df8a")
+ndvi052616.5.10.p <- ndvi052616.5.10.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi052616.5.10.us$NDVI, na.rm = T)), color = "#fc8d62")
+ndvi052616.5.10.p <- ndvi052616.5.10.p + labs(title = "Rush Ranch Block 1, Section 10.5\nMay 26, 2016 NDVI Values Histogram\n with mean & median", x = "")
+ndvi052616.5.10.p
+ggsave(file = "052616.10.5.png")
 
-ndvi062316.5.9.p <- ggplot(ndvi062316.5.9.us, aes(ndvi062316.5.9.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
-ndvi062316.5.9.p <- ndvi062316.5.9.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi062316.5.9.us$NDVI, na.rm = T)), color = "#b2df8a")
-ndvi062316.5.9.p <- ndvi062316.5.9.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi062316.5.9.us$NDVI, na.rm = T)), color = "#fc8d62")
-ndvi062316.5.9.p <- ndvi062316.5.9.p + labs(title = "Rush Ranch Block 1, Section 8.5\nJune 23, 2016 NDVI Values Histogram\n with mean & median", x = "")
-ndvi062316.5.9.p
-ggsave(file = "062316.9.5.png")
+ndvi062316.5.10.p <- ggplot(ndvi062316.5.10.us, aes(ndvi062316.5.10.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
+ndvi062316.5.10.p <- ndvi062316.5.10.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi062316.5.10.us$NDVI, na.rm = T)), color = "#b2df8a")
+ndvi062316.5.10.p <- ndvi062316.5.10.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi062316.5.10.us$NDVI, na.rm = T)), color = "#fc8d62")
+ndvi062316.5.10.p <- ndvi062316.5.10.p + labs(title = "Rush Ranch Block 1, Section 10.5\nJune 23, 2016 NDVI Values Histogram\n with mean & median", x = "")
+ndvi062316.5.10.p
+ggsave(file = "062316.10.5.png")
 
-ndvi062916.5.9.p <- ggplot(ndvi062916.5.9.us, aes(ndvi062916.5.9.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
-ndvi062916.5.9.p <- ndvi062916.5.9.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi062916.5.9.us$NDVI, na.rm = T)), color = "#b2df8a")
-ndvi062916.5.9.p <- ndvi062916.5.9.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi062916.5.9.us$NDVI, na.rm = T)), color = "#fc8d62")
-ndvi062916.5.9.p <- ndvi062916.5.9.p + labs(title = "Rush Ranch Block 1, Section 8.5\nJune 29, 2016 NDVI Values Histogram\n with mean & median", x = "")
-ndvi062916.5.9.p
-ggsave(file = "062916.9.5.png")
+ndvi062916.5.10.p <- ggplot(ndvi062916.5.10.us, aes(ndvi062916.5.10.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
+ndvi062916.5.10.p <- ndvi062916.5.10.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi062916.5.10.us$NDVI, na.rm = T)), color = "#b2df8a")
+ndvi062916.5.10.p <- ndvi062916.5.10.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi062916.5.10.us$NDVI, na.rm = T)), color = "#fc8d62")
+ndvi062916.5.10.p <- ndvi062916.5.10.p + labs(title = "Rush Ranch Block 1, Section 10.5\nJune 29, 2016 NDVI Values Histogram\n with mean & median", x = "")
+ndvi062916.5.10.p
+ggsave(file = "062916.10.5.png")
 
-ndvi072716.5.9.p <- ggplot(ndvi072716.5.9.us, aes(ndvi072716.5.9.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
-ndvi072716.5.9.p <- ndvi072716.5.9.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi072716.5.9.us$NDVI, na.rm = T)), color = "#b2df8a")
-ndvi072716.5.9.p <- ndvi072716.5.9.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi072716.5.9.us$NDVI, na.rm = T)), color = "#fc8d62")
-ndvi072716.5.9.p <- ndvi072716.5.9.p + labs(title = "Rush Ranch Block 1, Section 8.5\nJuly 27, 2016 NDVI Values Histogram\n with mean &median", x = "")
-ndvi072716.5.9.p
-ggsave(file = "072716.9.5.png")
+ndvi072716.5.10.p <- ggplot(ndvi072716.5.10.us, aes(ndvi072716.5.10.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
+ndvi072716.5.10.p <- ndvi072716.5.10.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi072716.5.10.us$NDVI, na.rm = T)), color = "#b2df8a")
+ndvi072716.5.10.p <- ndvi072716.5.10.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi072716.5.10.us$NDVI, na.rm = T)), color = "#fc8d62")
+ndvi072716.5.10.p <- ndvi072716.5.10.p + labs(title = "Rush Ranch Block 1, Section 10.5\nJuly 27, 2016 NDVI Values Histogram\n with mean &median", x = "")
+ndvi072716.5.10.p
+ggsave(file = "072716.10.5.png")
 
-ndvi081716.5.9.p <- ggplot(ndvi081716.5.9.us, aes(ndvi081716.5.9.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
-ndvi081716.5.9.p <- ndvi081716.5.9.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi081716.5.9.us$NDVI, na.rm = T)), color = "#b2df8a")
-ndvi081716.5.9.p <- ndvi081716.5.9.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi081716.5.9.us$NDVI, na.rm = T)), color = "#fc8d62")
-ndvi081716.5.9.p <- ndvi081716.5.9.p + labs(title = "Rush Ranch Block 1, Section 8.5\nAugust 17, 2016 NDVI Values Histogram\n with mean & median", x = "")
-ndvi081716.5.9.p
-ggsave(file = "081716.9.5.png")
+ndvi081716.5.10.p <- ggplot(ndvi081716.5.10.us, aes(ndvi081716.5.10.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
+ndvi081716.5.10.p <- ndvi081716.5.10.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi081716.5.10.us$NDVI, na.rm = T)), color = "#b2df8a")
+ndvi081716.5.10.p <- ndvi081716.5.10.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi081716.5.10.us$NDVI, na.rm = T)), color = "#fc8d62")
+ndvi081716.5.10.p <- ndvi081716.5.10.p + labs(title = "Rush Ranch Block 1, Section 10.5\nAugust 17, 2016 NDVI Values Histogram\n with mean & median", x = "")
+ndvi081716.5.10.p
+ggsave(file = "081716.10.5.png")
 
-ndvi082416.5.9.p <- ggplot(ndvi082416.5.9.us, aes(ndvi082416.5.9.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
-ndvi082416.5.9.p <- ndvi082416.5.9.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi082416.5.9.us$NDVI, na.rm = T)), color = "#b2df8a")
-ndvi082416.5.9.p <- ndvi082416.5.9.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi082416.5.9.us$NDVI, na.rm = T)), color = "#fc8d62")
-ndvi082416.5.9.p <- ndvi082416.5.9.p + labs(title = "Rush Ranch Block 1, Section 8.5\nAugust 24, 2016 NDVI Values Histogram\n with mean & median", x = "")
-ndvi082416.5.9.p
-ggsave(file = "082416.9.5.png")
+ndvi082416.5.10.p <- ggplot(ndvi082416.5.10.us, aes(ndvi082416.5.10.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
+ndvi082416.5.10.p <- ndvi082416.5.10.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi082416.5.10.us$NDVI, na.rm = T)), color = "#b2df8a")
+ndvi082416.5.10.p <- ndvi082416.5.10.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi082416.5.10.us$NDVI, na.rm = T)), color = "#fc8d62")
+ndvi082416.5.10.p <- ndvi082416.5.10.p + labs(title = "Rush Ranch Block 1, Section 10.5\nAugust 24, 2016 NDVI Values Histogram\n with mean & median", x = "")
+ndvi082416.5.10.p
+ggsave(file = "082416.10.5.png")
 
 set.seed(131)
-ndvi050316.5.9.us <- na.omit(ndvi050316.5.9.us); ndvi050316.5.9.rs <- sample_n(ndvi050316.5.9.us, 15000); ndvi050316.5.9.rs$Date <- "a"
-ndvi052616.5.9.us <- na.omit(ndvi052616.5.9.us); ndvi052616.5.9.rs <- sample_n(ndvi052616.5.9.us, 15000); ndvi052616.5.9.rs$Date <- "b"
-ndvi062316.5.9.us <- na.omit(ndvi062316.5.9.us); ndvi062316.5.9.rs <- sample_n(ndvi062316.5.9.us, 15000); ndvi062316.5.9.rs$Date <- "c"
-ndvi062916.5.9.us <- na.omit(ndvi062916.5.9.us); ndvi062916.5.9.rs <- sample_n(ndvi062916.5.9.us, 15000); ndvi062916.5.9.rs$Date <- "d"
-ndvi072716.5.9.us <- na.omit(ndvi072716.5.9.us); ndvi072716.5.9.rs <- sample_n(ndvi072716.5.9.us, 15000); ndvi072716.5.9.rs$Date <- "e"
-ndvi081716.5.9.us <- na.omit(ndvi081716.5.9.us); ndvi081716.5.9.rs <- sample_n(ndvi081716.5.9.us, 15000); ndvi081716.5.9.rs$Date <- "f"
-ndvi082416.5.9.us <- na.omit(ndvi082416.5.9.us); ndvi082416.5.9.rs <- sample_n(ndvi082416.5.9.us, 15000); ndvi082416.5.9.rs$Date <- "g"
+ndvi050316.5.10.us <- na.omit(ndvi050316.5.10.us); ndvi050316.5.10.rs <- sample_n(ndvi050316.5.10.us, 15000); ndvi050316.5.10.rs$Date <- "a"
+ndvi052616.5.10.us <- na.omit(ndvi052616.5.10.us); ndvi052616.5.10.rs <- sample_n(ndvi052616.5.10.us, 15000); ndvi052616.5.10.rs$Date <- "b"
+ndvi062316.5.10.us <- na.omit(ndvi062316.5.10.us); ndvi062316.5.10.rs <- sample_n(ndvi062316.5.10.us, 15000); ndvi062316.5.10.rs$Date <- "c"
+ndvi062916.5.10.us <- na.omit(ndvi062916.5.10.us); ndvi062916.5.10.rs <- sample_n(ndvi062916.5.10.us, 15000); ndvi062916.5.10.rs$Date <- "d"
+ndvi072716.5.10.us <- na.omit(ndvi072716.5.10.us); ndvi072716.5.10.rs <- sample_n(ndvi072716.5.10.us, 15000); ndvi072716.5.10.rs$Date <- "e"
+ndvi081716.5.10.us <- na.omit(ndvi081716.5.10.us); ndvi081716.5.10.rs <- sample_n(ndvi081716.5.10.us, 15000); ndvi081716.5.10.rs$Date <- "f"
+ndvi082416.5.10.us <- na.omit(ndvi082416.5.10.us); ndvi082416.5.10.rs <- sample_n(ndvi082416.5.10.us, 15000); ndvi082416.5.10.rs$Date <- "g"
 
-rrblrs <- rbind(ndvi082416.5.9.rs, ndvi081716.5.9.rs)
-rrblrs <- rbind(rrblrs, ndvi072716.5.9.rs)
-rrblrs <- rbind(rrblrs, ndvi062916.5.9.rs)
-rrblrs <- rbind(rrblrs, ndvi062316.5.9.rs)
-rrblrs <- rbind(rrblrs, ndvi052616.5.9.rs)
-rrblrs <- rbind(rrblrs, ndvi050316.5.9.rs)
+rrblrs <- rbind(ndvi082416.5.10.rs, ndvi081716.5.10.rs)
+rrblrs <- rbind(rrblrs, ndvi072716.5.10.rs)
+rrblrs <- rbind(rrblrs, ndvi062916.5.10.rs)
+rrblrs <- rbind(rrblrs, ndvi062316.5.10.rs)
+rrblrs <- rbind(rrblrs, ndvi052616.5.10.rs)
+rrblrs <- rbind(rrblrs, ndvi050316.5.10.rs)
 
 
 
@@ -1040,26 +1040,26 @@ rrblrsp <- ggplot(rrblrs, aes(x = Date, y = NDVI)) + geom_violin(aes(fill = Date
 rrblrsp <- rrblrsp + scale_fill_brewer(palette="BrBG", labels = c("May 3", "May 26", "June 23", "June 26", "July 27", "Aug 17", "Aug 24"))
 rrblrsp <- rrblrsp + xlab("") + theme_bw()+ theme(axis.text.x = element_blank()) + theme(plot.title = element_text(hjust = 0.5))
 rrblrsp <- rrblrsp + stat_summary(fun.data=mean_sdl, mult=1, geom="pointrange", color="#bf812d")
-rrblrsp <- rrblrsp + labs(title = "Rush Ranch Block 1, Section 8.5\n2016 NDVI Values")
+rrblrsp <- rrblrsp + labs(title = "Rush Ranch Block 1, Section 10.5\n2016 NDVI Values")
 rrblrsp
-ggsave(file = "rrblrsp2016violin.9.5.png")
+ggsave(file = "rrblrsp2016violin.10.5.png")
 
 rrblrsp <- ggplot(rrblrs, aes(x = Date, y = NDVI)) + geom_boxplot(aes(fill = Date))
 rrblrsp <- rrblrsp + scale_fill_brewer(palette="BrBG", labels = c("May 3", "May 26", "June 23", "June 26", "July 27", "Aug 17", "Aug 24"))
 rrblrsp <- rrblrsp + xlab("") + theme_bw() + theme(axis.text.x = element_blank()) + theme(plot.title = element_text(hjust = 0.5))
-rrblrsp <- rrblrsp + labs(title = "Rush Ranch Block 1, Section 8.5\n2016 NDVI Values")
+rrblrsp <- rrblrsp + labs(title = "Rush Ranch Block 1, Section 10.5\n2016 NDVI Values")
 rrblrsp
-ggsave(file = "rrblrsp2016box.9.5.png")
+ggsave(file = "rrblrsp2016box.10.5.png")
 
 ###########################################################################
 
-ndvi050316.6.9 <- crop(ndvi050316, extent(ndvi050316, 400, 479, 1801, 2016))
-ndvi052616.6.9 <- crop(ndvi052616, extent(ndvi052616, 400, 479, 1801, 2023))
-ndvi062316.6.9 <- crop(ndvi062316, extent(ndvi062316, 400, 479, 1801, 2011))
-ndvi062916.6.9 <- crop(ndvi062916, extent(ndvi062916, 400, 479, 1801, 1949))
-ndvi072716.6.9 <- crop(ndvi072716, extent(ndvi072716, 400, 479, 1801, 1937))
-ndvi081716.6.9 <- crop(ndvi081716, extent(ndvi081716, 400, 479, 1801, 1948))
-ndvi082416.6.9 <- crop(ndvi082416, extent(ndvi082416, 400, 479, 1801, 1996))
+ndvi050316.6.10 <- crop(ndvi050316, extent(ndvi050316, 400, 479, 1801, 2016))
+ndvi052616.6.10 <- crop(ndvi052616, extent(ndvi052616, 400, 479, 1801, 2023))
+ndvi062316.6.10 <- crop(ndvi062316, extent(ndvi062316, 400, 479, 1801, 2011))
+ndvi062916.6.10 <- crop(ndvi062916, extent(ndvi062916, 400, 479, 1801, 1949))
+ndvi072716.6.10 <- crop(ndvi072716, extent(ndvi072716, 400, 479, 1801, 1937))
+ndvi081716.6.10 <- crop(ndvi081716, extent(ndvi081716, 400, 479, 1801, 1948))
+ndvi082416.6.10 <- crop(ndvi082416, extent(ndvi082416, 400, 479, 1801, 1996))
 
 
 
@@ -1073,87 +1073,87 @@ ndvi082416.6.9 <- crop(ndvi082416, extent(ndvi082416, 400, 479, 1801, 1996))
 # ndvi050316.1.1
 # 
 # image(ndvi050316)
-image(ndvi082416.6.9)
+image(ndvi082416.6.10)
 
-ndvi050316.6.9.st <- stack(ndvi050316.6.9)
-ndvi052616.6.9.st <- stack(ndvi052616.6.9)
-ndvi062316.6.9.st <- stack(ndvi062316.6.9)
-ndvi062916.6.9.st <- stack(ndvi062916.6.9)
-ndvi072716.6.9.st <- stack(ndvi072716.6.9)
-ndvi081716.6.9.st <- stack(ndvi081716.6.9)
-ndvi082416.6.9.st <- stack(ndvi082416.6.9)
+ndvi050316.6.10.st <- stack(ndvi050316.6.10)
+ndvi052616.6.10.st <- stack(ndvi052616.6.10)
+ndvi062316.6.10.st <- stack(ndvi062316.6.10)
+ndvi062916.6.10.st <- stack(ndvi062916.6.10)
+ndvi072716.6.10.st <- stack(ndvi072716.6.10)
+ndvi081716.6.10.st <- stack(ndvi081716.6.10)
+ndvi082416.6.10.st <- stack(ndvi082416.6.10)
 
-ndvi050316.6.9.df <- as.data.frame(ndvi050316.6.9.st);colnames(ndvi050316.6.9.df) <- "NDVI"; ndvi050316.6.9.df$observation <- 1:nrow(ndvi050316.6.9.df)
+ndvi050316.6.10.df <- as.data.frame(ndvi050316.6.10.st);colnames(ndvi050316.6.10.df) <- "NDVI"; ndvi050316.6.10.df$observation <- 1:nrow(ndvi050316.6.10.df)
 
-ndvi052616.6.9.df <- as.data.frame(ndvi052616.6.9.st);colnames(ndvi052616.6.9.df) <- "NDVI"; ndvi052616.6.9.df$observation <- 1:nrow(ndvi052616.6.9.df)
+ndvi052616.6.10.df <- as.data.frame(ndvi052616.6.10.st);colnames(ndvi052616.6.10.df) <- "NDVI"; ndvi052616.6.10.df$observation <- 1:nrow(ndvi052616.6.10.df)
 
-ndvi062316.6.9.df <- as.data.frame(ndvi062316.6.9.st); colnames(ndvi062316.6.9.df) <- "NDVI"; ndvi062316.6.9.df$observation <- 1:nrow(ndvi062316.6.9.df)
+ndvi062316.6.10.df <- as.data.frame(ndvi062316.6.10.st); colnames(ndvi062316.6.10.df) <- "NDVI"; ndvi062316.6.10.df$observation <- 1:nrow(ndvi062316.6.10.df)
 
-ndvi062916.6.9.df <- as.data.frame(ndvi062916.6.9.st); colnames(ndvi062916.6.9.df) <- "NDVI"; ndvi062916.6.9.df$observation <- 1:nrow(ndvi062916.6.9.df)
+ndvi062916.6.10.df <- as.data.frame(ndvi062916.6.10.st); colnames(ndvi062916.6.10.df) <- "NDVI"; ndvi062916.6.10.df$observation <- 1:nrow(ndvi062916.6.10.df)
 
-ndvi072716.6.9.df <- as.data.frame(ndvi072716.6.9.st); colnames(ndvi072716.6.9.df) <- "NDVI"; ndvi072716.6.9.df$observation <- 1:nrow(ndvi072716.6.9.df)
+ndvi072716.6.10.df <- as.data.frame(ndvi072716.6.10.st); colnames(ndvi072716.6.10.df) <- "NDVI"; ndvi072716.6.10.df$observation <- 1:nrow(ndvi072716.6.10.df)
 
-ndvi081716.6.9.df <- as.data.frame(ndvi081716.6.9.st); colnames(ndvi081716.6.9.df) <- "NDVI"; ndvi081716.6.9.df$observation <- 1:nrow(ndvi081716.6.9.df)
+ndvi081716.6.10.df <- as.data.frame(ndvi081716.6.10.st); colnames(ndvi081716.6.10.df) <- "NDVI"; ndvi081716.6.10.df$observation <- 1:nrow(ndvi081716.6.10.df)
 
-ndvi082416.6.9.df <- as.data.frame(ndvi082416.6.9.st);colnames(ndvi082416.6.9.df) <- "NDVI"; ndvi082416.6.9.df$observation <- 1:nrow(ndvi082416.6.9.df)
+ndvi082416.6.10.df <- as.data.frame(ndvi082416.6.10.st);colnames(ndvi082416.6.10.df) <- "NDVI"; ndvi082416.6.10.df$observation <- 1:nrow(ndvi082416.6.10.df)
 
 
-ndvi050316.6.9.st.av <- cellStats(ndvi050316.6.9.st, mean)
-ndvi050316.6.9.st.md <- cellStats(ndvi050316.6.9.st, median)
-ndvi050316.6.9.st.mx <- cellStats(ndvi050316.6.9.st, max)
-ndvi050316.6.9.st.mn <- cellStats(ndvi050316.6.9.st, min)
-ndvi050316.6.9.st.sd <- sd(ndvi050316.6.9.df$NDVI, na.rm = TRUE)
+ndvi050316.6.10.st.av <- cellStats(ndvi050316.6.10.st, mean)
+ndvi050316.6.10.st.md <- cellStats(ndvi050316.6.10.st, median)
+ndvi050316.6.10.st.mx <- cellStats(ndvi050316.6.10.st, max)
+ndvi050316.6.10.st.mn <- cellStats(ndvi050316.6.10.st, min)
+ndvi050316.6.10.st.sd <- sd(ndvi050316.6.10.df$NDVI, na.rm = TRUE)
 
-ndvi052616.6.9.st.av <- cellStats(ndvi052616.6.9.st, mean)
-ndvi052616.6.9.st.md <- cellStats(ndvi052616.6.9.st, median)
-ndvi052616.6.9.st.mx <- cellStats(ndvi052616.6.9.st, max)
-ndvi052616.6.9.st.mn <- cellStats(ndvi052616.6.9.st, min)
-ndvi052616.6.9.st.sd <- sd(ndvi052616.6.9.df$NDVI, na.rm = TRUE)
+ndvi052616.6.10.st.av <- cellStats(ndvi052616.6.10.st, mean)
+ndvi052616.6.10.st.md <- cellStats(ndvi052616.6.10.st, median)
+ndvi052616.6.10.st.mx <- cellStats(ndvi052616.6.10.st, max)
+ndvi052616.6.10.st.mn <- cellStats(ndvi052616.6.10.st, min)
+ndvi052616.6.10.st.sd <- sd(ndvi052616.6.10.df$NDVI, na.rm = TRUE)
 
-ndvi062316.6.9.st.av <- cellStats(ndvi062316.6.9.st, mean)
-ndvi062316.6.9.st.md <- cellStats(ndvi062316.6.9.st, median)
-ndvi062316.6.9.st.mx <- cellStats(ndvi062316.6.9.st, max)
-ndvi062316.6.9.st.mn <- cellStats(ndvi062316.6.9.st, min)
-ndvi062316.6.9.st.sd <- sd(ndvi062316.6.9.df$NDVI, na.rm = TRUE)
+ndvi062316.6.10.st.av <- cellStats(ndvi062316.6.10.st, mean)
+ndvi062316.6.10.st.md <- cellStats(ndvi062316.6.10.st, median)
+ndvi062316.6.10.st.mx <- cellStats(ndvi062316.6.10.st, max)
+ndvi062316.6.10.st.mn <- cellStats(ndvi062316.6.10.st, min)
+ndvi062316.6.10.st.sd <- sd(ndvi062316.6.10.df$NDVI, na.rm = TRUE)
 
-ndvi062916.6.9.st.av <- cellStats(ndvi062916.6.9.st, mean)
-ndvi062916.6.9.st.md <- cellStats(ndvi062916.6.9.st, median)
-ndvi062916.6.9.st.mx <- cellStats(ndvi062916.6.9.st, max)
-ndvi062916.6.9.st.mn <- cellStats(ndvi062916.6.9.st, min)
-ndvi062916.6.9.st.sd <- sd(ndvi062916.6.9.df$NDVI, na.rm = TRUE)
+ndvi062916.6.10.st.av <- cellStats(ndvi062916.6.10.st, mean)
+ndvi062916.6.10.st.md <- cellStats(ndvi062916.6.10.st, median)
+ndvi062916.6.10.st.mx <- cellStats(ndvi062916.6.10.st, max)
+ndvi062916.6.10.st.mn <- cellStats(ndvi062916.6.10.st, min)
+ndvi062916.6.10.st.sd <- sd(ndvi062916.6.10.df$NDVI, na.rm = TRUE)
 
-ndvi072716.6.9.st.av <- cellStats(ndvi072716.6.9.st, mean)
-ndvi072716.6.9.st.md <- cellStats(ndvi072716.6.9.st, median)
-ndvi072716.6.9.st.mx <- cellStats(ndvi072716.6.9.st, max)
-ndvi072716.6.9.st.mn <- cellStats(ndvi072716.6.9.st, min)
-ndvi072716.6.9.st.sd <- sd(ndvi072716.6.9.df$NDVI, na.rm = TRUE)
+ndvi072716.6.10.st.av <- cellStats(ndvi072716.6.10.st, mean)
+ndvi072716.6.10.st.md <- cellStats(ndvi072716.6.10.st, median)
+ndvi072716.6.10.st.mx <- cellStats(ndvi072716.6.10.st, max)
+ndvi072716.6.10.st.mn <- cellStats(ndvi072716.6.10.st, min)
+ndvi072716.6.10.st.sd <- sd(ndvi072716.6.10.df$NDVI, na.rm = TRUE)
 
-ndvi081716.6.9.st.av <- cellStats(ndvi081716.6.9.st, mean)
-ndvi081716.6.9.st.md <- cellStats(ndvi081716.6.9.st, median)
-ndvi081716.6.9.st.mx <- cellStats(ndvi081716.6.9.st, max)
-ndvi081716.6.9.st.mn <- cellStats(ndvi081716.6.9.st, min)
-ndvi081716.6.9.st.sd <- sd(ndvi081716.6.9.df$NDVI, na.rm = TRUE)
+ndvi081716.6.10.st.av <- cellStats(ndvi081716.6.10.st, mean)
+ndvi081716.6.10.st.md <- cellStats(ndvi081716.6.10.st, median)
+ndvi081716.6.10.st.mx <- cellStats(ndvi081716.6.10.st, max)
+ndvi081716.6.10.st.mn <- cellStats(ndvi081716.6.10.st, min)
+ndvi081716.6.10.st.sd <- sd(ndvi081716.6.10.df$NDVI, na.rm = TRUE)
 
-ndvi082416.6.9.st.av <- cellStats(ndvi082416.6.9.st, mean)
-ndvi082416.6.9.st.md <- cellStats(ndvi082416.6.9.st, median)
-ndvi082416.6.9.st.mx <- cellStats(ndvi082416.6.9.st, max)
-ndvi082416.6.9.st.mn <- cellStats(ndvi082416.6.9.st, min)
-ndvi082416.6.9.st.sd <- sd(ndvi082416.6.9.df$NDVI, na.rm = TRUE)
+ndvi082416.6.10.st.av <- cellStats(ndvi082416.6.10.st, mean)
+ndvi082416.6.10.st.md <- cellStats(ndvi082416.6.10.st, median)
+ndvi082416.6.10.st.mx <- cellStats(ndvi082416.6.10.st, max)
+ndvi082416.6.10.st.mn <- cellStats(ndvi082416.6.10.st, min)
+ndvi082416.6.10.st.sd <- sd(ndvi082416.6.10.df$NDVI, na.rm = TRUE)
 
-ndviav <- data.frame(Average = c(ndvi050316.6.9.st.av, ndvi052616.6.9.st.av, ndvi062316.6.9.st.av, ndvi062916.6.9.st.av,
-                                 ndvi072716.6.9.st.av, ndvi081716.6.9.st.av, ndvi082416.6.9.st.av))
+ndviav <- data.frame(Average = c(ndvi050316.6.10.st.av, ndvi052616.6.10.st.av, ndvi062316.6.10.st.av, ndvi062916.6.10.st.av,
+                                 ndvi072716.6.10.st.av, ndvi081716.6.10.st.av, ndvi082416.6.10.st.av))
 
-ndvimd <- data.frame(Median = c(ndvi050316.6.9.st.md, ndvi052616.6.9.st.md, ndvi062316.6.9.st.md, ndvi062916.6.9.st.md,
-                                ndvi072716.6.9.st.md, ndvi081716.6.9.st.md, ndvi082416.6.9.st.md))
+ndvimd <- data.frame(Median = c(ndvi050316.6.10.st.md, ndvi052616.6.10.st.md, ndvi062316.6.10.st.md, ndvi062916.6.10.st.md,
+                                ndvi072716.6.10.st.md, ndvi081716.6.10.st.md, ndvi082416.6.10.st.md))
 
-ndvisd <- data.frame(StandardDeviation = c(ndvi050316.6.9.st.sd, ndvi052616.6.9.st.sd, ndvi062316.6.9.st.sd, ndvi062916.6.9.st.sd,
-                                           ndvi072716.6.9.st.sd, ndvi081716.6.9.st.sd, ndvi082416.6.9.st.sd))
+ndvisd <- data.frame(StandardDeviation = c(ndvi050316.6.10.st.sd, ndvi052616.6.10.st.sd, ndvi062316.6.10.st.sd, ndvi062916.6.10.st.sd,
+                                           ndvi072716.6.10.st.sd, ndvi081716.6.10.st.sd, ndvi082416.6.10.st.sd))
 
-ndvimx <- data.frame(Maximum = c(ndvi050316.6.9.st.mx, ndvi052616.6.9.st.mx, ndvi062316.6.9.st.mx, ndvi062916.6.9.st.mx,
-                                 ndvi072716.6.9.st.mx, ndvi081716.6.9.st.mx, ndvi082416.6.9.st.mx))
+ndvimx <- data.frame(Maximum = c(ndvi050316.6.10.st.mx, ndvi052616.6.10.st.mx, ndvi062316.6.10.st.mx, ndvi062916.6.10.st.mx,
+                                 ndvi072716.6.10.st.mx, ndvi081716.6.10.st.mx, ndvi082416.6.10.st.mx))
 
-ndvimn <- data.frame(Minimum = c(ndvi050316.6.9.st.mn, ndvi052616.6.9.st.mn, ndvi062316.6.9.st.mn, ndvi062916.6.9.st.mn,
-                                 ndvi072716.6.9.st.mn, ndvi081716.6.9.st.mn, ndvi082416.6.9.st.mn))
+ndvimn <- data.frame(Minimum = c(ndvi050316.6.10.st.mn, ndvi052616.6.10.st.mn, ndvi062316.6.10.st.mn, ndvi062916.6.10.st.mn,
+                                 ndvi072716.6.10.st.mn, ndvi081716.6.10.st.mn, ndvi082416.6.10.st.mn))
 
 
 rrbldf <- cbind(dt, ndviav)
@@ -1161,81 +1161,81 @@ rrbldf <- cbind(rrbldf, ndvimd)
 rrbldf <- cbind(rrbldf, ndvisd)
 rrbldf <- cbind(rrbldf, ndvimx)
 rrbldf <- cbind(rrbldf, ndvimn)
-write.csv(rrbldf, "RushRanchBlk1_2016.9.6.csv")
+write.csv(rrbldf, "RushRanchBlk1_2016.10.6.csv")
 
 options(device = "RStudioGD")
-ndvi050316.6.9.us <- unstack(ndvi050316.6.9.df); colnames(ndvi050316.6.9.us) <- "NDVI"
-ndvi052616.6.9.us <- unstack(ndvi052616.6.9.df); colnames(ndvi052616.6.9.us) <- "NDVI"
-ndvi062316.6.9.us <- unstack(ndvi062316.6.9.df); colnames(ndvi062316.6.9.us) <- "NDVI"
-ndvi062916.6.9.us <- unstack(ndvi062916.6.9.df); colnames(ndvi062916.6.9.us) <- "NDVI"
-ndvi072716.6.9.us <- unstack(ndvi072716.6.9.df); colnames(ndvi072716.6.9.us) <- "NDVI"
-ndvi081716.6.9.us <- unstack(ndvi081716.6.9.df); colnames(ndvi081716.6.9.us) <- "NDVI"
-ndvi082416.6.9.us <- unstack(ndvi082416.6.9.df); colnames(ndvi082416.6.9.us) <- "NDVI"
+ndvi050316.6.10.us <- unstack(ndvi050316.6.10.df); colnames(ndvi050316.6.10.us) <- "NDVI"
+ndvi052616.6.10.us <- unstack(ndvi052616.6.10.df); colnames(ndvi052616.6.10.us) <- "NDVI"
+ndvi062316.6.10.us <- unstack(ndvi062316.6.10.df); colnames(ndvi062316.6.10.us) <- "NDVI"
+ndvi062916.6.10.us <- unstack(ndvi062916.6.10.df); colnames(ndvi062916.6.10.us) <- "NDVI"
+ndvi072716.6.10.us <- unstack(ndvi072716.6.10.df); colnames(ndvi072716.6.10.us) <- "NDVI"
+ndvi081716.6.10.us <- unstack(ndvi081716.6.10.df); colnames(ndvi081716.6.10.us) <- "NDVI"
+ndvi082416.6.10.us <- unstack(ndvi082416.6.10.df); colnames(ndvi082416.6.10.us) <- "NDVI"
 
-ndvi050316.6.9.p <- ggplot(ndvi050316.6.9.us, aes(ndvi050316.6.9.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
-ndvi050316.6.9.p <- ndvi050316.6.9.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi050316.6.9.us$NDVI, na.rm = T)), color = "#b2df8a")
-ndvi050316.6.9.p <- ndvi050316.6.9.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi050316.6.9.us$NDVI, na.rm = T)), color = "#fc8d62")
-ndvi050316.6.9.p <- ndvi050316.6.9.p + labs(title = "Rush Ranch Block 1, Section 8.6\nMay 3, 2016 NDVI Values Histogram\n with mean & median", x = "")
-ndvi050316.6.9.p
-ggsave(file = "050316.9.6.png")
+ndvi050316.6.10.p <- ggplot(ndvi050316.6.10.us, aes(ndvi050316.6.10.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
+ndvi050316.6.10.p <- ndvi050316.6.10.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi050316.6.10.us$NDVI, na.rm = T)), color = "#b2df8a")
+ndvi050316.6.10.p <- ndvi050316.6.10.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi050316.6.10.us$NDVI, na.rm = T)), color = "#fc8d62")
+ndvi050316.6.10.p <- ndvi050316.6.10.p + labs(title = "Rush Ranch Block 1, Section 10.6\nMay 3, 2016 NDVI Values Histogram\n with mean & median", x = "")
+ndvi050316.6.10.p
+ggsave(file = "050316.10.6.png")
 
-ndvi052616.6.9.p <- ggplot(ndvi052616.6.9.us, aes(ndvi052616.6.9.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
-ndvi052616.6.9.p <- ndvi052616.6.9.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi052616.6.9.us$NDVI, na.rm = T)), color = "#b2df8a")
-ndvi052616.6.9.p <- ndvi052616.6.9.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi052616.6.9.us$NDVI, na.rm = T)), color = "#fc8d62")
-ndvi052616.6.9.p <- ndvi052616.6.9.p + labs(title = "Rush Ranch Block 1, Section 8.6\nMay 26, 2016 NDVI Values Histogram\n with mean & median", x = "")
-ndvi052616.6.9.p
-ggsave(file = "052616.9.6.png")
+ndvi052616.6.10.p <- ggplot(ndvi052616.6.10.us, aes(ndvi052616.6.10.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
+ndvi052616.6.10.p <- ndvi052616.6.10.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi052616.6.10.us$NDVI, na.rm = T)), color = "#b2df8a")
+ndvi052616.6.10.p <- ndvi052616.6.10.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi052616.6.10.us$NDVI, na.rm = T)), color = "#fc8d62")
+ndvi052616.6.10.p <- ndvi052616.6.10.p + labs(title = "Rush Ranch Block 1, Section 10.6\nMay 26, 2016 NDVI Values Histogram\n with mean & median", x = "")
+ndvi052616.6.10.p
+ggsave(file = "052616.10.6.png")
 
-ndvi062316.6.9.p <- ggplot(ndvi062316.6.9.us, aes(ndvi062316.6.9.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
-ndvi062316.6.9.p <- ndvi062316.6.9.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi062316.6.9.us$NDVI, na.rm = T)), color = "#b2df8a")
-ndvi062316.6.9.p <- ndvi062316.6.9.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi062316.6.9.us$NDVI, na.rm = T)), color = "#fc8d62")
-ndvi062316.6.9.p <- ndvi062316.6.9.p + labs(title = "Rush Ranch Block 1, Section 8.6\nJune 23, 2016 NDVI Values Histogram\n with mean & median", x = "")
-ndvi062316.6.9.p
-ggsave(file = "062316.9.6.png")
+ndvi062316.6.10.p <- ggplot(ndvi062316.6.10.us, aes(ndvi062316.6.10.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
+ndvi062316.6.10.p <- ndvi062316.6.10.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi062316.6.10.us$NDVI, na.rm = T)), color = "#b2df8a")
+ndvi062316.6.10.p <- ndvi062316.6.10.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi062316.6.10.us$NDVI, na.rm = T)), color = "#fc8d62")
+ndvi062316.6.10.p <- ndvi062316.6.10.p + labs(title = "Rush Ranch Block 1, Section 10.6\nJune 23, 2016 NDVI Values Histogram\n with mean & median", x = "")
+ndvi062316.6.10.p
+ggsave(file = "062316.10.6.png")
 
-ndvi062916.6.9.p <- ggplot(ndvi062916.6.9.us, aes(ndvi062916.6.9.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
-ndvi062916.6.9.p <- ndvi062916.6.9.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi062916.6.9.us$NDVI, na.rm = T)), color = "#b2df8a")
-ndvi062916.6.9.p <- ndvi062916.6.9.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi062916.6.9.us$NDVI, na.rm = T)), color = "#fc8d62")
-ndvi062916.6.9.p <- ndvi062916.6.9.p + labs(title = "Rush Ranch Block 1, Section 8.6\nJune 29, 2016 NDVI Values Histogram\n with mean & median", x = "")
-ndvi062916.6.9.p
-ggsave(file = "062916.9.6.png")
+ndvi062916.6.10.p <- ggplot(ndvi062916.6.10.us, aes(ndvi062916.6.10.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
+ndvi062916.6.10.p <- ndvi062916.6.10.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi062916.6.10.us$NDVI, na.rm = T)), color = "#b2df8a")
+ndvi062916.6.10.p <- ndvi062916.6.10.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi062916.6.10.us$NDVI, na.rm = T)), color = "#fc8d62")
+ndvi062916.6.10.p <- ndvi062916.6.10.p + labs(title = "Rush Ranch Block 1, Section 10.6\nJune 29, 2016 NDVI Values Histogram\n with mean & median", x = "")
+ndvi062916.6.10.p
+ggsave(file = "062916.10.6.png")
 
-ndvi072716.6.9.p <- ggplot(ndvi072716.6.9.us, aes(ndvi072716.6.9.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
-ndvi072716.6.9.p <- ndvi072716.6.9.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi072716.6.9.us$NDVI, na.rm = T)), color = "#b2df8a")
-ndvi072716.6.9.p <- ndvi072716.6.9.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi072716.6.9.us$NDVI, na.rm = T)), color = "#fc8d62")
-ndvi072716.6.9.p <- ndvi072716.6.9.p + labs(title = "Rush Ranch Block 1, Section 8.6\nJuly 27, 2016 NDVI Values Histogram\n with mean &median", x = "")
-ndvi072716.6.9.p
-ggsave(file = "072716.9.6.png")
+ndvi072716.6.10.p <- ggplot(ndvi072716.6.10.us, aes(ndvi072716.6.10.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
+ndvi072716.6.10.p <- ndvi072716.6.10.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi072716.6.10.us$NDVI, na.rm = T)), color = "#b2df8a")
+ndvi072716.6.10.p <- ndvi072716.6.10.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi072716.6.10.us$NDVI, na.rm = T)), color = "#fc8d62")
+ndvi072716.6.10.p <- ndvi072716.6.10.p + labs(title = "Rush Ranch Block 1, Section 10.6\nJuly 27, 2016 NDVI Values Histogram\n with mean &median", x = "")
+ndvi072716.6.10.p
+ggsave(file = "072716.10.6.png")
 
-ndvi081716.6.9.p <- ggplot(ndvi081716.6.9.us, aes(ndvi081716.6.9.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
-ndvi081716.6.9.p <- ndvi081716.6.9.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi081716.6.9.us$NDVI, na.rm = T)), color = "#b2df8a")
-ndvi081716.6.9.p <- ndvi081716.6.9.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi081716.6.9.us$NDVI, na.rm = T)), color = "#fc8d62")
-ndvi081716.6.9.p <- ndvi081716.6.9.p + labs(title = "Rush Ranch Block 1, Section 8.6\nAugust 17, 2016 NDVI Values Histogram\n with mean & median", x = "")
-ndvi081716.6.9.p
-ggsave(file = "081716.9.6.png")
+ndvi081716.6.10.p <- ggplot(ndvi081716.6.10.us, aes(ndvi081716.6.10.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
+ndvi081716.6.10.p <- ndvi081716.6.10.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi081716.6.10.us$NDVI, na.rm = T)), color = "#b2df8a")
+ndvi081716.6.10.p <- ndvi081716.6.10.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi081716.6.10.us$NDVI, na.rm = T)), color = "#fc8d62")
+ndvi081716.6.10.p <- ndvi081716.6.10.p + labs(title = "Rush Ranch Block 1, Section 10.6\nAugust 17, 2016 NDVI Values Histogram\n with mean & median", x = "")
+ndvi081716.6.10.p
+ggsave(file = "081716.10.6.png")
 
-ndvi082416.6.9.p <- ggplot(ndvi082416.6.9.us, aes(ndvi082416.6.9.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
-ndvi082416.6.9.p <- ndvi082416.6.9.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi082416.6.9.us$NDVI, na.rm = T)), color = "#b2df8a")
-ndvi082416.6.9.p <- ndvi082416.6.9.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi082416.6.9.us$NDVI, na.rm = T)), color = "#fc8d62")
-ndvi082416.6.9.p <- ndvi082416.6.9.p + labs(title = "Rush Ranch Block 1, Section 8.6\nAugust 24, 2016 NDVI Values Histogram\n with mean & median", x = "")
-ndvi082416.6.9.p
-ggsave(file = "082416.9.6.png")
+ndvi082416.6.10.p <- ggplot(ndvi082416.6.10.us, aes(ndvi082416.6.10.us$NDVI)) + geom_histogram(binwidth = 2, color = "white", fill = "darkblue")
+ndvi082416.6.10.p <- ndvi082416.6.10.p + theme_bw() + geom_vline(aes(xintercept = median(ndvi082416.6.10.us$NDVI, na.rm = T)), color = "#b2df8a")
+ndvi082416.6.10.p <- ndvi082416.6.10.p + theme(plot.title = element_text(hjust = 0.5)) + geom_vline(aes(xintercept = mean(ndvi082416.6.10.us$NDVI, na.rm = T)), color = "#fc8d62")
+ndvi082416.6.10.p <- ndvi082416.6.10.p + labs(title = "Rush Ranch Block 1, Section 10.6\nAugust 24, 2016 NDVI Values Histogram\n with mean & median", x = "")
+ndvi082416.6.10.p
+ggsave(file = "082416.10.6.png")
 
 set.seed(131)
-ndvi050316.6.9.us <- na.omit(ndvi050316.6.9.us); ndvi050316.6.9.rs <- sample_n(ndvi050316.6.9.us, 15000); ndvi050316.6.9.rs$Date <- "a"
-ndvi052616.6.9.us <- na.omit(ndvi052616.6.9.us); ndvi052616.6.9.rs <- sample_n(ndvi052616.6.9.us, 15000); ndvi052616.6.9.rs$Date <- "b"
-ndvi062316.6.9.us <- na.omit(ndvi062316.6.9.us); ndvi062316.6.9.rs <- sample_n(ndvi062316.6.9.us, 15000); ndvi062316.6.9.rs$Date <- "c"
-ndvi062916.6.9.us <- na.omit(ndvi062916.6.9.us); ndvi062916.6.9.rs <- sample_n(ndvi062916.6.9.us, 15000); ndvi062916.6.9.rs$Date <- "d"
-ndvi072716.6.9.us <- na.omit(ndvi072716.6.9.us); ndvi072716.6.9.rs <- sample_n(ndvi072716.6.9.us, 15000); ndvi072716.6.9.rs$Date <- "e"
-ndvi081716.6.9.us <- na.omit(ndvi081716.6.9.us); ndvi081716.6.9.rs <- sample_n(ndvi081716.6.9.us, 15000); ndvi081716.6.9.rs$Date <- "f"
-ndvi082416.6.9.us <- na.omit(ndvi082416.6.9.us); ndvi082416.6.9.rs <- sample_n(ndvi082416.6.9.us, 15000); ndvi082416.6.9.rs$Date <- "g"
+ndvi050316.6.10.us <- na.omit(ndvi050316.6.10.us); ndvi050316.6.10.rs <- sample_n(ndvi050316.6.10.us, 15000); ndvi050316.6.10.rs$Date <- "a"
+ndvi052616.6.10.us <- na.omit(ndvi052616.6.10.us); ndvi052616.6.10.rs <- sample_n(ndvi052616.6.10.us, 15000); ndvi052616.6.10.rs$Date <- "b"
+ndvi062316.6.10.us <- na.omit(ndvi062316.6.10.us); ndvi062316.6.10.rs <- sample_n(ndvi062316.6.10.us, 15000); ndvi062316.6.10.rs$Date <- "c"
+ndvi062916.6.10.us <- na.omit(ndvi062916.6.10.us); ndvi062916.6.10.rs <- sample_n(ndvi062916.6.10.us, 15000); ndvi062916.6.10.rs$Date <- "d"
+ndvi072716.6.10.us <- na.omit(ndvi072716.6.10.us); ndvi072716.6.10.rs <- sample_n(ndvi072716.6.10.us, 15000); ndvi072716.6.10.rs$Date <- "e"
+ndvi081716.6.10.us <- na.omit(ndvi081716.6.10.us); ndvi081716.6.10.rs <- sample_n(ndvi081716.6.10.us, 15000); ndvi081716.6.10.rs$Date <- "f"
+ndvi082416.6.10.us <- na.omit(ndvi082416.6.10.us); ndvi082416.6.10.rs <- sample_n(ndvi082416.6.10.us, 15000); ndvi082416.6.10.rs$Date <- "g"
 
-rrblrs <- rbind(ndvi082416.6.9.rs, ndvi081716.6.9.rs)
-rrblrs <- rbind(rrblrs, ndvi072716.6.9.rs)
-rrblrs <- rbind(rrblrs, ndvi062916.6.9.rs)
-rrblrs <- rbind(rrblrs, ndvi062316.6.9.rs)
-rrblrs <- rbind(rrblrs, ndvi052616.6.9.rs)
-rrblrs <- rbind(rrblrs, ndvi050316.6.9.rs)
+rrblrs <- rbind(ndvi082416.6.10.rs, ndvi081716.6.10.rs)
+rrblrs <- rbind(rrblrs, ndvi072716.6.10.rs)
+rrblrs <- rbind(rrblrs, ndvi062916.6.10.rs)
+rrblrs <- rbind(rrblrs, ndvi062316.6.10.rs)
+rrblrs <- rbind(rrblrs, ndvi052616.6.10.rs)
+rrblrs <- rbind(rrblrs, ndvi050316.6.10.rs)
 
 
 
@@ -1244,16 +1244,16 @@ rrblrsp <- ggplot(rrblrs, aes(x = Date, y = NDVI)) + geom_violin(aes(fill = Date
 rrblrsp <- rrblrsp + scale_fill_brewer(palette="BrBG", labels = c("May 3", "May 26", "June 23", "June 26", "July 27", "Aug 17", "Aug 24"))
 rrblrsp <- rrblrsp + xlab("") + theme_bw()+ theme(axis.text.x = element_blank()) + theme(plot.title = element_text(hjust = 0.5))
 rrblrsp <- rrblrsp + stat_summary(fun.data=mean_sdl, mult=1, geom="pointrange", color="#bf812d")
-rrblrsp <- rrblrsp + labs(title = "Rush Ranch Block 1, Section 8.6\n2016 NDVI Values")
+rrblrsp <- rrblrsp + labs(title = "Rush Ranch Block 1, Section 10.6\n2016 NDVI Values")
 rrblrsp
-ggsave(file = "rrblrsp2016violin.9.6.png")
+ggsave(file = "rrblrsp2016violin.10.6.png")
 
 rrblrsp <- ggplot(rrblrs, aes(x = Date, y = NDVI)) + geom_boxplot(aes(fill = Date))
 rrblrsp <- rrblrsp + scale_fill_brewer(palette="BrBG", labels = c("May 3", "May 26", "June 23", "June 26", "July 27", "Aug 17", "Aug 24"))
 rrblrsp <- rrblrsp + xlab("") + theme_bw() + theme(axis.text.x = element_blank()) + theme(plot.title = element_text(hjust = 0.5))
-rrblrsp <- rrblrsp + labs(title = "Rush Ranch Block 1, Section 8.6\n2016 NDVI Values")
+rrblrsp <- rrblrsp + labs(title = "Rush Ranch Block 1, Section 10.6\n2016 NDVI Values")
 rrblrsp
-ggsave(file = "rrblrsp2016box.9.6.png")
+ggsave(file = "rrblrsp2016box.10.6.png")
 
 ##########################################################################
 
