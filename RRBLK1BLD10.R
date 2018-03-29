@@ -242,7 +242,7 @@ ndvi062316.2.10 <- crop(ndvi062316, extent(ndvi062316, 80, 159, 1801, 2011))
 ndvi062916.2.10 <- crop(ndvi062916, extent(ndvi062916, 80, 159, 1801, 1949))
 ndvi072716.2.10 <- crop(ndvi072716, extent(ndvi072716, 80, 159, 1801, 1937))
 ndvi081716.2.10 <- crop(ndvi081716, extent(ndvi081716, 80, 159, 1801, 1948))
-ndvi082416.2.1 <- crop(ndvi082416, extent(ndvi082416, 80, 159, 1801, 1996))
+ndvi082416.2.10 <- crop(ndvi082416, extent(ndvi082416, 80, 159, 1801, 1996))
 
 
 
@@ -405,13 +405,13 @@ ndvi082416.2.10.p
 ggsave(file = "082416.10.2.png")
 
 set.seed(131)
-ndvi050316.2.10.us <- na.omit(ndvi050316.2.10.us); ndvi050316.2.10.rs <- sample_n(ndvi050316.2.10.us, 15000); ndvi050316.2.10.rs$Date <- "a"
-ndvi052616.2.10.us <- na.omit(ndvi052616.2.10.us); ndvi052616.2.10.rs <- sample_n(ndvi052616.2.10.us, 15000); ndvi052616.2.10.rs$Date <- "b"
-ndvi062316.2.10.us <- na.omit(ndvi062316.2.10.us); ndvi062316.2.10.rs <- sample_n(ndvi062316.2.10.us, 15000); ndvi062316.2.10.rs$Date <- "c"
-ndvi062916.2.10.us <- na.omit(ndvi062916.2.10.us); ndvi062916.2.10.rs <- sample_n(ndvi062916.2.10.us, 15000); ndvi062916.2.10.rs$Date <- "d"
-ndvi072716.2.10.us <- na.omit(ndvi072716.2.10.us); ndvi072716.2.10.rs <- sample_n(ndvi072716.2.10.us, 15000); ndvi072716.2.10.rs$Date <- "e"
-ndvi081716.2.10.us <- na.omit(ndvi081716.2.10.us); ndvi081716.2.10.rs <- sample_n(ndvi081716.2.10.us, 15000); ndvi081716.2.10.rs$Date <- "f"
-ndvi082416.2.10.us <- na.omit(ndvi082416.2.10.us); ndvi082416.2.10.rs <- sample_n(ndvi082416.2.10.us, 15000); ndvi082416.2.10.rs$Date <- "g"
+ndvi050316.2.10.us <- na.omit(ndvi050316.2.10.us); ndvi050316.2.10.rs <- sample_n(ndvi050316.2.10.us, 1980); ndvi050316.2.10.rs$Date <- "a"
+ndvi052616.2.10.us <- na.omit(ndvi052616.2.10.us); ndvi052616.2.10.rs <- sample_n(ndvi052616.2.10.us, 1980); ndvi052616.2.10.rs$Date <- "b"
+ndvi062316.2.10.us <- na.omit(ndvi062316.2.10.us); ndvi062316.2.10.rs <- sample_n(ndvi062316.2.10.us, 1980); ndvi062316.2.10.rs$Date <- "c"
+ndvi062916.2.10.us <- na.omit(ndvi062916.2.10.us); ndvi062916.2.10.rs <- sample_n(ndvi062916.2.10.us, 1980); ndvi062916.2.10.rs$Date <- "d"
+ndvi072716.2.10.us <- na.omit(ndvi072716.2.10.us); ndvi072716.2.10.rs <- sample_n(ndvi072716.2.10.us, 1980); ndvi072716.2.10.rs$Date <- "e"
+ndvi081716.2.10.us <- na.omit(ndvi081716.2.10.us); ndvi081716.2.10.rs <- sample_n(ndvi081716.2.10.us, 1980); ndvi081716.2.10.rs$Date <- "f"
+ndvi082416.2.10.us <- na.omit(ndvi082416.2.10.us); ndvi082416.2.10.rs <- sample_n(ndvi082416.2.10.us, 1980); ndvi082416.2.10.rs$Date <- "g"
 
 rrblrs <- rbind(ndvi082416.2.10.rs, ndvi081716.2.10.rs)
 rrblrs <- rbind(rrblrs, ndvi072716.2.10.rs)
