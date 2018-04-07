@@ -1222,13 +1222,13 @@ ndvi082416.6.10.p
 ggsave(file = "082416.10.6.png")
 
 set.seed(131)
-ndvi050316.6.10.us <- na.omit(ndvi050316.6.10.us); ndvi050316.6.10.rs <- sample_n(ndvi050316.6.10.us, 15000); ndvi050316.6.10.rs$Date <- "a"
-ndvi052616.6.10.us <- na.omit(ndvi052616.6.10.us); ndvi052616.6.10.rs <- sample_n(ndvi052616.6.10.us, 15000); ndvi052616.6.10.rs$Date <- "b"
-ndvi062316.6.10.us <- na.omit(ndvi062316.6.10.us); ndvi062316.6.10.rs <- sample_n(ndvi062316.6.10.us, 15000); ndvi062316.6.10.rs$Date <- "c"
-ndvi062916.6.10.us <- na.omit(ndvi062916.6.10.us); ndvi062916.6.10.rs <- sample_n(ndvi062916.6.10.us, 15000); ndvi062916.6.10.rs$Date <- "d"
-ndvi072716.6.10.us <- na.omit(ndvi072716.6.10.us); ndvi072716.6.10.rs <- sample_n(ndvi072716.6.10.us, 15000); ndvi072716.6.10.rs$Date <- "e"
-ndvi081716.6.10.us <- na.omit(ndvi081716.6.10.us); ndvi081716.6.10.rs <- sample_n(ndvi081716.6.10.us, 15000); ndvi081716.6.10.rs$Date <- "f"
-ndvi082416.6.10.us <- na.omit(ndvi082416.6.10.us); ndvi082416.6.10.rs <- sample_n(ndvi082416.6.10.us, 15000); ndvi082416.6.10.rs$Date <- "g"
+ndvi050316.6.10.us <- na.omit(ndvi050316.6.10.us); ndvi050316.6.10.rs <- sample_n(ndvi050316.6.10.us, 6400); ndvi050316.6.10.rs$Date <- "a"
+ndvi052616.6.10.us <- na.omit(ndvi052616.6.10.us); ndvi052616.6.10.rs <- sample_n(ndvi052616.6.10.us, 6400); ndvi052616.6.10.rs$Date <- "b"
+ndvi062316.6.10.us <- na.omit(ndvi062316.6.10.us); ndvi062316.6.10.rs <- sample_n(ndvi062316.6.10.us, 6400); ndvi062316.6.10.rs$Date <- "c"
+ndvi062916.6.10.us <- na.omit(ndvi062916.6.10.us); ndvi062916.6.10.rs <- sample_n(ndvi062916.6.10.us, 6400); ndvi062916.6.10.rs$Date <- "d"
+ndvi072716.6.10.us <- na.omit(ndvi072716.6.10.us); ndvi072716.6.10.rs <- sample_n(ndvi072716.6.10.us, 6400); ndvi072716.6.10.rs$Date <- "e"
+ndvi081716.6.10.us <- na.omit(ndvi081716.6.10.us); ndvi081716.6.10.rs <- sample_n(ndvi081716.6.10.us, 6400); ndvi081716.6.10.rs$Date <- "f"
+ndvi082416.6.10.us <- na.omit(ndvi082416.6.10.us); ndvi082416.6.10.rs <- sample_n(ndvi082416.6.10.us, 6400); ndvi082416.6.10.rs$Date <- "g"
 
 rrblrs <- rbind(ndvi082416.6.10.rs, ndvi081716.6.10.rs)
 rrblrs <- rbind(rrblrs, ndvi072716.6.10.rs)
