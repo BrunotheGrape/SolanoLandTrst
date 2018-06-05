@@ -9,6 +9,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr1 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 1
+dr1$Row <- 4
 
 
 d <- read.csv("RushRanchBlk1_2016.1.5.csv")
@@ -20,7 +22,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr2 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
-
+dr2$Column <- 1
+dr2$Row <- 5
 
 
 
@@ -33,6 +36,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr3 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr3$Column <- 1
+dr3$Row <- 6
 
 d <- read.csv("RushRanchBlk1_2016.1.7.csv")
 ds <- d[1, 3:7]
@@ -43,6 +48,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr4 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr4$Column <- 1
+dr4$Row <- 7
 
 d <- read.csv("RushRanchBlk1_2016.1.8.csv")
 ds <- d[1, 3:7]
@@ -53,6 +60,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr5 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr5$Column <- 1
+dr5$Row <- 8
 
 d <- read.csv("RushRanchBlk1_2016.1.9.csv")
 ds <- d[1, 3:7]
@@ -63,6 +72,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr6 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr6$Column <- 1
+dr6$Row <- 9
 
 d <- read.csv("RushRanchBlk1_2016.1.10.csv")
 ds <- d[1, 3:7]
@@ -73,6 +84,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr7 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr7$Column <- 1
+dr7$Row <- 10
 
 d <- read.csv("RushRanchBlk1_2016.2.3.csv")
 ds <- d[1, 3:7]
@@ -83,6 +96,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr8 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr8$Column <- 2
+dr8$Row <- 3
 
 d <- read.csv("RushRanchBlk1_2016.2.4.csv")
 ds <- d[1, 3:7]
@@ -93,6 +108,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr9 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr9$Column <- 2
+dr9$Row <- 4
 
 d <- read.csv("RushRanchBlk1_2016.2.5.csv")
 ds <- d[1, 3:7]
@@ -103,6 +120,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr10 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr10$Column <- 2
+dr10$Row <- 5
 
 d <- read.csv("RushRanchBlk1_2016.2.6.csv")
 ds <- d[1, 3:7]
@@ -113,6 +132,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr11 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr11$Column <- 2
+dr11$Row <- 6
 
 d <- read.csv("RushRanchBlk1_2016.2.7.csv")
 ds <- d[1, 3:7]
@@ -123,6 +144,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr12 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr12$Column <- 2
+dr12$Row <- 7
 
 d <- read.csv("RushRanchBlk1_2016.2.8.csv")
 ds <- d[1, 3:7]
@@ -133,6 +156,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr13 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr13$Column <- 2
+dr13$Row <- 8
 
 d <- read.csv("RushRanchBlk1_2016.2.9.csv")
 ds <- d[1, 3:7]
@@ -143,6 +168,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr14 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr14$Column <- 2
+dr14$Row <- 9
 
 d <- read.csv("RushRanchBlk1_2016.2.10.csv")
 ds <- d[1, 3:7]
@@ -153,6 +180,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr15 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr15$Column <- 2
+dr15$Row <- 10
 
 d <- read.csv("RushRanchBlk1_2016.3.1.csv")
 ds <- d[1, 3:7]
@@ -163,6 +192,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr16 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr16$Column <- 3
+dr16$Row <- 1
 
 d <- read.csv("RushRanchBlk1_2016.3.2.csv")
 ds <- d[1, 3:7]
@@ -173,6 +204,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr17 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr17$Column <- 3
+dr17$Row <- 2
 
 d <- read.csv("RushRanchBlk1_2016.3.3.csv")
 ds <- d[1, 3:7]
@@ -183,6 +216,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr18 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr18$Column <- 3
+dr18$Row <- 3
 
 d <- read.csv("RushRanchBlk1_2016.3.4.csv")
 ds <- d[1, 3:7]
@@ -193,6 +228,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr19 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr19$Column <- 3
+dr19$Row <- 4
 
 d <- read.csv("RushRanchBlk1_2016.3.5.csv")
 ds <- d[1, 3:7]
@@ -203,6 +240,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr20 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr20$Column <- 3
+dr20$Row <- 5
 
 d <- read.csv("RushRanchBlk1_2016.3.6.csv")
 ds <- d[1, 3:7]
@@ -213,6 +252,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr21 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr21$Column <- 3
+dr21$Row <- 6
 
 d <- read.csv("RushRanchBlk1_2016.3.7.csv")
 ds <- d[1, 3:7]
@@ -223,6 +264,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr22 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr22$Column <- 3
+dr22$Row <- 7
 
 d <- read.csv("RushRanchBlk1_2016.3.8.csv")
 ds <- d[1, 3:7]
@@ -233,6 +276,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr23 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr23$Column <- 3
+dr23$Row <- 8
 
 d <- read.csv("RushRanchBlk1_2016.3.9.csv")
 ds <- d[1, 3:7]
@@ -243,6 +288,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr24 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr24$Column <- 3
+dr24$Row <- 9
 
 d <- read.csv("RushRanchBlk1_2016.3.10.csv")
 ds <- d[1, 3:7]
@@ -253,6 +300,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr25 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr25$Column <- 3
+dr25$Row <- 10
 
 d <- read.csv("RushRanchBlk1_2016.4.1.csv")
 ds <- d[1, 3:7]
@@ -263,6 +312,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr26 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr26$Column <- 4
+dr26$Row <- 1
 
 d <- read.csv("RushRanchBlk1_2016.4.2.csv")
 ds <- d[1, 3:7]
@@ -273,6 +324,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr27 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr27$Column <- 4
+dr27$Row <- 2
 
 d <- read.csv("RushRanchBlk1_2016.4.3.csv")
 ds <- d[1, 3:7]
@@ -283,6 +336,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr28 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 4
+dr$Row <- 3
 
 d <- read.csv("RushRanchBlk1_2016.4.4.csv")
 ds <- d[1, 3:7]
@@ -293,6 +348,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr29 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 4
+dr$Row <- 4
 
 d <- read.csv("RushRanchBlk1_2016.4.5.csv")
 ds <- d[1, 3:7]
@@ -303,6 +360,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr30 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 4
+dr$Row <- 5
 
 d <- read.csv("RushRanchBlk1_2016.4.6.csv")
 ds <- d[1, 3:7]
@@ -313,6 +372,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr31 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 4
+dr$Row <- 6
 
 d <- read.csv("RushRanchBlk1_2016.4.7.csv")
 ds <- d[1, 3:7]
@@ -323,6 +384,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr32 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 4
+dr$Row <- 7
 
 d <- read.csv("RushRanchBlk1_2016.4.8.csv")
 ds <- d[1, 3:7]
@@ -333,6 +396,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr33 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 4
+dr$Row <- 8
 
 d <- read.csv("RushRanchBlk1_2016.4.9.csv")
 ds <- d[1, 3:7]
@@ -343,6 +408,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr34 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 4
+dr$Row <- 9
 
 d <- read.csv("RushRanchBlk1_2016.4.10.csv")
 ds <- d[1, 3:7]
@@ -353,6 +420,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr35 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 4
+dr$Row <- 10
 
 d <- read.csv("RushRanchBlk1_2016.5.1.csv")
 ds <- d[1, 3:7]
@@ -363,6 +432,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr36 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 5
+dr$Row <- 1
 
 d <- read.csv("RushRanchBlk1_2016.5.2.csv")
 ds <- d[1, 3:7]
@@ -373,6 +444,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr37 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 5
+dr$Row <- 2
 
 d <- read.csv("RushRanchBlk1_2016.5.3.csv")
 ds <- d[1, 3:7]
@@ -383,6 +456,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr38 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 5
+dr$Row <- 3
 
 d <- read.csv("RushRanchBlk1_2016.5.4.csv")
 ds <- d[1, 3:7]
@@ -393,6 +468,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr39 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 5
+dr$Row <- 4
 
 d <- read.csv("RushRanchBlk1_2016.5.5.csv")
 ds <- d[1, 3:7]
@@ -403,6 +480,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr40 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 5
+dr$Row <- 5
 
 d <- read.csv("RushRanchBlk1_2016.5.6.csv")
 ds <- d[1, 3:7]
@@ -413,6 +492,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr41 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 5
+dr$Row <- 6
 
 d <- read.csv("RushRanchBlk1_2016.5.7.csv")
 ds <- d[1, 3:7]
@@ -423,6 +504,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr42 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 5
+dr$Row <- 7
 
 d <- read.csv("RushRanchBlk1_2016.5.8.csv")
 ds <- d[1, 3:7]
@@ -433,6 +516,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr43 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 5
+dr$Row <- 8
 
 d <- read.csv("RushRanchBlk1_2016.5.9.csv")
 ds <- d[1, 3:7]
@@ -443,6 +528,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr44 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 5
+dr$Row <- 9
 
 
 d <- read.csv("RushRanchBlk1_2016.6.1.csv")
@@ -454,6 +541,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr45 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 6
+dr$Row <- 1
 
 d <- read.csv("RushRanchBlk1_2016.6.2.csv")
 ds <- d[1, 3:7]
@@ -464,6 +553,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr46 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 6
+dr$Row <- 2
 
 d <- read.csv("RushRanchBlk1_2016.6.3.csv")
 ds <- d[1, 3:7]
@@ -474,6 +565,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr47 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 6
+dr$Row <- 3
 
 d <- read.csv("RushRanchBlk1_2016.6.4.csv")
 ds <- d[1, 3:7]
@@ -484,6 +577,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr48 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 6
+dr$Row <- 4
 
 d <- read.csv("RushRanchBlk1_2016.6.5.csv")
 ds <- d[1, 3:7]
@@ -494,6 +589,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr49 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 6
+dr$Row <- 5
 
 d <- read.csv("RushRanchBlk1_2016.6.6.csv")
 ds <- d[1, 3:7]
@@ -504,6 +601,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr50 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 6
+dr$Row <- 6
 
 d <- read.csv("RushRanchBlk1_2016.6.7.csv")
 ds <- d[1, 3:7]
@@ -514,6 +613,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr51 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 6
+dr$Row <- 7
 
 d <- read.csv("RushRanchBlk1_2016.6.8.csv")
 ds <- d[1, 3:7]
@@ -524,6 +625,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr52 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 6
+dr$Row <- 8
 
 d <- read.csv("RushRanchBlk1_2016.6.9.csv")
 ds <- d[1, 3:7]
@@ -534,6 +637,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr53 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 6
+dr$Row <- 9
 
 d <- read.csv("RushRanchBlk1_2016.7.1.csv")
 ds <- d[1, 3:7]
@@ -544,6 +649,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr54 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 7
+dr$Row <- 1
 
 d <- read.csv("RushRanchBlk1_2016.7.2.csv")
 ds <- d[1, 3:7]
@@ -554,6 +661,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr55 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 7
+dr$Row <- 2
 
 d <- read.csv("RushRanchBlk1_2016.7.3.csv")
 ds <- d[1, 3:7]
@@ -564,6 +673,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr56 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 7
+dr$Row <- 3
 
 d <- read.csv("RushRanchBlk1_2016.7.4.csv")
 ds <- d[1, 3:7]
@@ -574,6 +685,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr57 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 7
+dr$Row <- 4
 
 d <- read.csv("RushRanchBlk1_2016.7.5.csv")
 ds <- d[1, 3:7]
@@ -584,6 +697,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr58 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 7
+dr$Row <- 5
 
 d <- read.csv("RushRanchBlk1_2016.7.6.csv")
 ds <- d[1, 3:7]
@@ -594,6 +709,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr59 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 7
+dr$Row <- 6
 
 d <- read.csv("RushRanchBlk1_2016.7.7.csv")
 ds <- d[1, 3:7]
@@ -604,6 +721,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr60 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 7
+dr$Row <- 7
 
 d <- read.csv("RushRanchBlk1_2016.7.8.csv")
 ds <- d[1, 3:7]
@@ -614,6 +733,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr61 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 7
+dr$Row <- 8
 
 d <- read.csv("RushRanchBlk1_2016.7.9.csv")
 ds <- d[1, 3:7]
@@ -624,6 +745,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr62 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 7
+dr$Row <- 9
 
 d <- read.csv("RushRanchBlk1_2016.8.1.csv")
 ds <- d[1, 3:7]
@@ -634,6 +757,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr63 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 8
+dr$Row <- 1
 
 d <- read.csv("RushRanchBlk1_2016.8.2.csv")
 ds <- d[1, 3:7]
@@ -644,6 +769,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr64 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 8
+dr$Row <- 2
 
 d <- read.csv("RushRanchBlk1_2016.8.3.csv")
 ds <- d[1, 3:7]
@@ -654,6 +781,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr65 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 8
+dr$Row <- 3
 
 d <- read.csv("RushRanchBlk1_2016.8.4.csv")
 ds <- d[1, 3:7]
@@ -664,6 +793,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr66 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 8
+dr$Row <- 4
 
 d <- read.csv("RushRanchBlk1_2016.8.5.csv")
 ds <- d[1, 3:7]
@@ -674,6 +805,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr67 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 8
+dr$Row <- 5
 
 d <- read.csv("RushRanchBlk1_2016.8.6.csv")
 ds <- d[1, 3:7]
@@ -684,6 +817,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr68 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 8
+dr$Row <- 6
 
 d <- read.csv("RushRanchBlk1_2016.8.7.csv")
 ds <- d[1, 3:7]
@@ -694,6 +829,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr69 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 8
+dr$Row <- 7
 
 d <- read.csv("RushRanchBlk1_2016.8.8.csv")
 ds <- d[1, 3:7]
@@ -704,6 +841,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr70 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 8
+dr$Row <- 8
 
 d <- read.csv("RushRanchBlk1_2016.8.9.csv")
 ds <- d[1, 3:7]
@@ -714,6 +853,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr71 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 8
+dr$Row <- 9
 
 d <- read.csv("RushRanchBlk1_2016.9.1.csv")
 ds <- d[1, 3:7]
@@ -724,6 +865,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr72 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 9
+dr$Row <- 1
 
 d <- read.csv("RushRanchBlk1_2016.9.2.csv")
 ds <- d[1, 3:7]
@@ -734,6 +877,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr73 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 9
+dr$Row <- 2
 
 d <- read.csv("RushRanchBlk1_2016.9.3.csv")
 ds <- d[1, 3:7]
@@ -744,6 +889,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr74 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 9
+dr$Row <- 3
 
 d <- read.csv("RushRanchBlk1_2016.9.4.csv")
 ds <- d[1, 3:7]
@@ -754,6 +901,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr75 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 9
+dr$Row <- 4
 
 d <- read.csv("RushRanchBlk1_2016.9.5.csv")
 ds <- d[1, 3:7]
@@ -764,6 +913,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr76 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 9
+dr$Row <- 5
 
 d <- read.csv("RushRanchBlk1_2016.9.6.csv")
 ds <- d[1, 3:7]
@@ -774,6 +925,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr77 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 9
+dr$Row <- 6
 
 d <- read.csv("RushRanchBlk1_2016.9.7.csv")
 ds <- d[1, 3:7]
@@ -784,6 +937,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr78 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 9
+dr$Row <- 7
 
 d <- read.csv("RushRanchBlk1_2016.9.8.csv")
 ds <- d[1, 3:7]
@@ -794,6 +949,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr79 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 9
+dr$Row <- 8
 
 d <- read.csv("RushRanchBlk1_2016.9.9.csv")
 ds <- d[1, 3:7]
@@ -804,6 +961,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr80 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 1
+dr$Row <- 4
 
 d <- read.csv("RushRanchBlk1_2016.10.1.csv")
 ds <- d[1, 3:7]
@@ -814,6 +973,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr81 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 10
+dr$Row <- 1
 
 d <- read.csv("RushRanchBlk1_2016.10.2.csv")
 ds <- d[1, 3:7]
@@ -824,6 +985,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr82 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 10
+dr$Row <- 2
 
 d <- read.csv("RushRanchBlk1_2016.10.3.csv")
 ds <- d[1, 3:7]
@@ -834,6 +997,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr83 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 10
+dr$Row <- 3
 
 d <- read.csv("RushRanchBlk1_2016.10.4.csv")
 ds <- d[1, 3:7]
@@ -844,6 +1009,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr84 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 10
+dr$Row <- 4
 
 d <- read.csv("RushRanchBlk1_2016.10.5.csv")
 ds <- d[1, 3:7]
@@ -854,6 +1021,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr85 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 10
+dr$Row <- 5
 
 d <- read.csv("RushRanchBlk1_2016.10.6.csv")
 ds <- d[1, 3:7]
@@ -864,6 +1033,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr86 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 10
+dr$Row <- 6
 
 d <- read.csv("RushRanchBlk1_2016.10.7.csv")
 ds <- d[1, 3:7]
@@ -874,6 +1045,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr87 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 10
+dr$Row <- 7
 
 d <- read.csv("RushRanchBlk1_2016.10.8.csv")
 ds <- d[1, 3:7]
@@ -884,6 +1057,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr88 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 10
+dr$Row <- 8
 
 d <- read.csv("RushRanchBlk1_2016.10.9.csv")
 ds <- d[1, 3:7]
@@ -894,6 +1069,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr89 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 10
+dr$Row <- 9
 
 d <- read.csv("RushRanchBlk1_2016.10.10.csv")
 ds <- d[1, 3:7]
@@ -904,6 +1081,8 @@ ds4 <- d[5, 3:7]
 ds5 <- d[6, 3:7]
 ds6 <- d[7, 3:7]
 dr90 <- cbind(ds, ds1, ds2, ds3, ds4, ds5, ds6)
+dr1$Column <- 10
+dr$Row <- 10
 
 i <- seq(1:98)
 nm <- as.data.frame(paste("dr", i, sep = "", collapse = ", "))
