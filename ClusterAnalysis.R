@@ -1,4 +1,5 @@
 library(caret); library(dplyr); library(ggplot2); library(rgl);
+library(plotly); library(Cairo)
 
 d <- read.csv("RushRanchBlk1_2016.1.4.csv")
 ds <- d[1, 3:7]
@@ -1104,15 +1105,37 @@ colnames(de) <- c("avg0503", "mdn0503", "sd0503", "max0503", "min0503", "avg0526
                   "avg0727", "mdn0727", "sd0503", "max0727", "min0727", "avg0817", "mdn0817", "sd0817", "max0817", "min0817",
                   "avg0824", "mdn0824", "sd0824", "max0824", "min0824", "Column", "Row")
 
-write.csv(de, "de.csv")
+write.csv(de, file = "de.csv")
 
-x <- de$Row
-y <- de$sd0503
-z <- de$Column
+# dedv <- as.data.frame(read.csv(file = "dedv.csv", header = T))
+# dedv[] <- lapply(dedv, function(x) as.numeric(as.character(x)))
+# x <- dedv$Row
+# y <- dedv$Column
+# z <- dedv$sd0503
+# dedv[] <- lapply(dedv, function(x) as.numeric(as.character(x)))
+# msd0503 <- as.matrix(select(dedv, Row, Column, sd0503))
 
-rgl.surface(x, y, z)
+#x <- msd0503$Row
+#y <- msd0503$Column
+#z <- msd0503$sd0503
+
             
+#persp(x, y, z )
 
+#df <- volcano
+msd0503 <- as.matrix(read.csv(file = "dedvMtxsd0503.csv", header = FALSE))
 
-
-
+#jpeg(filename = "~/Documents/Data_Science/SolanoLandTrst/msd0503.jpeg")
+jpeg('msd0503.jpeg')
+z <- 2 * msd0503
+x <- 10 * (1:nrow(z))
+y <- 10 * (1:ncol(z))
+zlim <- range(z)
+zlen <- zlim[2] - zlim[1] + 1
+colorlut <- terrain.colors(zlen)
+col <- colorlut[ z-zlim[1]+1 ]
+rgl.open()
+rgl.surface(x, y, z, color=col, back="lines")
+#dev.copy(x11)
+dev.off()
+#savePlot("msd0503.png", type = c("png"), device = dev.cur())
