@@ -1,5 +1,5 @@
 library(caret); library(dplyr); library(ggplot2); library(rgl);
-library(plotly); library(Cairo)
+library(plotly); library(Cairo); library(plot3D)
 
 d <- read.csv("RushRanchBlk1_2016.1.4.csv")
 ds <- d[1, 3:7]
@@ -1139,3 +1139,127 @@ rgl.surface(x, y, z, color=col, back="lines")
 #dev.copy(x11)
 dev.off()
 #savePlot("msd0503.png", type = c("png"), device = dev.cur())
+
+
+persp(x, y, z,
+      main="May 3, 2016",
+      zlab = "Standard Deviation",
+      xlab = "NorthSouth",
+      ylab = "EastWest",
+      theta = 30, phi = 15,
+      col = "springgreen", shade = 0.5)
+
+#p <- plot_ly(z = ~msd0503) %>% add_surface()
+#p
+
+
+msd0526 <- as.matrix(read.csv(file = "dedvMtxsd0526.csv", header = FALSE))
+
+jpeg('msd0526.jpeg')
+z <- 2 * msd0526
+x <- 10 * (1:nrow(z))
+y <- 10 * (1:ncol(z))
+zlim <- range(z)
+zlen <- zlim[2] - zlim[1] + 1
+colorlut <- terrain.colors(zlen)
+col <- colorlut[ z-zlim[1]+1 ]
+rgl.open()
+rgl.surface(x, y, z, color=col, back="lines")
+dev.off()
+
+persp(x, y, z,
+      main="May 26, 2016",
+      zlab = "Standard Deviation",
+      xlab = "NorthSouth",
+      ylab = "EastWest",
+      theta = 30, phi = 15,
+      col = "springgreen", shade = 0.5)
+
+msd0623 <- as.matrix(read.csv(file = "dedvMtxsd0623.csv", header = FALSE))
+
+jpeg('msd0623.jpeg')
+z <- 2 * msd0623
+x <- 10 * (1:nrow(z))
+y <- 10 * (1:ncol(z))
+zlim <- range(z)
+zlen <- zlim[2] - zlim[1] + 1
+colorlut <- terrain.colors(zlen)
+col <- colorlut[ z-zlim[1]+1 ]
+rgl.open()
+rgl.surface(x, y, z, color=col, back="lines")
+dev.off()
+
+persp(x, y, z,
+      main="June 23, 2016",
+      zlab = "Standard Deviation",
+      xlab = "NorthSouth",
+      ylab = "EastWest",
+      theta = 30, phi = 15,
+      col = "springgreen", shade = 0.5)
+
+msd0629 <- as.matrix(read.csv(file = "dedvMtxsd0629.csv", header = FALSE))
+
+jpeg('msd0629.jpeg')
+z <- 2 * msd0629
+x <- 10 * (1:nrow(z))
+y <- 10 * (1:ncol(z))
+zlim <- range(z)
+zlen <- zlim[2] - zlim[1] + 1
+colorlut <- terrain.colors(zlen)
+col <- colorlut[ z-zlim[1]+1 ]
+rgl.open()
+rgl.surface(x, y, z, color=col, back="lines")
+dev.off()
+
+persp(x, y, z,
+      main="June 29, 2016",
+      zlab = "Standard Deviation",
+      xlab = "NorthSouth",
+      ylab = "EastWest",
+      theta = 30, phi = 15,
+      col = "springgreen", shade = 0.5)
+
+msd0727 <- as.matrix(read.csv(file = "dedvMtxsd0727.csv", header = FALSE))
+
+jpeg('msd0727.jpeg')
+z <- 2 * msd0727
+x <- 10 * (1:nrow(z))
+y <- 10 * (1:ncol(z))
+zlim <- range(z)
+zlen <- zlim[2] - zlim[1] + 1
+colorlut <- terrain.colors(zlen)
+col <- colorlut[ z-zlim[1]+1 ]
+rgl.open()
+rgl.surface(x, y, z, color=col, back="lines")
+dev.off()
+
+persp(x, y, z,
+      main="July 27, 2016",
+      zlab = "Standard Deviation",
+      xlab = "NorthSouth",
+      ylab = "EastWest",
+      theta = 30, phi = 15,
+      col = "springgreen", shade = 0.5)
+
+msd0817 <- as.matrix(read.csv(file = "dedvMtxsd0817.csv", header = FALSE))
+
+jpeg('msd0817.jpeg')
+z <- 2 * msd0817
+x <- 10 * (1:nrow(z))
+y <- 10 * (1:ncol(z))
+zlim <- range(z)
+zlen <- zlim[2] - zlim[1] + 1
+colorlut <- terrain.colors(zlen)
+col <- colorlut[ z-zlim[1]+1 ]
+rgl.open()
+rgl.surface(x, y, z, color=col, back="lines")
+dev.off()
+
+persp(x, y, z,
+      main="August 17, 2016",
+      zlab = "Standard Deviation",
+      xlab = "NorthSouth",
+      ylab = "EastWest",
+      theta = 30, phi = 15,
+      col = "springgreen", shade = 0.5)
+
